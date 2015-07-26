@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: branch-notes
+# key: notes
+# expand-env: ((yas-indent-line 'fixed))
+# --
+* $1
+
+
+* Branch 1: ehrlic_g-$2
+          12345678901234567890123456789012345678901234567890
+
+
+* Compilation lines
+cd /v/foo/bar ; gmake gaz/fast
+
+
+* Bookmarks
+
+
+* TODO [/]
+- [ ] make branch
+- [ ] config spec
+- [ ] code
+- [ ] inspection
+- [ ] ready for merge
+
+
+* inspection

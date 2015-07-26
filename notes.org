@@ -1,0 +1,96 @@
+* Notes on .emacs.d
+
+
+* setup
+** mac
+cd ~/.emacs.d
+create .gitignore, put .DS_Store and *.elc in it
+git init
+make push
+
+ftp put ~/emacs.d.bundle to tscdz1
+
+** boeing
+cd ~
+ftp get ~/emacs.d.bundle from tscdz1
+mkdir ~/r/emacs.d
+rm -f ~/.emacs.d
+ln -s ~/r/emacs.d ~/.emacs.d
+cd ~/r
+git clone ~/emacs.d.bundle
+
+
+* workflow
+** mac push
+cd ~/.emacs.d
+edit stuff
+make push
+
+ftp put ~/emacs.d.bundle to tscdz1
+
+** mac pull
+ftp get ~/emacs.d.bundle from tscdz1
+
+cd ~/.emacs.d
+make pull
+
+** boeing push
+cd ~/.emacs.d
+edit stuff
+make push
+
+ftp put ~/emacs.d.bundle to tscdz1
+
+** boeing pull (THIS ONE IS DIFFERENT)
+ftp get ~/emacs.d.bundle from tscdz1
+
+cd ~/.emacs.d
+make pull_origin
+
+** create new elpa tar
+get new packages; make sure to add them to ~/.emacs.d/src/my-load-path.el
+
+cd ~/.emacs.d
+(optionally, make update_elpa)
+make create_elpa_tar
+
+ftp put ~/emacs.d.elpa.tar.gz to tscdz1
+ftp get emacs.d.elpa.tar.gz from tscdz1
+
+cd ~/.emacs.d
+make extract_elpa_tar
+make clean all
+
+
+* log
+cd ~/.emacs.d
+make log
+
+
+* 2015/06/11 - trying to get this to work all over again
+** startup on master
+git init
+git add --all .
+git commit -m "message"
+git bundle create <repo> HEAD master
+
+** startup on remote
+git clone -b master <repo>
+
+** workflow
+*** remote
+git add --all .
+git commit -m "message"
+git bundle create <bundle> HEAD master
+
+*** master
+git add --all .
+git commit -m "message"
+git pull <repo>
+
+git add --all .
+git commit -m "message"
+git bundle <repo> HEAD master
+
+*** remote
+git pull
