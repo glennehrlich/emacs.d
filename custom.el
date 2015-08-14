@@ -70,6 +70,7 @@
  '(kept-new-versions 10)
  '(kept-old-versions 10)
  '(make-backup-files t)
+ '(org-clock-into-drawer nil)
  '(org-clock-persist t)
  '(org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
  '(org-file-apps
