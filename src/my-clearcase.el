@@ -19,7 +19,7 @@
 
 ;; Currently, theis conflicts with avy-goto-char on C-;.  When I next
 ;; need to do this, find a good keybinding for this.
-;(global-set-key (kbd "C-;")     'next-clearcase-inspection)
+(global-set-key (kbd "M-'")     'next-clearcase-inspection)
 
 (global-set-key (kbd "M-<f1>")  'replace-clearcase-path-with-code-collaborator-inspection-line-region) ;; M-<f1>
 
