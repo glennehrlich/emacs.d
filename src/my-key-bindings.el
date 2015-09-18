@@ -25,6 +25,7 @@
 
 ;; Meta function keys.
 (global-set-key (kbd "M-<f6>") (lambda () "Call `revert-buffer' without confirmation." (interactive) (revert-buffer t t)))
+(global-set-key (kbd "M-<f8>") 'quick-calc)
 
 ;; Editing keys.
 (global-set-key (kbd "<home>") 'beginning-of-buffer)
