@@ -36,7 +36,6 @@
  '(find-file-visit-truename t)
  '(flycheck-clang-language-standard "c++11")
  '(font-lock-verbose nil)
- '(gc-cons-threshold 20000000)
  '(gdb-many-windows t)
  '(grep-files-aliases
    (quote
