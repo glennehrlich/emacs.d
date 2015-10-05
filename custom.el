@@ -40,10 +40,11 @@
  '(grep-files-aliases
    (quote
     (("all" . "* .*")
-     ("el" . "*.el")
      ("cpp" . "*.h *.hpp *.c *.cc *.cpp *.ddl *.inl")
-     ("perl" . "*.pl *.pm")
-     ("js" . "*.js"))))
+     ("el" . "*.el")
+     ("js" . "*.js")
+     ("jshtml" . "*.js *.html")
+     ("perl" . "*.pl *.pm"))))
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "for_reference_only" "oldunittest" "CMakeFiles")))
