@@ -119,6 +119,7 @@
 (defun sdf ()
   "Setup sdf."
   (interactive)
+  (dired "/v/sgc/sdfview")
   (dired "/v/sgc/sdfview/sdf_importer/xml")
   (dired "/v/sgc/sdfview/sdf_importer/util")
   (dired "/v/sgc/sdfview/sdf_importer/unittest") (rename-buffer "u")
@@ -127,17 +128,8 @@
   (dired "/v/sgc/sdfview/sdf_importer/from")
   (dired "/v/sgc/sdfview/sdf_importer/apps")
   (dired "/v/sgc/sdfview/sdf_importer/") (rename-buffer "sdf")
+  (dired "/v/sgc/sdfview/web")
   (find-file "/v/sgc/sdfview/sdf_importer/unittest/test_sdf_importer.cc") (rename-buffer "t1"))
-
-(defun sdfview ()
-  "\"Edit\" directory /v/sgc/sdfview using `dired'."
-  (interactive)
-  (dired "/v/sgc/sdfview"))
-
-(defun web ()
-  "\"Edit\" directory /v/sgc/sdfview/web using `dired'."
-  (interactive)
-  (dired "/v/sgc/sdfview/web"))
 
 (defun sgc ()
   "\"Edit\" directory /v/sgc/sgc using `dired'."
