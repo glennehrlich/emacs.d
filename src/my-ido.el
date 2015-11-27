@@ -3,10 +3,13 @@
 (require 'ido)
 
 (with-no-warnings
-  (defvar predicate nil)
-  (defvar inherit-input-method nil)
+  ;; Add variables here that cause mysterious warnings.
+  (defvar ido-cr+-debug-mode nil)
+  (defvar ido-cur-list nil)
   (defvar ido-default-item nil)
-  (defvar ido-cur-list nil))
+  (defvar ido-require-match nil)
+  (defvar inherit-input-method nil)
+  (defvar predicate nil))
 
 (require 'flx-ido)
 (require 'ido-hacks)
