@@ -38,7 +38,7 @@
                       exec-path-from-shell
                       expand-region
                       flx-ido
-                      flycheck
+                      ;; flycheck
                       fuzzy
                       ggtags
                       htmlize

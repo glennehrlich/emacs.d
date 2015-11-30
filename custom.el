@@ -34,7 +34,6 @@
  '(eshell-save-history-on-exit nil)
  '(fci-rule-color "#515151")
  '(find-file-visit-truename t)
- '(flycheck-clang-language-standard "c++11")
  '(font-lock-verbose nil)
  '(gdb-many-windows t)
  '(grep-files-aliases

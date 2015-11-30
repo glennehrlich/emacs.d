@@ -3,17 +3,17 @@
 (require 'diminish)
 (require 'eldoc)
 (require 'elisp-slime-nav)
-(require 'flycheck)
+;; (require 'flycheck)
 (require 'lisp-mode)
 (require 'ielm)
 (require 'morlock)
 
-(defvar flycheck-emacs-lisp-load-path)
-(defvar flycheck-disabled-checkers)
+;; (defvar flycheck-emacs-lisp-load-path)
+;; (defvar flycheck-disabled-checkers)
 
 (diminish 'eldoc-mode)
 (diminish 'elisp-slime-nav-mode)
-(diminish 'flycheck-mode)
+;; (diminish 'flycheck-mode)
 
 (dolist (hook '(emacs-lisp-mode-hook
                 ielm-mode-hook
