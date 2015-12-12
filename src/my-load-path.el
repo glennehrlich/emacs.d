@@ -41,6 +41,8 @@
                       ;; flycheck
                       fuzzy
                       ggtags
+                      haskell-mode
+                      hi2
                       htmlize
                       ido-hacks
                       ido-ubiquitous
