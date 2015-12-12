@@ -54,6 +54,7 @@
                       niflheim-theme
                       noctilux-theme
                       org-plus-contrib
+                      paradox
                       paredit
                       paredit-menu
                       popup
