@@ -12,7 +12,7 @@
 (setq package-user-dir "~/.emacs.d.elpa")
 
 (setq package-archives '(
-                         ; ("org"       . "http://orgmode.org/elpa/")
+                         ("org"       . "http://orgmode.org/elpa/")
                          ("melpa"     . "https://melpa.org/packages/")
                          ("gnu"       . "http://elpa.gnu.org/packages/")
                          ))
