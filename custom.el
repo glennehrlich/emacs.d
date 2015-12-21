@@ -12,7 +12,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/r/backups/emacs"))))
  '(blink-cursor-blinks 0)
- '(browse-url-chromium-program "/usr/bin/google-chrome")
+ '(browse-url-chromium-program "/usr/bin/google-chrome" t)
  '(c-offsets-alist (quote ((arglist-intro . +))))
  '(calc-settings-file "~/.emacs.d/calc-settings.el")
  '(column-number-mode t)
@@ -86,6 +86,7 @@
  '(org-todo-keywords
    (quote
     ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
+ '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(save-place nil nil (saveplace))
  '(save-place-file "~/.emacs.d.persistent/save-place/emacs-places")
