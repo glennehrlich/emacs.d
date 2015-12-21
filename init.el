@@ -40,6 +40,10 @@
 (use-package idutils
   :commands (gid))
 
+(use-package haskell-mode
+  :defer t
+  :config (require 'my-haskell))
+
 (use-package key-chord
   :disabled t
   :init (key-chord-mode 1))
