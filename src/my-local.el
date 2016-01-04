@@ -81,7 +81,8 @@
   "Create the shells and visit ~/todo.org."
   (interactive)
   (shells)
-  (todo))
+  (todo)
+  (delete-other-windows))
 
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
