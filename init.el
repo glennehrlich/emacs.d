@@ -66,6 +66,8 @@
 
 (use-package my-local)
 
+(use-package my-magit)
+
 (use-package my-windows
   :if (eq system-type 'windows-nt))
 
