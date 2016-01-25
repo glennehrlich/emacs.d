@@ -127,9 +127,9 @@
   (dired "/v/sgc/sdfview/sdf_importer/insert")
   (dired "/v/sgc/sdfview/sdf_importer/from")
   (dired "/v/sgc/sdfview/sdf_importer/apps")
-  (dired "/v/sgc/sdfview/sdf_importer/") (rename-buffer "sdf")
   (find-file "/v/sgc/sdfview/sdf_importer/unittest/test_sdf_importer.cc") (rename-buffer "t1")
-  (dired "/v/sgc/sdfview/web"))
+  (dired "/v/sgc/sdfview/web")
+  (dired "/v/sgc/sdfview/sdf_importer/") (rename-buffer "sdf"))
 
 (defun sgc ()
   "\"Edit\" directory /v/sgc/sgc using `dired'."
