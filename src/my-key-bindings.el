@@ -64,11 +64,11 @@
   (interactive)
   (save-buffer)
   (compile compile-command))
-(global-set-key (kbd "<f13>")   'save-and-compile) ; Mac
-(global-set-key (kbd "<print>") 'save-and-compile) ; boeing-linux
+(global-set-key (kbd "<f13>")   'save-and-compile) ; Mac (Ins key)
+(global-set-key (kbd "<print>") 'save-and-compile) ; boeing-linux (Ins key)
 
-(global-set-key (kbd "<f15>")   'magit-status) ; Mac
-(global-set-key (kbd "<pause>") 'magit-status) ; boeing-linux
+(global-set-key (kbd "<kp-delete>") 'magit-status) ; Mac (Del key)
+(global-set-key (kbd "<delete>")    'magit-status) ; boeing-linux (Del key)
 
 ;; Stop overwrite mode
 (global-set-key (kbd "<insert>") nil)
