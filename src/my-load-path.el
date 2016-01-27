@@ -52,6 +52,7 @@
                       json-mode
                       json-reformat
                       magit
+                      markdown-mode
                       morlock
                       niflheim-theme
                       noctilux-theme

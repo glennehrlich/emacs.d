@@ -52,6 +52,10 @@
   :defer t
   :config (require 'my-lisp))
 
+(use-package markdown-mode
+  :mode "\\.md\\'"
+  :mode "\\.markdown\\'")
+
 (use-package my-ace-jump-mode
   :disabled t)
 
