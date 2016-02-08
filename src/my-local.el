@@ -15,6 +15,11 @@
       (untabify (1- (point)) (point-max)))
     nil))
 
+(defun branches ()
+  "\"Edit\" directory ~/r/branhces using `dired'."
+  (interactive)
+  (dired "~/r/branches"))
+
 (defun my-apply-keyboard-macro-to-region-lines-query-for-macro (top bottom macro)
   "Apply keyboard macro to all lines in the region.  Query for the macro name."
   (interactive "r\nafunction: ")

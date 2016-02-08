@@ -25,11 +25,6 @@
 (global-set-key (kbd "M-*") 'vr/replace) ; was replace-regexp
 (define-key gtags-mode-map (kbd "M-*") 'vr/replace)
 
-(defun branches ()
-  "\"Edit\" directory ~/r/branhces using `dired'."
-  (interactive)
-  (dired "~/r/branches"))
-
 (defun constpop ()
   "Visit /v/inf/inf/namesvc/source/constPopulation.xml."
   (interactive)
