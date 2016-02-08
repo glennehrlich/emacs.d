@@ -68,9 +68,9 @@
   (eshell) (rename-buffer "e0"))
 
 (defun todo ()
-  "Visit ~/todo.org."
+  "Visit ~/r/kinetx/todo.org."
   (interactive)
-  (find-file "~/todo.org"))
+  (find-file "~/r/kinetx/todo.org"))
 
 (defun passwords ()
   "Visit ~/r/notes/passwords.org."
@@ -78,7 +78,7 @@
   (find-file "~/r/notes/passwords.org"))
 
 (defun start ()
-  "Create the shells and visit ~/todo.org."
+  "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
   (todo)
