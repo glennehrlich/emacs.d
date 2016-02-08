@@ -20,7 +20,6 @@
 (package-initialize)
 
 (defvar my-packages '(
-                      ace-window
                       auto-complete
                       auto-complete-clang
                       avy

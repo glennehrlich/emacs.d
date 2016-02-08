@@ -56,9 +56,6 @@
   :mode "\\.md\\'"
   :mode "\\.markdown\\'")
 
-(use-package my-ace-jump-mode
-  :disabled t)
-
 (use-package my-backup)
 
 (use-package my-ediff)
