@@ -51,6 +51,8 @@
                       js2-mode
                       json-mode
                       json-reformat
+                      julia-mode
+                      julia-shell
                       magit
                       markdown-mode
                       morlock
