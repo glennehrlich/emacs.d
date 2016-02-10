@@ -72,6 +72,11 @@
   (eshell) (rename-buffer "e1")
   (eshell) (rename-buffer "e0"))
 
+(defun ptodo ()
+  "Visit ~/r/notes.personal/ptodo.org."
+  (interactive)
+  (find-file "~/r/notes.personal/ptodo.org"))
+
 (defun todo ()
   "Visit ~/r/kinetx/todo.org."
   (interactive)
@@ -86,8 +91,8 @@
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
-  (todo)
-  (delete-other-windows))
+  (ptodo)
+  (todo))
 
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
