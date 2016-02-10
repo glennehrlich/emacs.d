@@ -3,6 +3,9 @@
 (require 'shell)
 (require 'dirtrack)
 
+;; Make shells open in same window.
+(add-to-list 'display-buffer-alist '("*shell*" display-buffer-same-window))
+
 (setq-default dirtrack-list '("^.*:\\(.*\\)" 1 t))
 (add-hook 'shell-mode-hook
          (lambda ()
