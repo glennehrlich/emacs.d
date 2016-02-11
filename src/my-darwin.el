@@ -17,13 +17,11 @@
 (defvar browse-url-chromium-program "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
 (require 'exec-path-from-shell)
-(exec-path-from-shell-copy-env "PATH")
-(exec-path-from-shell-copy-env "INFOPATH")
-(exec-path-from-shell-copy-env "MANPATH")
-(exec-path-from-shell-copy-env "EMACS")
-(exec-path-from-shell-copy-env "EDITOR")
-(exec-path-from-shell-copy-env "VISUAL")
-(exec-path-from-shell-copy-env "PLTCOLLECTS")
+(add-to-list 'exec-path-from-shell-variables "INFOPATH")
+(add-to-list 'exec-path-from-shell-variables "EMACS")
+(add-to-list 'exec-path-from-shell-variables "EDITOR")
+(add-to-list 'exec-path-from-shell-variables "VISUAL")
+(exec-path-from-shell-initialize)
 
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
