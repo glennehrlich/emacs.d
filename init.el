@@ -33,6 +33,10 @@
   :defer t
   :config (require 'my-eshell))
 
+(use-package ess-site
+  :defer t
+  :commands julia)
+
 ;; Can not use use-package because of warnings.
 (with-no-warnings (require 'my-ido))
 
