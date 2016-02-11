@@ -34,7 +34,7 @@
                       dropdown-list
                       eldoc-extension
                       elisp-slime-nav
-                      ess
+                      ;; ess
                       exec-path-from-shell
                       expand-region
                       flx-ido
@@ -52,7 +52,7 @@
                       json-mode
                       json-reformat
                       julia-mode
-                      ;; julia-shell
+                      julia-shell
                       magit
                       markdown-mode
                       morlock
