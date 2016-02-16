@@ -18,6 +18,9 @@ GIT_BUNDLE = ~/emacs.d.bundle
 	$(EMACS_BATCH) -f batch-byte-compile $<
 
 all: $(ELCFILES)
+	@echo "sleeping 5 seconds in order to touch all *.elc files"
+	sleep 5
+	find . -name "*.elc" | xargs touch
 
 clean:
 	rm -f $(ELCFILES)
@@ -26,6 +29,9 @@ update_elpa:
 	rm -rf $(ELPA_DIR).old
 	mv $(ELPA_DIR) $(ELPA_DIR).old
 	$(EMACS_BATCH) -f get-my-packages
+	@echo "sleeping 5 seconds in order to touch all *.elc files"
+	sleep 5
+	find $(ELPA_DIR) -name "*.elc" | xargs touch
 
 create_elpa_tar:
 	cd ~ ; \
@@ -53,8 +59,8 @@ create_persistent_dirs:
 	mkdir $(PERSISTENT_DIR)/save-place ; \
 	mkdir $(PERSISTENT_DIR)/smex ; \
 	mkdir $(PERSISTENT_DIR)/url ; \
-	echo ; \
-	echo "$(PERSISTENT_DIR) and sub-directories have been created."
+	@echo ; \
+	@echo "$(PERSISTENT_DIR) and sub-directories have been created."
 
 
 # This has to be done outside of emacs to work, otherwise, when emacs
@@ -69,7 +75,7 @@ git_setup_origin:
 	rm -rf .git ; \
 	git init ; \
 	rm -f .bundle_history ; \
-	echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
+	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
 	git add --all . ; \
 	git commit -m "origin: initial commit." ; \
 	git bundle create $(GIT_BUNDLE) --all
@@ -86,13 +92,13 @@ git_pull_remote:
 	git pull origin
 
 git_push_origin:
-	echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
+	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
 	git add --all . ; \
 	git commit -m "origin: add and commit from git_push_origin." ; \
 	git bundle create $(GIT_BUNDLE) --all
 
 git_push_remote:
-	echo "`TZ=MST date` from remote: `id -un`@`hostname`" >> .bundle_history ; \
+	@echo "`TZ=MST date` from remote: `id -un`@`hostname`" >> .bundle_history ; \
 	git add --all . ; \
 	git commit -m "remote: add and commit from git_push_remote." ; \
 	git bundle create $(GIT_BUNDLE) --all
