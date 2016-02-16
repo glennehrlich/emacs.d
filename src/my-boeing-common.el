@@ -15,6 +15,10 @@
 ;; will display in local time instead of utc.
 (set-time-zone-rule "MST")
 
+;; Tell emacs to show true filenames instead of symlinks.  Makes things be like /v/inf/...
+;; instead of /v/iridium/...
+(setq find-file-visit-truename t)
+
 (add-to-list 'auto-mode-alist '("\\.ddl\\'" . c++-mode))
 
 (add-to-list 'ffap-c++-path "/v/iridium")

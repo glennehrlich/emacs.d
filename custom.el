@@ -33,7 +33,6 @@
  '(eshell-hist-ignoredups t)
  '(eshell-save-history-on-exit nil)
  '(fci-rule-color "#515151")
- '(find-file-visit-truename t)
  '(font-lock-verbose nil)
  '(gdb-many-windows t)
  '(grep-files-aliases
