@@ -42,6 +42,7 @@
      ("el" . "*.el")
      ("js" . "*.js")
      ("jshtml" . "*.js *.html")
+     ("julia" . "*.jl")
      ("perl" . "*.pl *.pm"))))
  '(grep-find-ignored-directories
    (quote
