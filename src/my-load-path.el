@@ -42,11 +42,11 @@
                       dropdown-list
                       eldoc-extension
                       elisp-slime-nav
-                      ;; ess
+                      elpy
                       exec-path-from-shell
                       expand-region
                       flx-ido
-                      ;; flycheck
+                      flycheck
                       fuzzy
                       ggtags
                       haskell-mode
@@ -71,6 +71,7 @@
                       paredit
                       paredit-menu
                       popup
+                      py-autopep8
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets

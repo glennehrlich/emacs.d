@@ -82,12 +82,16 @@
 
 (use-package my-theme-looper)
 
+(use-package paredit
+  :init (require 'my-paredit))
+
+(use-package python
+  :defer t
+  :config (require 'my-python))
+
 (use-package org
   :defer t
   :config (require 'my-org))
-
-(use-package paredit
-  :init (require 'my-paredit))
 
 (use-package shell
   :defer t
