@@ -2,6 +2,7 @@
 
 (require 'python)
 (require 'elpy)
+(require 'jedi)
 (require 'py-autopep8)
 
 ;; Have elpy use flycheck instead of flymake.
@@ -16,6 +17,12 @@
 ;; This brute forces turns off readline support so we don't get
 ;; spurious warnings in the *Warnings* buffer.
 (setq python-shell-completion-native-enable nil)
+
+;; Setup jedi
+(setq elpy-rpc-backend "jedi")
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+(jedi:install-server)
 
 ;; Turn on elpy.
 (elpy-enable)

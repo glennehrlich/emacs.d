@@ -88,7 +88,7 @@
     ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
  '(package-selected-packages
    (quote
-    (py-autopep8 elpy julia-mode markdown-mode zerodark-theme yasnippet wrap-region web-mode visual-regexp use-package theme-looper smex skewer-reload-stylesheets paredit-menu paredit paradox org-plus-contrib noctilux-theme niflheim-theme morlock magit json-mode impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks hi2 haskell-mode ggtags fuzzy flx-ido expand-region exec-path-from-shell elisp-slime-nav eldoc-extension dropdown-list darcula-theme color-theme-sanityinc-tomorrow cmake-mode bash-completion base16-theme auto-complete-clang ace-window)))
+    (jedi py-autopep8 elpy julia-mode markdown-mode zerodark-theme yasnippet wrap-region web-mode visual-regexp use-package theme-looper smex skewer-reload-stylesheets paredit-menu paredit paradox org-plus-contrib noctilux-theme niflheim-theme morlock magit json-mode impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks hi2 haskell-mode ggtags fuzzy flx-ido expand-region exec-path-from-shell elisp-slime-nav eldoc-extension dropdown-list darcula-theme color-theme-sanityinc-tomorrow cmake-mode bash-completion base16-theme auto-complete-clang ace-window)))
  '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(save-place nil nil (saveplace))

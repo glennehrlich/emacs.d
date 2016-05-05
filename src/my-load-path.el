@@ -56,6 +56,7 @@
                       ido-ubiquitous
                       ido-vertical-mode
                       impatient-mode
+                      jedi
                       js2-mode
                       json-mode
                       json-reformat
