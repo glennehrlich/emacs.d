@@ -24,6 +24,11 @@
 (setq jedi:complete-on-dot t)
 (jedi:install-server)
 
+;; Turn off some of the elpy modules.
+(setq elpy-modules (delq 'elpy-module-company               elpy-modules))
+(setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
+(setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
+
 ;; Turn on elpy.
 (elpy-enable)
 

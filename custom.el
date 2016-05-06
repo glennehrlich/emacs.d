@@ -12,7 +12,6 @@
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/r/backups/emacs"))))
  '(blink-cursor-blinks 0)
- '(browse-url-chromium-program "/usr/bin/google-chrome")
  '(c-offsets-alist (quote ((arglist-intro . +))))
  '(calc-settings-file "~/.emacs.d/calc-settings.el")
  '(column-number-mode t)
