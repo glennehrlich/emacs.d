@@ -5,6 +5,14 @@
 (require 'jedi)
 (require 'py-autopep8)
 
+;; Add some key bindings when elpy-mode is in effect. These could be
+;; done in python-mode-hook, but adding them to elpy-mode-hook means I
+;; don't have to determine if elpy-mode-hook overrides anything in
+;; python-mode.
+(add-hook 'elpy-mode-hook
+          (lambda ()
+            (local-set-key (kbd "M-q") 'python-fill-paragraph)))
+
 ;; Have elpy use flycheck instead of flymake.
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 (add-hook 'elpy-mode-hook 'flycheck-mode)
@@ -31,5 +39,19 @@
 
 ;; Turn on elpy.
 (elpy-enable)
+
+;; Insert an empty __init__.py into the current directory.
+(defun init-py ()
+  "Create an empty __init__.py in the current directory if it
+does not already exist.  If executed in a Dired buffer, refresh
+the Dired buffer."
+  (interactive)
+  (let ((init "__init__.py"))
+    (if (file-exists-p init)
+        (error "__init__.py already exists")
+      (progn
+        (write-region "" nil init)
+        (when (eq major-mode 'dired-mode)
+          (revert-buffer))))))
 
 (provide 'my-python)
