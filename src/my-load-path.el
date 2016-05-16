@@ -86,15 +86,6 @@
                       zerodark-theme
                       ))
 
-;; Packages I no longer load
-;; ace-jump-mode
-;; geiser
-;; ghc
-;; ghci-completion
-;; haskell-mode
-;; hi2
-;; key-chord
-
 (defun get-my-packages ()
   "Get all packages listed in the `my-packages' variable."
   (interactive)
