@@ -55,6 +55,7 @@ create_persistent_dirs:
 	mkdir $(PERSISTENT_DIR)/eshell ; \
 	mkdir $(PERSISTENT_DIR)/ido ; \
 	mkdir $(PERSISTENT_DIR)/org ; \
+	mkdir $(PERSISTENT_DIR)/python-environments ; \
 	mkdir $(PERSISTENT_DIR)/recentf ; \
 	mkdir $(PERSISTENT_DIR)/save-place ; \
 	mkdir $(PERSISTENT_DIR)/smex ; \
