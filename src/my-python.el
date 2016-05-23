@@ -3,7 +3,6 @@
 (require 'python)
 (require 'elpy)
 (require 'jedi)
-(require 'py-autopep8)
 
 ;; Add some key bindings when elpy-mode is in effect. These could be
 ;; done in python-mode-hook, but adding them to elpy-mode-hook means I
@@ -16,9 +15,6 @@
 ;; Have elpy use flycheck instead of flymake.
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 (add-hook 'elpy-mode-hook 'flycheck-mode)
-
-;; Have elpy auto format when saving.
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; For some reason, emacs 25 messes up python mode's testing for
 ;; whether readline support is enabled in the python interpreter.
