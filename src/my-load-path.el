@@ -72,7 +72,7 @@
                       paredit
                       paredit-menu
                       popup
-                      py-autopep8
+                      ;; py-autopep8
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets
