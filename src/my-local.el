@@ -92,6 +92,7 @@
   (interactive)
   (shells)
   (ptodo)
+  (k-shell)
   (todo))
 
 (defun elpa ()
@@ -108,6 +109,13 @@
   "\"Edit\" directory ~ using `dired'."
   (interactive)
   (dired "~"))
+
+(defun k-shell ()
+  "Open a shell in /k."
+  (interactive)
+  (cd "/k")
+  (shell)
+  (rename-buffer "k0"))
 
 (defun notes ()
   "\"Edit\" directory ~/r/notes using `dired'."
