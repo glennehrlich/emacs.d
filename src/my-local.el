@@ -122,6 +122,11 @@
   (interactive)
   (dired "~/r/notes"))
 
+(defun notes-personal ()
+  "\"Edit\" directory ~/r/notes.personal using `dired'."
+  (interactive)
+  (dired "~/r/notes.personal"))
+
 (defun my-current-line ()
   "Return the current line."
   (interactive)
