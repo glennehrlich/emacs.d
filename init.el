@@ -48,6 +48,9 @@
   :defer t
   :config (require 'my-haskell))
 
+(use-package json-mode
+  :mode "\\.czml\\'")
+
 (use-package key-chord
   :disabled t
   :init (key-chord-mode 1))
