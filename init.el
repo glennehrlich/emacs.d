@@ -51,10 +51,6 @@
 (use-package json-mode
   :mode "\\.czml\\'")
 
-(use-package key-chord
-  :disabled t
-  :init (key-chord-mode 1))
-
 (use-package lisp-mode
   :defer t
   :config (require 'my-lisp))
