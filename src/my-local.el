@@ -165,6 +165,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
       (set-marker end-marker nil)
       (set-marker next-line-marker nil))))
 
+(defun site-packages ()
+  "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
+  (interactive)
+  (dired "/opt/anaconda/lib/python2.7/site-packages"))
+
 (defun sort-and-delete-duplicate-lines ()
   "Sort and uniquify the lines in region."
   (interactive)
