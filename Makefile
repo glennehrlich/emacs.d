@@ -47,8 +47,6 @@ extract_elpa_tar:
 # This should be done outside of emacs to work; see clean_persistent_dirs.
 create_persistent_dirs:
 	cd ~
-	rm -rf $(PERSISTENT_DIR).old
-	mv $(PERSISTENT_DIR) $(PERSISTENT_DIR).old
 	mkdir $(PERSISTENT_DIR)
 	mkdir $(PERSISTENT_DIR)/auto-complete
 	mkdir $(PERSISTENT_DIR)/auto-save-list
