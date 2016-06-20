@@ -34,33 +34,33 @@ update_elpa:
 	find $(ELPA_DIR) -name "*.elc" | xargs touch
 
 create_elpa_tar:
-	cd ~ ; \
-	rm -rf $(ELPA_TAR) ; \
+	cd ~
+	rm -rf $(ELPA_TAR)
 	tar czvf $(ELPA_TAR) .$(ELPA)
 
 extract_elpa_tar:
-	cd ~ ; \
-	rm -rf $(ELPA_DIR).old ; \
-	mv $(ELPA_DIR) $(ELPA_DIR).old ; \
+	cd ~
+	rm -rf $(ELPA_DIR).old
+	mv $(ELPA_DIR) $(ELPA_DIR).old
 	tar xzvf $(ELPA_TAR)
 
 # This should be done outside of emacs to work; see clean_persistent_dirs.
 create_persistent_dirs:
-	cd ~ ; \
-	rm -rf $(PERSISTENT_DIR).old ; \
-	mv $(PERSISTENT_DIR) $(PERSISTENT_DIR).old ; \
-	mkdir $(PERSISTENT_DIR) ; \
-	mkdir $(PERSISTENT_DIR)/auto-complete ; \
-	mkdir $(PERSISTENT_DIR)/auto-save-list ; \
-	mkdir $(PERSISTENT_DIR)/eshell ; \
-	mkdir $(PERSISTENT_DIR)/ido ; \
-	mkdir $(PERSISTENT_DIR)/org ; \
-	mkdir $(PERSISTENT_DIR)/python-environments ; \
-	mkdir $(PERSISTENT_DIR)/recentf ; \
-	mkdir $(PERSISTENT_DIR)/save-place ; \
-	mkdir $(PERSISTENT_DIR)/smex ; \
-	mkdir $(PERSISTENT_DIR)/url ; \
-	@echo ; \
+	cd ~
+	rm -rf $(PERSISTENT_DIR).old
+	mv $(PERSISTENT_DIR) $(PERSISTENT_DIR).old
+	mkdir $(PERSISTENT_DIR)
+	mkdir $(PERSISTENT_DIR)/auto-complete
+	mkdir $(PERSISTENT_DIR)/auto-save-list
+	mkdir $(PERSISTENT_DIR)/eshell
+	mkdir $(PERSISTENT_DIR)/ido
+	mkdir $(PERSISTENT_DIR)/org
+	mkdir $(PERSISTENT_DIR)/python-environments
+	mkdir $(PERSISTENT_DIR)/recentf
+	mkdir $(PERSISTENT_DIR)/save-place
+	mkdir $(PERSISTENT_DIR)/smex
+	mkdir $(PERSISTENT_DIR)/url
+	@echo
 	@echo "$(PERSISTENT_DIR) and sub-directories have been created."
 
 
@@ -73,12 +73,12 @@ clean_ido:
 	rm -f $(PERSISTENT_DIR)/ido/*
 
 git_setup_origin:
-	rm -rf .git ; \
-	git init ; \
-	rm -f .bundle_history ; \
-	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
-	git add --all . ; \
-	git commit -m "origin: initial commit." ; \
+	rm -rf .git
+	git init
+	rm -f .bundle_history
+	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history
+	git add --all .
+	git commit -m "origin: initial commit."
 	git bundle create $(GIT_BUNDLE) --all
 
 # Do this in parent directory; technically it can't be run, but this
@@ -93,13 +93,13 @@ git_pull_remote:
 	git pull origin
 
 git_push_origin:
-	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history ; \
-	git add --all . ; \
-	git commit -m "origin: add and commit from git_push_origin." ; \
+	@echo "`TZ=MST date` from origin: `id -un`@`hostname`" >> .bundle_history
+	git add --all .
+	git commit -m "origin: add and commit from git_push_origin."
 	git bundle create $(GIT_BUNDLE) --all
 
 git_push_remote:
-	@echo "`TZ=MST date` from remote: `id -un`@`hostname`" >> .bundle_history ; \
-	git add --all . ; \
-	git commit -m "remote: add and commit from git_push_remote." ; \
+	@echo "`TZ=MST date` from remote: `id -un`@`hostname`" >> .bundle_history
+	git add --all .
+	git commit -m "remote: add and commit from git_push_remote."
 	git bundle create $(GIT_BUNDLE) --all
