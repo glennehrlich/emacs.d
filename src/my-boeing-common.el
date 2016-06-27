@@ -3,7 +3,7 @@
 (require 'ffap)
 (require 'my-clearcase)
 ; (require 'my-vc-clearcase)
-(require 'my-gtags)
+; (require 'my-gtags)
 ; (require 'my-ggtags)
 (require 'my-local)
 (require 'my-parallels)
@@ -27,7 +27,7 @@
 
 ;; Override any key bindings.
 (global-set-key (kbd "M-*") 'vr/replace) ; was replace-regexp
-(define-key gtags-mode-map (kbd "M-*") 'vr/replace)
+; (define-key gtags-mode-map (kbd "M-*") 'vr/replace)
 
 (defun constpop ()
   "Visit /v/inf/inf/namesvc/source/constPopulation.xml."
