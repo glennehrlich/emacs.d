@@ -7,7 +7,5 @@
             (when (derived-mode-p 'java-mode)
               (ggtags-mode 1))))
 
-(customize-set-variable 'ggtags-auto-jump-to-match 'nil)
-
 (provide 'my-ggtags)
 
