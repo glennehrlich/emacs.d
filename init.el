@@ -33,9 +33,9 @@
   :defer t
   :config (require 'my-eshell))
 
-;; (use-package ess-site
-;;   :defer t
-;;   :commands julia)
+(use-package ggtags
+  :defer t
+  :config (require 'my-ggtags))
 
 ;; Can not use use-package because of warnings.
 (with-no-warnings (require 'my-ido))

@@ -2,6 +2,7 @@
 
 (require 'cc-mode)
 (require 'elec-pair nil t) ;; need to do this until I have emacs 24.4 everywhere
+(require 'ggtags) ;; further customization of ggtags is in my-ggtags
 (require 'wrap-region)
 
 ;; Not yet ready for boeing
