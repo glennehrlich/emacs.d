@@ -46,9 +46,11 @@
       (set-marker end-marker nil)
       (set-marker next-line-marker nil))))
 
-(defalias 'rb 'rename-buffer)
-
 (defalias 'ar 'align-regexp)
+
+(defalias 'eb 'ediff-buffers)
+
+(defalias 'rb 'rename-buffer)
 
 (defun align-c-function-parameters ()
   "Align function call parameters in region."
