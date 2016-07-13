@@ -10,5 +10,7 @@
             'magit-format-duration--format-date)
 (setq magit-log-margin-spec '(40 13 magit-duration-spec))
 
+(customize-set-variable 'magit-log-arguments '("--graph" "--color" "-n256"))
+
 (provide 'my-magit)
 
