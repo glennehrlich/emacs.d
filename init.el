@@ -37,6 +37,10 @@
   :defer t
   :config (require 'my-ggtags))
 
+(use-package git-timemachine
+  :defer t
+  :config (require 'my-git-timemachine))
+
 ;; Can not use use-package because of warnings.
 (with-no-warnings (require 'my-ido))
 

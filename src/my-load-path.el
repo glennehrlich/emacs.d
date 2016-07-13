@@ -49,6 +49,7 @@
                       flycheck
                       fuzzy
                       ggtags
+                      git-timemachine
                       haskell-mode
                       hi2
                       htmlize
