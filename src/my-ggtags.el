@@ -7,5 +7,7 @@
             (when (derived-mode-p 'java-mode)
               (ggtags-mode 1))))
 
+(customize-set-variable 'ggtags-global-abbreviate-filename nil)
+
 (provide 'my-ggtags)
 
