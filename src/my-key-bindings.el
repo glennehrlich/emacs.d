@@ -6,10 +6,6 @@
 (keyboard-translate ?\( ?\[) ; ( -> [
 (keyboard-translate ?\) ?\]) ; ) -> ]
 
-;; These must be unbind because on mac, suspend-frame crashes emacs.
-(global-unset-key (kbd "C-z"))     ; suspend-frame
-(global-unset-key (kbd "C-x C-z")) ; suspend-frame
-
 ;; Function keys.
 (global-set-key (kbd "<f1>")  'call-last-kbd-macro)
 (global-set-key (kbd "<f2>")  'previous-error)
