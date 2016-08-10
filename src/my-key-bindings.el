@@ -1,10 +1,10 @@
 ;;;; my-key-bindings.el - Global key bindings.
 
 ;; Physical key remappings.
-(keyboard-translate ?\[ ?\() ; [ -> (
-(keyboard-translate ?\] ?\)) ; ] -> )
-(keyboard-translate ?\( ?\[) ; ( -> [
-(keyboard-translate ?\) ?\]) ; ) -> ]
+(define-key key-translation-map (kbd "[") (kbd "(")) ; [ -> (
+(define-key key-translation-map (kbd "]") (kbd ")")) ; ] -> )
+(define-key key-translation-map (kbd "(") (kbd "[")) ; ( -> [
+(define-key key-translation-map (kbd ")") (kbd "]")) ; ) -> ]
 
 ;; Function keys.
 (global-set-key (kbd "<f1>")  'call-last-kbd-macro)
