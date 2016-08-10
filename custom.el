@@ -88,7 +88,7 @@
     ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
  '(package-selected-packages
    (quote
-    (smartparens zerodark-theme wrap-region web-mode visual-regexp use-package theme-looper smex skewer-reload-stylesheets paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list darcula-theme color-theme-sanityinc-tomorrow cmake-mode bash-completion base16-theme auto-complete-clang ace-window)))
+    (zerodark-theme wrap-region web-mode visual-regexp use-package theme-looper smex smartparens skewer-reload-stylesheets paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list darcula-theme color-theme-sanityinc-tomorrow cmake-mode bash-completion base16-theme ace-window)))
  '(paradox-github-token t)
  '(python-environment-directory "~/.emacs.d.persistent/python-environments")
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
@@ -115,5 +115,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ediff-fine-diff-B ((t (:background "dark olive green"))))
- '(popup-isearch-match ((t (:background "sky blue" :foreground "black")))))
+ '(popup-isearch-match ((t (:background "sky blue" :foreground "black"))))
+ '(sp-show-pair-match-face ((t (:background "gray50")))))
 
