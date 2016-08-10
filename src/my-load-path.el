@@ -77,6 +77,7 @@
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets
+                      smartparens
                       smex
                       theme-looper
                       use-package

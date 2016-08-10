@@ -96,6 +96,9 @@
   :defer t
   :config (require 'my-shell))
 
+(use-package smartparens-config
+  :init (require 'my-smartparens))
+
 (use-package subword
   :if (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   :diminish subword-mode
