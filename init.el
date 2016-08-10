@@ -44,10 +44,6 @@
 ;; Can not use use-package because of warnings.
 (with-no-warnings (require 'my-ido))
 
-(eval-when-compile (autoload 'gid "idutils" nil t))
-(use-package idutils
-  :commands (gid))
-
 (use-package haskell-mode
   :defer t
   :config (require 'my-haskell))
