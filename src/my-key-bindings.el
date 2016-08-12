@@ -44,7 +44,6 @@
 (global-set-key (kbd "M-g") 'avy-goto-line)
 (global-set-key (kbd "M-o") 'ace-window) ;; really an avy package
 
-
 ;; Command history.
 (define-key minibuffer-local-map (kbd "<f7>") 'previous-history-element)
 (define-key minibuffer-local-map (kbd "<f8>") 'next-history-element)
@@ -56,6 +55,10 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window) ; was list-buffers
 (global-set-key (kbd "C-=")     'er/expand-region)
 (global-set-key (kbd "C-\\")    'er/contract-region)
+
+;; Hungry delete commands.
+(global-set-key (kbd "C-c <backspace>")  'hungry-delete-backward)
+(global-set-key (kbd "C-c <deletechar>") 'hungry-delete-forward)
 
 ;; Special keys.
 (eval-when-compile (autoload 'recompile "compile" nil t))
