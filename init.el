@@ -54,6 +54,7 @@
   :config (global-hungry-delete-mode))
 
 (use-package json-mode
+  :defer t
   :mode "\\.czml\\'")
 
 (use-package lisp-mode
@@ -61,16 +62,21 @@
   :config (require 'my-lisp))
 
 (use-package markdown-mode
+  :defer t
   :mode "\\.md\\'"
   :mode "\\.markdown\\'")
 
 (use-package my-backup)
 
-(use-package my-ediff)
+(use-package ediff
+  :defer t
+  :config (require 'my-ediff))
 
 ;; Elisp is special and needs both :commands and :init.
 ;; 2015/01/06: error with flycheck prevents this from loading.
-(use-package my-elisp)
+(use-package elisp-mode
+  :defer t
+  :config (require 'my-elisp))
 ;; (use-package emacs-lisp-mode
 ;;   :commands (emacs-lisp-mode)
 ;;   :init (require 'my-elisp))
@@ -79,12 +85,16 @@
 
 (use-package my-local)
 
-(use-package my-magit)
+(use-package magit
+  :defer t
+  :config (require 'my-magit))
 
 (use-package my-windows
   :if (eq system-type 'windows-nt))
 
-(use-package my-theme-looper)
+(use-package theme-looper
+  :defer t
+  :config (require 'my-theme-looper))
 
 (use-package paredit
   :init (require 'my-paredit))
@@ -102,18 +112,18 @@
   :config (require 'my-shell))
 
 (use-package smartparens-config
-  :init (require 'my-smartparens))
+  :config (require 'my-smartparens))
 
 (use-package subword
   :if (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   :diminish subword-mode
-  :init (global-subword-mode 1))
+  :config (global-subword-mode 1))
 
 (use-package visual-regexp
   :commands (vr/replace vr/query-replace))
 
 (use-package winner
-  :init (winner-mode 1))
+  :config (winner-mode 1))
 
 (eval-when-compile (autoload 'yas "my-yas" nil t))
 (use-package my-yas
