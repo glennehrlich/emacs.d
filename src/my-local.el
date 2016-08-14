@@ -124,7 +124,7 @@
   (interactive)
   (dired "~/r/notes"))
 
-(defun notes-personal ()
+(defun notes.personal ()
   "\"Edit\" directory ~/r/notes.personal using `dired'."
   (interactive)
   (dired "~/r/notes.personal"))
