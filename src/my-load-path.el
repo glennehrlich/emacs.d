@@ -79,6 +79,7 @@
                       smartparens
                       smex
                       theme-looper
+                      undo-tree
                       use-package
                       visual-regexp
                       web-mode

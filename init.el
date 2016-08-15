@@ -66,8 +66,6 @@
   :mode "\\.md\\'"
   :mode "\\.markdown\\'")
 
-(use-package my-backup)
-
 (use-package ediff
   :defer t
   :config (require 'my-ediff))
@@ -81,13 +79,17 @@
 ;;   :commands (emacs-lisp-mode)
 ;;   :init (require 'my-elisp))
 
+(use-package magit
+  :defer t
+  :config (require 'my-magit))
+
+(use-package my-backup)
+
 (use-package my-key-bindings)
 
 (use-package my-local)
 
-(use-package magit
-  :defer t
-  :config (require 'my-magit))
+(use-package my-undo-tree)
 
 (use-package my-windows
   :if (eq system-type 'windows-nt))
