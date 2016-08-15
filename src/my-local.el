@@ -119,6 +119,11 @@
   (shell)
   (rename-buffer "k0"))
 
+(defun meetings ()
+  "\"Edit\" directory ~/r/meetings using `dired'."
+  (interactive)
+  (dired "~/r/meetings"))
+
 (defun notes ()
   "\"Edit\" directory ~/r/notes using `dired'."
   (interactive)
