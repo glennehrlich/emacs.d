@@ -10,6 +10,7 @@ ELCFILES  = $(LISPFILES:.el=.elc)
 
 ELPA = emacs.d.elpa
 ELPA_DIR = ~/.$(ELPA)
+ELPA_BACKUP_DIR = $(ELPA_DIR).backup
 ELPA_TAR = ~/$(ELPA).tar.gz
 PERSISTENT_DIR = ~/.emacs.d.persistent
 GIT_BUNDLE = ~/emacs.d.bundle
@@ -26,8 +27,8 @@ clean:
 	rm -f $(ELCFILES)
 
 update_elpa:
-	rm -rf $(ELPA_DIR).old
-	mv $(ELPA_DIR) $(ELPA_DIR).old
+	mkdir -p $(ELPA_BACKUP_DIR)
+	mv $(ELPA_DIR) $(ELPA_BACKUP_DIR)/$(ELPA)_$(shell date "+%Y-%m-%d_%H%M%S")
 	$(EMACS_BATCH) -f get-my-packages
 	@echo "sleeping 5 seconds in order to touch all *.elc files"
 	sleep 5
