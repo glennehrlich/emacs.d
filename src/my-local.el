@@ -16,9 +16,9 @@
     nil))
 
 (defun branches ()
-  "\"Edit\" directory ~/r/branhces using `dired'."
+  "\"Edit\" directory ~/r/branches/2016 using `dired'."
   (interactive)
-  (dired "~/r/branches"))
+  (dired "~/r/branches/2016"))
 
 (defun my-apply-keyboard-macro-to-region-lines-query-for-macro (top bottom macro)
   "Apply keyboard macro to all lines in the region.  Query for the macro name."
