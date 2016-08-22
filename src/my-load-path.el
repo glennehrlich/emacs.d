@@ -73,6 +73,7 @@
                       paredit
                       paredit-menu
                       popup
+                      puml-mode
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets

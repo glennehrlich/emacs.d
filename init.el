@@ -89,6 +89,11 @@
 
 (use-package my-local)
 
+(use-package puml-mode
+  :defer t
+  :mode ("\\.puml\\'" . puml-mode)
+  :config (require 'my-puml))
+
 (use-package my-undo-tree)
 
 (use-package my-windows
