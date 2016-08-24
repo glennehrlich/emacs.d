@@ -26,6 +26,7 @@
 ;; $ sudo find / -name .git
 (customize-set-variable 'magit-repository-directories
                         '(
+                          ("/gitlab/kinetx_glenn/design" . 0)
                           ("/gitlab/kinetx_glenn/examples" . 0)
                           ("/gitlab/kinetx_glenn/python" . 0)
                           ("/gitlab/kinetx_python/k" . 0)
