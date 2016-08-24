@@ -107,8 +107,8 @@
   :defer t
   :config (require 'my-theme-looper))
 
-(use-package paredit
-  :init (require 'my-paredit))
+;; (use-package paredit
+;;   :init (require 'my-paredit))
 
 (use-package python
   :defer t
