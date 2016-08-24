@@ -72,6 +72,8 @@
 
 (global-set-key (kbd "<kp-delete>") 'magit-status) ; Mac (Del key)
 (global-set-key (kbd "<delete>")    'magit-status) ; boeing-linux (Del key)
+(global-set-key (kbd "M-<delete>")  'magit-list-repositories)
+
 
 ;; Stop overwrite mode
 (global-set-key (kbd "<insert>") nil)
