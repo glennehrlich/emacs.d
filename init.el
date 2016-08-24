@@ -89,10 +89,14 @@
 
 (use-package my-local)
 
+;; puml-mode calls the plantuml jar file when byte compiling and on
+;; first load, hence the jar location has to be set before puml-mode
+;; is loaded or compiled. Unfortunately, this can not be done in
+;; custom.el.
+(eval-and-compile (customize-set-variable 'puml-plantuml-jar-path "/usr/local/bin/plantuml.jar"))
 (use-package puml-mode
   :defer t
-  :mode ("\\.puml\\'" . puml-mode)
-  :config (require 'my-puml))
+  :mode ("\\.puml\\'" . puml-mode))
 
 (use-package my-undo-tree)
 
