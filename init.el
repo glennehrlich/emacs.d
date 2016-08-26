@@ -107,6 +107,13 @@
   :defer t
   :config (require 'my-theme-looper))
 
+;; glenn: commented out because paredit creates a binding for
+;; M-<delete> that for some reason I can't override globally (I want
+;; M-<delete> to be magit-list-repositories instead). As I hardly ever
+;; edit lisp code anymore and smartparens seems to be working on in
+;; lisp code, I'm tentatively not using paredit mode.
+;;
+;; At some point, permamently delete this and my-paredit.el.
 ;; (use-package paredit
 ;;   :init (require 'my-paredit))
 
