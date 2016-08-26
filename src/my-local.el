@@ -74,6 +74,11 @@
   (eshell) (rename-buffer "e1")
   (eshell) (rename-buffer "e0"))
 
+(defun meetings ()
+  "\"Edit\" directory ~/r/meetings/2016 using `dired'."
+  (interactive)
+  (dired "~/r/meetings/2016"))
+
 (defun ptodo ()
   "Visit ~/r/notes.personal/ptodo.org."
   (interactive)
@@ -118,11 +123,6 @@
   (cd "/k")
   (shell)
   (rename-buffer "k0"))
-
-(defun meetings ()
-  "\"Edit\" directory ~/r/meetings using `dired'."
-  (interactive)
-  (dired "~/r/meetings"))
 
 (defun notes ()
   "\"Edit\" directory ~/r/notes using `dired'."
