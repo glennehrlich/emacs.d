@@ -18,7 +18,7 @@
  '(comint-input-ignoredups t)
  '(compilation-scroll-output t)
  '(compilation-window-height 6)
- '(custom-enabled-themes (quote (base16-chalk-dark)))
+ '(custom-enabled-themes (quote (base16-chalk)))
  '(custom-safe-themes t)
  '(delete-old-versions t)
  '(delete-selection-mode t)
@@ -88,7 +88,7 @@
     ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
  '(package-selected-packages
    (quote
-    (zerodark-theme wrap-region web-mode visual-regexp use-package undo-tree theme-looper smex smartparens skewer-reload-stylesheets paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list darcula-theme color-theme-sanityinc-tomorrow cmake-mode bash-completion base16-theme ace-window)))
+    (zerodark-theme wrap-region web-mode visual-regexp use-package undo-tree theme-looper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list cmake-mode bash-completion base16-theme ace-window)))
  '(paradox-github-token t)
  '(python-environment-directory "~/.emacs.d.persistent/python-environments")
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")

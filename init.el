@@ -104,7 +104,6 @@
   :if (eq system-type 'windows-nt))
 
 (use-package theme-looper
-  :defer t
   :config (require 'my-theme-looper))
 
 ;; glenn: commented out because paredit creates a binding for
