@@ -58,7 +58,7 @@
   "Open a shell in /k."
   (interactive)
   (cd "/k")
-  (eshell)
+  (shell)
   (rename-buffer "k0"))
 
 (defun meetings ()
@@ -191,7 +191,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
-  (eshells)
+  (shells)
   (ptodo)
   (k-shell)
   (todo))
