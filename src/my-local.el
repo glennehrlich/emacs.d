@@ -2,6 +2,18 @@
 
 (require 'recentf)
 
+(defalias 'ac 'align-c-function-parameters)
+(defalias 'ar 'align-regexp)
+(defalias 'eb 'ediff-buffers)
+(defalias 'rb 'rename-buffer)
+
+(defun align-c-function-parameters ()
+  "Align function call parameters in region."
+  (interactive)
+  (unless (region-active-p) (error "No region selected"))
+  (align-regexp (region-beginning) (region-end) "[,(]\\(\\s-*\\)" 1 1 t)
+  (align-regexp (region-beginning) (region-end) "\\(\\s-*\\)\\()[ \t]*;\\)" 1 1 t))
+
 (defun any-mode-untabify ()
   "Untabify automatically on file write.  Add this to a mode hook:
 
@@ -20,88 +32,6 @@
   (interactive)
   (dired "~/r/branches/2016"))
 
-(defun my-apply-keyboard-macro-to-region-lines-query-for-macro (top bottom macro)
-  "Apply keyboard macro to all lines in the region.  Query for the macro name."
-  (interactive "r\nafunction: ")
-  (or macro
-      (progn
-	(if (null last-kbd-macro)
-	    (error "No keyboard macro has been defined"))
-	(setq macro last-kbd-macro)))
-  (save-excursion
-    (let ((end-marker (copy-marker bottom))
-	  next-line-marker)
-      (goto-char top)
-      (if (not (bolp))
-	  (forward-line 1))
-      (setq next-line-marker (point-marker))
-      (while (< next-line-marker end-marker)
-	(goto-char next-line-marker)
-	(save-excursion
-	  (forward-line 1)
-	  (set-marker next-line-marker (point)))
-	(save-excursion
-	  (let ((mark-active nil))
-	    (execute-kbd-macro macro))))
-      (set-marker end-marker nil)
-      (set-marker next-line-marker nil))))
-
-(defalias 'ar 'align-regexp)
-
-(defalias 'eb 'ediff-buffers)
-
-(defalias 'rb 'rename-buffer)
-
-(defun align-c-function-parameters ()
-  "Align function call parameters in region."
-  (interactive)
-  (unless (region-active-p) (error "No region selected"))
-  (align-regexp (region-beginning) (region-end) "[,(]\\(\\s-*\\)" 1 1 t)
-  (align-regexp (region-beginning) (region-end) "\\(\\s-*\\)\\()[ \t]*;\\)" 1 1 t))
-(defalias 'ac 'align-c-function-parameters)
-
-(defun shells ()
-  "Create shells s0, s1, and s2."
-  (interactive)
-  (shell) (rename-buffer "s2")
-  (shell) (rename-buffer "s1")
-  (shell) (rename-buffer "s0"))
-
-(defun eshells ()
-  "Create eshells e0, e1, and e2."
-  (interactive)
-  (eshell) (rename-buffer "e2")
-  (eshell) (rename-buffer "e1")
-  (eshell) (rename-buffer "e0"))
-
-(defun meetings ()
-  "\"Edit\" directory ~/r/meetings/2016 using `dired'."
-  (interactive)
-  (dired "~/r/meetings/2016"))
-
-(defun ptodo ()
-  "Visit ~/r/notes.personal/ptodo.org."
-  (interactive)
-  (find-file "~/r/notes.personal/ptodo.org"))
-
-(defun todo ()
-  "Visit ~/r/kinetx/todo.org."
-  (interactive)
-  (find-file "~/r/kinetx/todo.org"))
-
-(defun passwords ()
-  "Visit ~/r/notes/passwords.org."
-  (interactive)
-  (find-file "~/r/notes/passwords.org"))
-
-(defun start ()
-  "Create the shells and visit ~/r/kinetx/todo.org."
-  (interactive)
-  (shells)
-  (ptodo)
-  (k-shell)
-  (todo))
-
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
   (interactive)
@@ -111,6 +41,13 @@
   "\"Edit\" directory ~/.emacs.d using `dired'."
   (interactive)
   (dired "~/.emacs.d"))
+
+(defun eshells ()
+  "Create eshells e0, e1, and e2."
+  (interactive)
+  (eshell) (rename-buffer "e2")
+  (eshell) (rename-buffer "e1")
+  (eshell) (rename-buffer "e0"))
 
 (defun home ()
   "\"Edit\" directory ~ using `dired'."
@@ -124,20 +61,10 @@
   (shell)
   (rename-buffer "k0"))
 
-(defun notes ()
-  "\"Edit\" directory ~/r/notes using `dired'."
+(defun meetings ()
+  "\"Edit\" directory ~/r/meetings/2016 using `dired'."
   (interactive)
-  (dired "~/r/notes"))
-
-(defun notes.personal ()
-  "\"Edit\" directory ~/r/notes.personal using `dired'."
-  (interactive)
-  (dired "~/r/notes.personal"))
-
-(defun my-current-line ()
-  "Return the current line."
-  (interactive)
-  (buffer-substring (line-beginning-position) (line-end-position)))
+  (dired "~/r/meetings/2016"))
 
 (defun my-apply-function-to-region-lines (fn)
   "Apply function to all lines in the region.
@@ -172,6 +99,81 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
       (set-marker end-marker nil)
       (set-marker next-line-marker nil))))
 
+(defun my-apply-keyboard-macro-to-region-lines-query-for-macro (top bottom macro)
+  "Apply keyboard macro to all lines in the region.  Query for the macro name."
+  (interactive "r\nafunction: ")
+  (or macro
+      (progn
+	(if (null last-kbd-macro)
+	    (error "No keyboard macro has been defined"))
+	(setq macro last-kbd-macro)))
+  (save-excursion
+    (let ((end-marker (copy-marker bottom))
+	  next-line-marker)
+      (goto-char top)
+      (if (not (bolp))
+	  (forward-line 1))
+      (setq next-line-marker (point-marker))
+      (while (< next-line-marker end-marker)
+	(goto-char next-line-marker)
+	(save-excursion
+	  (forward-line 1)
+	  (set-marker next-line-marker (point)))
+	(save-excursion
+	  (let ((mark-active nil))
+	    (execute-kbd-macro macro))))
+      (set-marker end-marker nil)
+      (set-marker next-line-marker nil))))
+
+(defun my-current-line ()
+  "Return the current line."
+  (interactive)
+  (buffer-substring (line-beginning-position) (line-end-position)))
+
+(defun my-narrow-to-region ()
+  "Like `narrow-to-region', except that it deactivates the mark."
+  (interactive)
+  (narrow-to-region (region-beginning) (region-end))
+  (deactivate-mark)
+  (goto-char (point-min)))
+
+(defun my-recentf-delete ()
+  "Delete the recent list."
+  (interactive)
+  (setq recentf-list nil))
+
+(defun notes ()
+  "\"Edit\" directory ~/r/notes using `dired'."
+  (interactive)
+  (dired "~/r/notes"))
+
+(defun notes.personal ()
+  "\"Edit\" directory ~/r/notes.personal using `dired'."
+  (interactive)
+  (dired "~/r/notes.personal"))
+
+(defun passwords ()
+  "Visit ~/r/notes/passwords.org."
+  (interactive)
+  (find-file "~/r/notes/passwords.org"))
+
+(defun phone-numbers ()
+  "Visit ~/r/notes/phone_numbers.org."
+  (interactive)
+  (find-file "~/r/notes/phone_numbers.org"))
+
+(defun ptodo ()
+  "Visit ~/r/notes.personal/ptodo.org."
+  (interactive)
+  (find-file "~/r/notes.personal/ptodo.org"))
+
+(defun shells ()
+  "Create shells s0, s1, and s2."
+  (interactive)
+  (shell) (rename-buffer "s2")
+  (shell) (rename-buffer "s1")
+  (shell) (rename-buffer "s0"))
+
 (defun site-packages ()
   "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
   (interactive)
@@ -186,22 +188,18 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (delete-duplicate-lines (region-beginning)
                           (region-end)))
 
-(defun phone-numbers ()
-  "Visit ~/r/notes/phone_numbers.org."
+(defun start ()
+  "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
-  (find-file "~/r/notes/phone_numbers.org"))
+  (shells)
+  (ptodo)
+  (k-shell)
+  (todo))
 
-(defun my-narrow-to-region ()
-  "Like `narrow-to-region', except that it deactivates the mark."
+(defun todo ()
+  "Visit ~/r/kinetx/todo.org."
   (interactive)
-  (narrow-to-region (region-beginning) (region-end))
-  (deactivate-mark)
-  (goto-char (point-min)))
-
-(defun my-recentf-delete ()
-  "Delete the recent list."
-  (interactive)
-  (setq recentf-list nil))
+  (find-file "~/r/kinetx/todo.org"))
 
 (provide 'my-local)
 
