@@ -48,11 +48,6 @@
   :defer t
   :config (require 'my-haskell))
 
-(use-package hungry-delete
-  :ensure t
-  :diminish hungry-delete-mode
-  :config (global-hungry-delete-mode))
-
 (use-package json-mode
   :defer t
   :mode "\\.czml\\'")
