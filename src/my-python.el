@@ -35,6 +35,8 @@
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
 (setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
 
+(customize-set-variable 'jedi:get-in-function-call-delay 10000000) ; prevent annoying jedi in function display
+
 ;; Turn on elpy.
 (elpy-enable)
 
