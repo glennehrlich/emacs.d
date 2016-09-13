@@ -35,6 +35,7 @@
                       bash-completion
                       bind-key
                       cmake-mode
+                      counsel
                       dash
                       diminish
                       dropdown-list
@@ -56,6 +57,7 @@
                       ido-ubiquitous
                       ido-vertical-mode
                       impatient-mode
+                      ivy
                       jedi
                       js2-mode
                       json-mode
@@ -78,11 +80,14 @@
                       skewer-reload-stylesheets
                       smartparens
                       smex
+                      swiper
                       theme-looper
                       undo-tree
                       use-package
                       visual-regexp
                       web-mode
+                      wgrep
+                      wgrep-ag
                       wrap-region
                       yasnippet
                       zerodark-theme

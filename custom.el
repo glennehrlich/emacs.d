@@ -88,9 +88,9 @@
     ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
  '(package-selected-packages
    (quote
-    (zerodark-theme wrap-region web-mode visual-regexp use-package undo-tree theme-looper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list cmake-mode bash-completion base16-theme ace-window)))
+    (zerodark-theme wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree theme-looper swiper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi ivy impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list counsel cmake-mode bash-completion base16-theme avy ace-window)))
  '(paradox-github-token t)
- '(puml-plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
+ '(puml-plantuml-jar-path "/usr/local/bin/plantuml.jar")
  '(python-environment-directory "~/.emacs.d.persistent/python-environments")
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(save-place nil nil (saveplace))
