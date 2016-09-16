@@ -82,6 +82,7 @@
                       smex
                       swiper
                       theme-looper
+                      try
                       undo-tree
                       use-package
                       visual-regexp
