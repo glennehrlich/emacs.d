@@ -22,6 +22,7 @@ all: $(ELCFILES)
 	@echo "sleeping 5 seconds in order to touch all *.elc files"
 	sleep 5
 	find . -name "*.elc" | xargs touch
+	rm -f init.elc~
 
 clean:
 	rm -f $(ELCFILES)
@@ -33,6 +34,7 @@ update_elpa:
 	@echo "sleeping 5 seconds in order to touch all *.elc files"
 	sleep 5
 	find $(ELPA_DIR) -name "*.elc" | xargs touch
+	rm -f init.elc~
 
 create_elpa_tar:
 	cd ~
