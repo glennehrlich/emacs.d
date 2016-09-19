@@ -148,19 +148,9 @@
 ;;; These must appear last because they may rebind keys that are set
 ;;; in my-key-bindings.el
 
-;; Normal linux running on parallels.
+;; Linux.
 (use-package my-linux
-  :if (and (eq system-type 'gnu/linux)
-           (not (getenv "BOEING_LINUX"))))
-
-;; Boeing linux.
-(use-package my-boeing-linux
-  :if (and (eq system-type 'gnu/linux)
-           (getenv "BOEING_LINUX")))
-
-;; Boeing solaris.
-(use-package my-boeing-solaris
-  :if (eq system-type 'usg-unix-v))
+  :if (eq system-type 'gnu/linux))
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
