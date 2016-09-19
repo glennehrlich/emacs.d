@@ -32,6 +32,11 @@
   (interactive)
   (dired "~/r/branches/2016"))
 
+(defun credit-cards ()
+  "Visit ~/r/notes.personal/credit_cards.org."
+  (interactive)
+  (find-file "~/r/notes.personal/credit_cards.org"))
+
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
   (interactive)
