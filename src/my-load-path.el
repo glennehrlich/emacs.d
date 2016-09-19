@@ -34,6 +34,7 @@
                       base16-theme
                       bash-completion
                       bind-key
+                      cmake-font-lock
                       cmake-mode
                       counsel
                       dash
