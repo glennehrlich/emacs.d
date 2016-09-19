@@ -13,7 +13,6 @@
                               ))
 
 (global-set-key (kbd "<M-f12>")   'theme-looper-enable-next-theme) ; Mac
-(global-set-key (kbd "<M-pause>") 'theme-looper-enable-next-theme) ; boeing-linux
 
 (provide 'my-theme-looper)
 
