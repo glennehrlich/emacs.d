@@ -202,9 +202,9 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (todo))
 
 (defun todo ()
-  "Visit ~/r/kinetx/todo.org."
+  "Visit ~/r/notes.personal/todo.org."
   (interactive)
-  (find-file "~/r/kinetx/todo.org"))
+  (find-file "~/r/notes.personal/todo.org"))
 
 (provide 'my-local)
 
