@@ -1,6 +1,5 @@
 ;;;; my-load-path.el - Set up the load-path and package system.
 
-(load-library "url-handlers")
 (require 'package)
 
 ; suppress messages like "ad-handle-definition: `ido-completing-read' got redefined"
