@@ -201,6 +201,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (k-shell)
   (todo))
 
+(defun timekeeping ()
+  "\"Edit\" directory ~/r/kinetx/timekeeping using `dired'."
+  (interactive)
+  (dired "~/r/kinetx/timekeeping"))
+
 (defun todo ()
   "Visit ~/r/notes.personal/todo.org."
   (interactive)
