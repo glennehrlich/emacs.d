@@ -1,13 +1,5 @@
 ;;;; my-load-path.el - Set up the load-path and package system.
 
-;; Nightly builds of emacs from http://emacsformacosx.com have this
-;; set to a local build machine directory that does not exist on my
-;; machine.  This is needed for things like hexl.
-;; (if (eq system-type 'darwin)
-;;     (progn
-;;       (setq exec-directory "/Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_9")
-;;       (message "darwin detected: setting exec-directory to /Applications/Emacs.app/Contents/MacOS/libexec-x86_64-10_9")))
-
 (load-library "url-handlers")
 (require 'package)
 
