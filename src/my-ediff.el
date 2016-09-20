@@ -6,6 +6,10 @@
 ;; use setq-default.
 (setq-default ediff-ignore-similar-regions t)
 
+(customize-set-variable 'ediff-split-window-function 'split-window-horizontally)
+(customize-set-variable 'ediff-use-long-help-message nil)
+(customize-set-variable 'ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (defun my-ediff-quit-no-prompt (reverse-default-keep-variants)
   "Finish an Ediff session and exit Ediff with no prompting."
   (interactive "P")

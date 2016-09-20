@@ -2,6 +2,8 @@
 
 (require 'calc)
 
+(customize-set-variable 'calc-settings-file "~/.emacs.d/calc-settings.el")
+
 (defun calc-eval-region (beg end)
   "Evaluate the algebraic calc expression in the region and replace it with the result."
   (interactive "r")
