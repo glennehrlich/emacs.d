@@ -11,7 +11,6 @@
  '(auto-save-list-file-prefix "~/.emacs.d.persistent/auto-save-list/saves-")
  '(blink-cursor-blinks 0)
  '(c-offsets-alist (quote ((arglist-intro . +))))
- '(calc-settings-file "~/.emacs.d/calc-settings.el")
  '(column-number-mode t)
  '(comint-input-ignoredups t)
  '(compilation-scroll-output t)
