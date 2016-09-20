@@ -4,6 +4,8 @@
 (require 'elpy)
 (require 'jedi)
 
+(customize-set-variable 'python-environment-directory "~/.emacs.d.persistent/python-environments")
+
 ;; Add some key bindings when elpy-mode is in effect. These could be
 ;; done in python-mode-hook, but adding them to elpy-mode-hook means I
 ;; don't have to determine if elpy-mode-hook overrides anything in
