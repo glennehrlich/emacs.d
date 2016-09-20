@@ -12,7 +12,7 @@
 (global-set-key (kbd "<f3>")  'next-error)
 (global-set-key (kbd "<f6>")  'undo)
 (global-set-key (kbd "<f7>")  'repeat-complex-command)
-(global-set-key (kbd "<f8>")  'lgrep)
+; (global-set-key (kbd "<f8>")  'lgrep) ; glenn: temporarily trying counsel-ag for this
 (global-set-key (kbd "<f9>")  'my-narrow-to-region)
 (global-set-key (kbd "<f10>") 'widen)
 (global-set-key (kbd "<f11>") (lambda () "Scroll the window down one line." (interactive) (scroll-down 1)))
@@ -21,7 +21,7 @@
 ;; Control function keys.
 (global-set-key (kbd "C-<f6>") 'winner-undo)
 (global-set-key (kbd "C-<f7>") 'winner-redo)
-(global-set-key (kbd "C-<f8>") 'rgrep)
+; (global-set-key (kbd "C-<f8>") 'rgrep) ; glenn: temporarily trying counsel-ag for this
 
 ;; Meta function keys.
 (global-set-key (kbd "M-<f6>") (lambda () "Call `revert-buffer' without confirmation." (interactive) (revert-buffer t t)))
