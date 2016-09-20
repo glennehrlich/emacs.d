@@ -2,7 +2,7 @@
 
 (require 'package)
 
-; suppress messages like "ad-handle-definition: `ido-completing-read' got redefined"
+; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
 (add-to-list 'load-path "~/.emacs.d/src" t)
@@ -36,8 +36,8 @@
                       elpy
                       exec-path-from-shell
                       expand-region
-                      flx-ido
                       flycheck
+                      flx
                       fuzzy
                       ggtags
                       git-timemachine
@@ -46,9 +46,6 @@
                       htmlize
                       hydra
                       idea-darkula-theme
-                      ido-hacks
-                      ido-ubiquitous
-                      ido-vertical-mode
                       impatient-mode
                       ivy
                       ivy-hydra

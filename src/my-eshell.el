@@ -3,13 +3,6 @@
 (require 'eshell)
 (require 'em-hist)
 
-;; For some reason, quitting an eshell buffer without having dired
-;; loaded causes an undefined symbol error on dired-get-filename.  A
-;; stack trace shows this actually comes from ido doing something, but
-;; it's triggered by eshell, so I'm fixing this by loading dired when
-;; eshell is loadd.
-(require 'dired)
-
 (customize-set-variable 'eshell-aliases-file "~/.emacs.d/eshell-alias")
 (customize-set-variable 'eshell-directory-name "~/.emacs.d.persistent/eshell/")
 (customize-set-variable 'eshell-hist-ignoredups t)
