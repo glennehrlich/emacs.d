@@ -5,7 +5,7 @@
 ;; (setq debug-on-error t)
 (setq debug-on-error nil)
 
-; suppress messages like "ad-handle-definition: `ido-completing-read' got redefined"
+; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
 (load (expand-file-name "src/my-load-path.el" (file-name-directory load-file-name)))
@@ -40,9 +40,6 @@
 (use-package git-timemachine
   :defer t
   :config (require 'my-git-timemachine))
-
-;; Can not use use-package because of warnings.
-(with-no-warnings (require 'my-ido))
 
 (use-package haskell-mode
   :defer t
