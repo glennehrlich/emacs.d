@@ -12,6 +12,8 @@
 
 (customize-set-variable 'magit-log-arguments '("--graph" "--color" "-n256"))
 
+(setq magit-completing-read-function 'ivy-completing-read)
+
 ;; The list of repositories reported by magit-list-repositories, bound
 ;; to M-<delete> in my-key-bindings.el.
 

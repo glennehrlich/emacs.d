@@ -56,7 +56,7 @@
  '(magit-log-arguments (quote ("--graph" "--color" "-n256")))
  '(package-selected-packages
    (quote
-    (zerodark-theme wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi ivy impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ace-window)))
+    (zerodark-theme wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi ivy-hydra ivy impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hydra hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ace-window)))
  '(paradox-github-token t)
  '(puml-plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")

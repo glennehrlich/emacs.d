@@ -44,12 +44,14 @@
                       haskell-mode
                       hi2
                       htmlize
+                      hydra
                       idea-darkula-theme
                       ido-hacks
                       ido-ubiquitous
                       ido-vertical-mode
                       impatient-mode
                       ivy
+                      ivy-hydra
                       jedi
                       js2-mode
                       json-mode

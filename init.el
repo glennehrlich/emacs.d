@@ -48,6 +48,9 @@
   :defer t
   :config (require 'my-haskell))
 
+(use-package ivy
+  :config (require 'my-ivy))
+
 (use-package json-mode
   :defer t
   :mode "\\.czml\\'")
