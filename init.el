@@ -2,7 +2,7 @@
 
 (setq gc-cons-threshold 20000000)
 
-;; (setq debug-on-error t)
+; (setq debug-on-error t)
 (setq debug-on-error nil)
 
 ; Suppress messages from ad-handle-definition.
