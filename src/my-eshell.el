@@ -10,6 +10,11 @@
 ;; eshell is loadd.
 (require 'dired)
 
+(customize-set-variable 'eshell-aliases-file "~/.emacs.d/eshell-alias")
+(customize-set-variable 'eshell-directory-name "~/.emacs.d.persistent/eshell/")
+(customize-set-variable 'eshell-hist-ignoredups t)
+(customize-set-variable 'eshell-save-history-on-exit nil)
+
 (defun eshell-truncate-buffer-all ()
   "Truncate the buffer."
   (interactive)
