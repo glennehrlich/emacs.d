@@ -54,23 +54,6 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(magit-log-arguments (quote ("--graph" "--color" "-n256")))
- '(org-clock-into-drawer nil)
- '(org-clock-persist t)
- '(org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
- '(org-file-apps
-   (quote
-    ((auto-mode . emacs)
-     ("\\.mm\\'" . default)
-     ("\\.x?html?\\'" . default)
-     ("\\.pdf\\'" . default)
-     (directory . emacs))))
- '(org-return-follows-link t)
- '(org-startup-folded t)
- '(org-startup-indented t)
- '(org-table-use-standard-references t)
- '(org-todo-keywords
-   (quote
-    ((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED"))))
  '(package-selected-packages
    (quote
     (zerodark-theme wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi ivy impatient-mode ido-vertical-mode ido-ubiquitous ido-hacks idea-darkula-theme hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flycheck flx-ido expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ace-window)))
