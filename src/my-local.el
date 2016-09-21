@@ -167,11 +167,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (find-file "~/r/notes/phone_numbers.org"))
 
-(defun ptodo ()
-  "Visit ~/r/notes.personal/ptodo.org."
-  (interactive)
-  (find-file "~/r/notes.personal/ptodo.org"))
-
 (defun shells ()
   "Create shells s0, s1, and s2."
   (interactive)
@@ -197,7 +192,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
-  (ptodo)
   (k-shell)
   (todo))
 
