@@ -67,9 +67,9 @@
   (rename-buffer "k0"))
 
 (defun meetings ()
-  "\"Edit\" directory ~/r/meetings/2016 using `dired'."
+  "\"Edit\" directory ~/r/org/current/meetings using `dired'."
   (interactive)
-  (dired "~/r/meetings/2016"))
+  (dired "~/r/org/current/meetings"))
 
 (defun my-apply-function-to-region-lines (fn)
   "Apply function to all lines in the region.
