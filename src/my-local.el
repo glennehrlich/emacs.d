@@ -201,9 +201,9 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (dired "~/r/kinetx/timekeeping"))
 
 (defun todo ()
-  "Visit ~/r/notes.personal/todo.org."
+  "Visit ~/r/org/current/todo.org."
   (interactive)
-  (find-file "~/r/notes.personal/todo.org"))
+  (find-file "~/r/org/current/todo.org"))
 
 (provide 'my-local)
 
