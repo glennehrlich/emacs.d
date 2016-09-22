@@ -28,9 +28,9 @@
     nil))
 
 (defun branches ()
-  "\"Edit\" directory ~/r/branches/2016 using `dired'."
+  "\"Edit\" directory ~/r/branches/current using `dired'."
   (interactive)
-  (dired "~/r/branches/2016"))
+  (dired "~/r/branches/current"))
 
 (defun credit-cards ()
   "Visit ~/r/notes.personal/credit_cards.org."
