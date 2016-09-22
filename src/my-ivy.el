@@ -6,6 +6,8 @@
 (ivy-mode 1)
 (diminish 'ivy-mode)
 
+(customize-set-variable 'counsel-find-file-at-point t)
+
 (global-set-key (kbd "C-h f")   'counsel-describe-function)
 (global-set-key (kbd "C-h v")   'counsel-describe-variable)
 (global-set-key (kbd "C-s")     'counsel-grep-or-swiper)
