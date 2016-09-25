@@ -6,8 +6,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-list-file-prefix "~/.emacs.d.persistent/auto-save-list/saves-")
- '(backup-by-copying t)
- '(backup-directory-alist (quote (("." . "~/r/backups/emacs"))))
  '(blink-cursor-blinks 0)
  '(c-offsets-alist (quote ((arglist-intro . +))))
  '(column-number-mode t)
@@ -17,9 +15,7 @@
  '(counsel-find-file-at-point t)
  '(custom-enabled-themes (quote (base16-chalk)))
  '(custom-safe-themes t)
- '(delete-old-versions t)
  '(delete-selection-mode t)
- '(dired-kept-versions 2)
  '(enable-local-variables :all)
  '(fci-rule-color "#515151")
  '(font-lock-verbose nil)
@@ -55,10 +51,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
- '(kept-new-versions 10)
- '(kept-old-versions 10)
  '(magit-log-arguments (quote ("--graph" "--color" "-n256")))
- '(make-backup-files t)
  '(package-selected-packages
    (quote
     (zerodark-theme wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets puml-mode paredit-menu paradox org-plus-contrib noctilux-theme niflheim-theme morlock markdown-mode magit julia-shell json-mode jedi ivy-hydra ivy impatient-mode idea-darkula-theme hydra hungry-delete hi2 haskell-mode git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav eldoc-extension dropdown-list counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ace-window)))
@@ -75,7 +68,6 @@
  '(use-package-verbose t)
  '(vc-annotate-background nil)
  '(vc-make-backup-files t)
- '(version-control t)
  '(visual-line-mode nil t)
  '(woman-use-own-frame nil))
 
