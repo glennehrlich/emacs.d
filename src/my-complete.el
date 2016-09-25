@@ -35,7 +35,9 @@
 
 (require 'auto-complete-config)
 
-(setq ac-comphist-file "~/.emacs.d.persistent/auto-complete/ac-comphist.dat")
+(customize-set-variable 'ac-clang-flags '("-std=c++11"))
+(customize-set-variable 'ac-comphist-file "~/.emacs.d.persistent/auto-complete/ac-comphist.dat")
+(customize-set-variable 'ac-dictionary-files '("~.emacs.d.persistent/auto-complete"))
 
 (ac-config-default)
 
