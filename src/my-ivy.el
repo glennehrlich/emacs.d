@@ -6,6 +6,10 @@
 (ivy-mode 1)
 (diminish 'ivy-mode)
 
+;; Set this here, as we are no longer directly loading smex, but
+;; counsel-M-x will load it.
+(customize-set-variable 'smex-save-file "~/.emacs.d.persistent/smex/smex-items")
+
 (customize-set-variable 'counsel-find-file-at-point t)
 
 (global-set-key (kbd "C-h f")   'counsel-describe-function)

@@ -83,20 +83,5 @@
 (global-set-key (kbd "M-<f11>") 'nil)                  ; Help
 (global-set-key (kbd "M-<f12>") 'nil)                  ; Blank key
 
-(global-set-key (kbd "C-M-S-<f1>")  'calc)             ; Stop
-(global-set-key (kbd "C-M-S-<f2>")  'quick-calc)       ; Again
-
-;(global-set-key (kbd "C-M-S-<f3>") 'nil)              ; Props (unbindable; same as Blank key)
-(global-set-key (kbd "C-M-S-<f4>")  'calc-eval-region) ; Undo
-
-(global-set-key (kbd "C-M-S-<f5>")  'nil)              ; Front
-(global-set-key (kbd "C-M-S-<f6>")  'nil)              ; Copy
-
-(global-set-key (kbd "C-M-S-<f7>")  'nil)              ; Open
-(global-set-key (kbd "C-M-S-<f8>")  'nil)              ; Paste
-
-(global-set-key (kbd "C-M-S-<f9>")  'nil)              ; Find
-(global-set-key (kbd "C-M-S-<f10>") 'nil)              ; Cut
-
 (provide 'my-key-bindings)
 
