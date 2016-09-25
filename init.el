@@ -16,7 +16,7 @@
 (use-package my-complete)
 
 (use-package calc
-  :commands (calc quick-calc calc-eval-region)
+  :defer t
   :init (eval-when-compile (autoload 'calc-eval-region "my-calc" nil t))
   :config (require 'my-calc))
 
@@ -40,6 +40,10 @@
 (use-package git-timemachine
   :defer t
   :config (require 'my-git-timemachine))
+
+(use-package grep
+  :defer t
+  :config (require 'my-grep))
 
 (use-package haskell-mode
   :defer t
@@ -65,14 +69,9 @@
   :defer t
   :config (require 'my-ediff))
 
-;; Elisp is special and needs both :commands and :init.
-;; 2015/01/06: error with flycheck prevents this from loading.
 (use-package elisp-mode
   :defer t
   :config (require 'my-elisp))
-;; (use-package emacs-lisp-mode
-;;   :commands (emacs-lisp-mode)
-;;   :init (require 'my-elisp))
 
 (use-package magit
   :defer t
@@ -95,10 +94,8 @@
 
 (use-package my-undo-tree)
 
-(use-package my-windows
-  :if (eq system-type 'windows-nt))
-
 (use-package theme-looper
+  :defer t
   :config (require 'my-theme-looper))
 
 ;; glenn: commented out because paredit creates a binding for
@@ -132,14 +129,14 @@
   :config (global-subword-mode 1))
 
 (use-package visual-regexp
-  :commands (vr/replace vr/query-replace))
+  :defer t)
 
 (use-package winner
   :config (winner-mode 1))
 
-(eval-when-compile (autoload 'yas "my-yas" nil t))
-(use-package my-yas
-  :commands (yas))
+(use-package yasnippet
+  :defer t
+  :config (require 'my-yas))
 
 ;; Mac.
 (use-package my-darwin
@@ -151,6 +148,10 @@
 ;; Linux.
 (use-package my-linux
   :if (eq system-type 'gnu/linux))
+
+;; Windows
+(use-package my-windows
+  :if (eq system-type 'windows-nt))
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
