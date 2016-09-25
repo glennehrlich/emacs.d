@@ -28,9 +28,9 @@
     nil))
 
 (defun branches ()
-  "\"Edit\" directory ~/r/branches/current using `dired'."
+  "\"Edit\" directory ~/r/branches using `dired'."
   (interactive)
-  (dired "~/r/branches/current"))
+  (dired "~/r/branches"))
 
 (defun credit-cards ()
   "Visit ~/r/notes.personal/credit_cards.org."
@@ -67,9 +67,9 @@
   (rename-buffer "k0"))
 
 (defun meetings ()
-  "\"Edit\" directory ~/r/org/current/meetings using `dired'."
+  "\"Edit\" directory ~/r/org/meetings using `dired'."
   (interactive)
-  (dired "~/r/org/current/meetings"))
+  (dired "~/r/org/meetings"))
 
 (defun my-apply-function-to-region-lines (fn)
   "Apply function to all lines in the region.
@@ -201,9 +201,9 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (dired "~/r/kinetx/timekeeping"))
 
 (defun todo ()
-  "Visit ~/r/org/current/todo.org."
+  "Visit ~/r/org/todo.org."
   (interactive)
-  (find-file "~/r/org/current/todo.org"))
+  (find-file "~/r/org/todo.org"))
 
 (provide 'my-local)
 
