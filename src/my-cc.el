@@ -7,6 +7,9 @@
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
+(customize-set-variable 'c-offsets-alist '((arglist-intro . +)))
+
+
 ;; (define-key c-mode-base-map (kbd "DEL") 'electric-pair-backward-delete-char-untabify)
 (define-key c-mode-base-map (kbd "RET") 'align-newline-and-indent)
 (define-key c-mode-base-map (kbd "C-<return>") 'align-current)

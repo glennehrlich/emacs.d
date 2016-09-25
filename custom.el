@@ -7,7 +7,6 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-list-file-prefix "~/.emacs.d.persistent/auto-save-list/saves-")
  '(blink-cursor-blinks 0)
- '(c-offsets-alist (quote ((arglist-intro . +))))
  '(column-number-mode t)
  '(comint-input-ignoredups t)
  '(compilation-scroll-output t)
