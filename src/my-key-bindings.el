@@ -70,6 +70,7 @@
 (global-set-key (kbd "<f13>")   'save-and-compile) ; Mac (Ins key)
 
 (global-set-key (kbd "<kp-delete>") 'magit-status) ; Mac (Del key)
+(global-set-key (kbd "<delete>")    'magit-status) ; Linux (Del key)
 (global-set-key (kbd "C-x g")       'magit-status) ; recommendend key binding
 
 (global-set-key (kbd "M-<delete>") 'magit-list-repositories) ; mac
