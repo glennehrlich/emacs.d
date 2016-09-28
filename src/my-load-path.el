@@ -20,6 +20,7 @@
 
 (defvar my-packages '(
                       ace-window
+                      ag
                       auto-complete
                       avy
                       base16-theme
