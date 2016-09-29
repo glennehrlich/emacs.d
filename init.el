@@ -34,6 +34,10 @@
   :defer t
   :config (require 'my-comint))
 
+(use-package compile
+  :defer t
+  :config (require 'my-compile))
+
 (use-package ediff
   :defer t
   :config (require 'my-ediff))

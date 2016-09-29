@@ -6,8 +6,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-list-file-prefix "~/.emacs.d.persistent/auto-save-list/saves-")
- '(compilation-scroll-output t)
- '(compilation-window-height 6)
  '(custom-enabled-themes (quote (base16-chalk)))
  '(custom-safe-themes t)
  '(gdb-many-windows t)
