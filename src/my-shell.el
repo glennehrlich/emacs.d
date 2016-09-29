@@ -1,5 +1,6 @@
 ;;;; my-shell.el - Customizations for shell mode.
 
+(require 'counsel)
 (require 'shell)
 (require 'dirtrack)
 
@@ -31,9 +32,11 @@
   (let ((comint-buffer-maximum-size 0))
     (comint-truncate-buffer)))
 
-(define-key comint-mode-map (kbd "C-c SPC") nil) ;; unbind so that C-c SPC can be used for ace-jump-mode
+(define-key comint-mode-map (kbd "C-c SPC") nil) ; unbind so that C-c SPC can be used for ace-jump-mode
 (define-key comint-mode-map (kbd "C-c C-t") 'shell-truncate-buffer-all)
 (define-key comint-mode-map (kbd "C-c M-o") 'shell-truncate-buffer-all)
+
+(define-key comint-mode-map (kbd "M-r") 'counsel-shell-history) ; override comint-history-isearch-backward-regexp
 
 (provide 'my-shell)
 

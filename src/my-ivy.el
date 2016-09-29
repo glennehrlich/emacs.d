@@ -1,5 +1,6 @@
 ;;;; my-ivy.el - Customizations for ivy mode.
 
+(require 'counsel)
 (require 'diminish)
 (require 'ivy)
 
