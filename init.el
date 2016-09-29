@@ -12,7 +12,8 @@
 
 (require 'use-package)
 
-;; Setting up auto completion should occur before other modes.
+;; These should occur before any other packages.
+(use-package my-global-settings)
 (use-package my-complete)
 
 (use-package calc
@@ -28,6 +29,22 @@
 (use-package cmake-mode
   :defer t
   :config (require 'my-cmake))
+
+(use-package comint
+  :defer t
+  :config (require 'my-comint))
+
+(use-package compile
+  :defer t
+  :config (require 'my-compile))
+
+(use-package ediff
+  :defer t
+  :config (require 'my-ediff))
+
+(use-package elisp-mode
+  :defer t
+  :config (require 'my-elisp))
 
 (use-package eshell
   :defer t
@@ -64,14 +81,6 @@
   :defer t
   :mode "\\.md\\'"
   :mode "\\.markdown\\'")
-
-(use-package ediff
-  :defer t
-  :config (require 'my-ediff))
-
-(use-package elisp-mode
-  :defer t
-  :config (require 'my-elisp))
 
 (use-package magit
   :defer t
