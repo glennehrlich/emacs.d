@@ -66,7 +66,7 @@
                       paredit
                       paredit-menu
                       popup
-                      puml-mode
+                      plantuml-mode
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets
