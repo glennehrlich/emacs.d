@@ -62,7 +62,7 @@
                       niflheim-theme
                       noctilux-theme
                       org-plus-contrib
-                      paradox
+                      ; paradox ; temporarily commented out because of spinner bug
                       paredit
                       paredit-menu
                       popup
