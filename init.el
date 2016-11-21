@@ -30,10 +30,6 @@
   :defer t
   :config (require 'my-cmake))
 
-(use-package comint
-  :defer t
-  :config (require 'my-comint))
-
 (use-package compile
   :defer t
   :config (require 'my-compile))

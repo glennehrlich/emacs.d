@@ -7,7 +7,6 @@
 
 (smartparens-global-mode t)
 
-(customize-set-variable 'sp-show-pair-from-inside t)
 (custom-set-faces '(sp-show-pair-match-face ((t (:background "gray50")))))
 (show-smartparens-global-mode t)
 
