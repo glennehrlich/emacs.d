@@ -62,6 +62,7 @@
                       niflheim-theme
                       noctilux-theme
                       org-plus-contrib
+                      ox-clip
                       paradox
                       paredit
                       paredit-menu
