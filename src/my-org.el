@@ -18,7 +18,6 @@
 
 (global-set-key (kbd "C-c l") 'org-store-link)
 
-(define-key org-mode-map (kbd "C-c SPC") nil) ;; unbind so that C-c SPC can be used for ace-jump-mode
 (define-key org-mode-map (kbd "<home>") 'beginning-of-buffer)
 (define-key org-mode-map (kbd "<end>") 'end-of-buffer)
 
