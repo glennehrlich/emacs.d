@@ -35,6 +35,8 @@
 
 (require 'auto-complete-config)
 
+(customize-set-variable 'ac-comphist-file "~/.emacs.d.persistent/auto-complete/ac-comphist.dat")
+
 (ac-config-default)
 
 (setq ac-use-menu-map t)

@@ -6,7 +6,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-clang-flags (quote ("-std=c++11")) t)
- '(ac-comphist-file "~/.emacs.d.persistent/auto-complete/ac-comphist.dat")
  '(ac-dictionary-files (quote ("~.emacs.d.persistent/auto-complete")))
  '(auto-save-list-file-prefix "~/.emacs.d.persistent/auto-save-list/saves-")
  '(backup-by-copying t)
