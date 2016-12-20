@@ -16,6 +16,7 @@
 (customize-set-variable 'org-table-use-standard-references t)
 (customize-set-variable 'org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
 
+(global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
 
 (define-key org-mode-map (kbd "<home>") 'beginning-of-buffer)
