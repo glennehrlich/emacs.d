@@ -1,6 +1,7 @@
 ;;;; my-org.el - Customizations for org mode.
 
 (require 'org)
+(require 'org-checklist)
 
 (customize-set-variable 'org-clock-into-drawer nil)
 (customize-set-variable 'org-clock-persist t)
