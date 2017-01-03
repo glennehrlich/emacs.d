@@ -24,6 +24,7 @@
  '(initial-scratch-message nil)
  '(kept-new-versions 10)
  '(kept-old-versions 10)
+ '(magit-log-margin (quote (t "%Y-%m-%d %H:%M " magit-log-margin-width t 18)))
  '(make-backup-files t)
  '(package-selected-packages
    (quote
