@@ -58,6 +58,10 @@
   :defer t
   :config (require 'my-grep))
 
+(use-package groovy-mode
+  :defer t
+  :mode ("\\.g\\(?:ant\\|roovy\\|radle\\)\\'\\|Jenkinsfile\\'" . groovy-mode))
+
 (use-package haskell-mode
   :defer t
   :config (require 'my-haskell))

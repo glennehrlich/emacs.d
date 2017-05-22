@@ -42,6 +42,7 @@
                       fuzzy
                       ggtags
                       git-timemachine
+                      groovy-mode
                       haskell-mode
                       hi2
                       htmlize
