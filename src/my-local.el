@@ -157,6 +157,13 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "~/r/notes.personal"))
 
+(defun oneweb-shell ()
+  "Open a shell in ~/vm/oneweb."
+  (interactive)
+  (cd "~/vm/oneweb")
+  (shell)
+  (rename-buffer "oneweb-0"))
+
 (defun passwords ()
   "Visit ~/r/notes/passwords.org."
   (interactive)
@@ -192,7 +199,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
-  (k-shell)
+  (oneweb-shell)
   (todo))
 
 (defun timekeeping ()
