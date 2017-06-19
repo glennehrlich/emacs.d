@@ -20,8 +20,10 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
 
+;; Need to reassert these key bindings because org mode sets them.
 (define-key org-mode-map (kbd "<home>") 'beginning-of-buffer)
-(define-key org-mode-map (kbd "<end>") 'end-of-buffer)
+(define-key org-mode-map (kbd "<end>")  'end-of-buffer)
+(define-key org-mode-map (kbd "C-'")    'avy-goto-char-2)
 
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
