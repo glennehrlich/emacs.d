@@ -162,7 +162,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (cd "~/vm/oneweb")
   (shell)
-  (rename-buffer "oneweb-0"))
+  (rename-buffer "v0"))
 
 (defun passwords ()
   "Visit ~/r/notes/passwords.org."
