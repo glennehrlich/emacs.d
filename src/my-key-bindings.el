@@ -76,6 +76,9 @@
 (global-set-key (kbd "M-<delete>") 'magit-list-repositories) ; mac
 (global-set-key (kbd "M-<DEL>")    'magit-list-repositories) ; linux; glenn: does not work
 
+(global-set-key (kbd "C-C M-g l") 'magit-log-buffer-file)
+(global-set-key (kbd "C-C M-g L") 'magit-log-buffer-file-popup)
+
 ;; Stop overwrite mode
 (global-set-key (kbd "<insert>") nil)
 (global-set-key (kbd "<insertchar>") nil)
