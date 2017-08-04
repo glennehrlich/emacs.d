@@ -18,6 +18,9 @@
 (global-set-key (kbd "<f11>") (lambda () "Scroll the window down one line." (interactive) (scroll-down 1)))
 (global-set-key (kbd "<f12>") (lambda () "Scroll the window up one line."   (interactive) (scroll-up 1)))
 
+(global-set-key (kbd "<f14>") 'calc)
+(global-set-key (kbd "<f15>") 'calendar)
+
 ;; Control function keys.
 (global-set-key (kbd "C-<f6>") 'winner-undo)
 (global-set-key (kbd "C-<f7>") 'winner-redo)
