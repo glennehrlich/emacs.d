@@ -47,7 +47,6 @@
                       hi2
                       htmlize
                       hydra
-                      idea-darkula-theme
                       impatient-mode
                       ivy
                       ivy-hydra
@@ -60,8 +59,6 @@
                       magit
                       markdown-mode
                       morlock
-                      niflheim-theme
-                      noctilux-theme
                       org-plus-contrib
                       ox-clip
                       paradox
@@ -86,7 +83,6 @@
                       wgrep-ag
                       wrap-region
                       yasnippet
-                      zerodark-theme
                       ))
 
 (defun get-my-packages ()
