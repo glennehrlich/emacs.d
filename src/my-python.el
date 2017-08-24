@@ -41,6 +41,7 @@
 
 ;; Turn on elpy.
 (elpy-enable)
+(elpy-use-ipython)
 
 ;; Insert an empty __init__.py into the current directory.
 (defun init-py ()
