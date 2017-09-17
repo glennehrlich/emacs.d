@@ -34,6 +34,10 @@
   :defer t
   :config (require 'my-compile))
 
+(use-package dired
+  :defer t
+  :config (require 'my-dired))
+
 (use-package ediff
   :defer t
   :config (require 'my-ediff))
