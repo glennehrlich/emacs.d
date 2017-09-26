@@ -212,5 +212,10 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (find-file "~/r/org/todo.org"))
 
+(defun work ()
+  "\"Edit\" directory /gitlab/kinetx_oneweb/work using `dired'."
+  (interactive)
+  (dired "/gitlab/kinetx_oneweb/work"))
+
 (provide 'my-local)
 
