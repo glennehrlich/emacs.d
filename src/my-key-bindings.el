@@ -76,8 +76,9 @@
 (global-set-key (kbd "<delete>")    'magit-status) ; Linux (Del key)
 (global-set-key (kbd "C-x g")       'magit-status) ; recommendend key binding
 
-(global-set-key (kbd "M-<delete>") 'magit-list-repositories) ; mac
-(global-set-key (kbd "M-<DEL>")    'magit-list-repositories) ; linux; glenn: does not work
+;; glenn: this binding is repeated below, see which one I like better.
+(global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac
+(global-set-key (kbd "M-<DEL>")    'magit-log-buffer-file) ; linux
 
 (global-set-key (kbd "C-C M-g l") 'magit-log-buffer-file)
 (global-set-key (kbd "C-C M-g L") 'magit-log-buffer-file-popup)
