@@ -157,13 +157,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "~/r/notes.personal"))
 
-(defun oneweb-shell ()
-  "Open a shell in ~/vm/oneweb."
-  (interactive)
-  (cd "~/vm/oneweb")
-  (shell)
-  (rename-buffer "v0"))
-
 (defun passwords ()
   "Visit ~/r/notes/passwords.org."
   (interactive)
@@ -199,7 +192,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
-  (oneweb-shell)
+  (vm-shell)
   (todo))
 
 (defun timekeeping ()
@@ -212,10 +205,12 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (find-file "~/r/org/todo.org"))
 
-(defun work ()
-  "\"Edit\" directory /gitlab/kinetx_oneweb/work using `dired'."
+(defun vm-shell ()
+  "Open a shell in ~/vm."
   (interactive)
-  (dired "/gitlab/kinetx_oneweb/work"))
+  (cd "~/vm")
+  (shell)
+  (rename-buffer "v0"))
 
 (provide 'my-local)
 
