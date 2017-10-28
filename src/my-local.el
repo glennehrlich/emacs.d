@@ -54,6 +54,11 @@
   (eshell) (rename-buffer "e1")
   (eshell) (rename-buffer "e0"))
 
+(defun gitlab ()
+  "\"Edit\" directory ~/gitlab using `dired'."
+  (interactive)
+  (dired "~/gitlab"))
+
 (defun home ()
   "\"Edit\" directory ~ using `dired'."
   (interactive)
