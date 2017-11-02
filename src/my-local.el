@@ -64,13 +64,6 @@
   (interactive)
   (dired "~"))
 
-(defun k-shell ()
-  "Open a shell in /k."
-  (interactive)
-  (cd "/k")
-  (shell)
-  (rename-buffer "k0"))
-
 (defun meetings ()
   "\"Edit\" directory ~/r/org/meetings using `dired'."
   (interactive)
@@ -172,12 +165,19 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (find-file "~/r/notes/phone_numbers.org"))
 
-(defun shells ()
-  "Create shells s0, s1, and s2."
+(defun shell-in-dir (dir buffer-name)
+  "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
-  (shell) (rename-buffer "s2")
-  (shell) (rename-buffer "s1")
-  (shell) (rename-buffer "s0"))
+  (cd dir)
+  (shell)
+  (rename-buffer buffer-name))
+
+(defun shells ()
+  "Create shells starter shells."
+  (interactive)
+  (shell-in-dir "~" "s0")
+  (shell-in-dir "~" "s1")
+  (shell-in-dir "~" "s2"))
 
 (defun site-packages ()
   "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
@@ -197,7 +197,8 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shells)
-  (vm-shell)
+  (shell-in-dir "~/vm/kai2" "k2")
+  (shell-in-dir "~/vm/kai3" "k3")
   (todo))
 
 (defun timekeeping ()
@@ -209,13 +210,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Visit ~/r/org/todo.org."
   (interactive)
   (find-file "~/r/org/todo.org"))
-
-(defun vm-shell ()
-  "Open a shell in ~/vm."
-  (interactive)
-  (cd "~/vm")
-  (shell)
-  (rename-buffer "v0"))
 
 (provide 'my-local)
 
