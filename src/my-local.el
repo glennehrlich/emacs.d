@@ -175,9 +175,9 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun shells ()
   "Create shells starter shells."
   (interactive)
-  (shell-in-dir "~" "s0")
+  (shell-in-dir "~" "s2")
   (shell-in-dir "~" "s1")
-  (shell-in-dir "~" "s2"))
+  (shell-in-dir "~" "s0"))
 
 (defun site-packages ()
   "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
@@ -196,9 +196,10 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
-  (shells)
-  (shell-in-dir "~/vm/kai2" "k2")
   (shell-in-dir "~/vm/kai3" "k3")
+  (shell-in-dir "~/vm/kai2" "k2")
+  (shell-in-dir "~/vm/g" "g")
+  (shells)
   (todo))
 
 (defun timekeeping ()
