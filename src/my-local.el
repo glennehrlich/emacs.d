@@ -168,6 +168,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
+  (mkdir dir t)
   (cd dir)
   (shell)
   (rename-buffer buffer-name))
