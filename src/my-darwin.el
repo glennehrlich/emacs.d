@@ -18,6 +18,7 @@
 
 (require 'exec-path-from-shell)
 (add-to-list 'exec-path-from-shell-variables "INFOPATH")
+(add-to-list 'exec-path-from-shell-variables "MANPATH")
 (add-to-list 'exec-path-from-shell-variables "EMACS")
 (add-to-list 'exec-path-from-shell-variables "EDITOR")
 (add-to-list 'exec-path-from-shell-variables "VISUAL")
