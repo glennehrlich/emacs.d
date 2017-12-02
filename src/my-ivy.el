@@ -13,6 +13,7 @@
 
 (customize-set-variable 'counsel-find-file-at-point t)
 (customize-set-variable 'ivy-count-format "%d/%d ")
+(customize-set-variable 'ivy-use-selectable-prompt t)
 
 (global-set-key (kbd "C-h f")   'counsel-describe-function)
 (global-set-key (kbd "C-h v")   'counsel-describe-variable)
