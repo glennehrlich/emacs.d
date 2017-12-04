@@ -15,6 +15,7 @@
 (customize-set-variable 'ivy-count-format "%d/%d ")
 (customize-set-variable 'ivy-use-selectable-prompt t)
 
+(global-set-key (kbd "C-h a")   'counsel-apropos)
 (global-set-key (kbd "C-h f")   'counsel-describe-function)
 (global-set-key (kbd "C-h v")   'counsel-describe-variable)
 (global-set-key (kbd "C-s")     'counsel-grep-or-swiper)
