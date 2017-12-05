@@ -54,7 +54,6 @@ create_persistent_dirs:
 	mkdir $(PERSISTENT_DIR)/auto-complete
 	mkdir $(PERSISTENT_DIR)/auto-save-list
 	mkdir $(PERSISTENT_DIR)/eshell
-	mkdir $(PERSISTENT_DIR)/ido
 	mkdir $(PERSISTENT_DIR)/org
 	mkdir $(PERSISTENT_DIR)/python-environments
 	mkdir $(PERSISTENT_DIR)/recentf
@@ -68,9 +67,6 @@ create_persistent_dirs:
 # quits, it will re-write all of the bad data.
 clean_persistent_dirs:
 	rm -f $(PERSISTENT_DIR)/*/*
-
-clean_ido:
-	rm -f $(PERSISTENT_DIR)/ido/*
 
 git_setup_origin:
 	rm -rf .git
