@@ -32,6 +32,7 @@
                       dash
                       diminish
                       dropdown-list
+                      ein
                       eldoc-extension
                       elisp-slime-nav
                       elpy
