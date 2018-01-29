@@ -31,9 +31,7 @@
                       counsel
                       dash
                       diminish
-                      dropdown-list
                       ein
-                      eldoc-extension
                       elisp-slime-nav
                       elpy
                       exec-path-from-shell
