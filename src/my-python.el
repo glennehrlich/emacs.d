@@ -2,9 +2,17 @@
 
 (require 'python)
 (require 'elpy)
-(require 'jedi)
+; (require 'jedi)
 
 (customize-set-variable 'python-environment-directory "~/.emacs.d.persistent/python-environments")
+(customize-set-variable 'python-shell-interpreter "ipython")
+(customize-set-variable 'python-shell-interpreter-args "-i --simple-prompt")
+
+;; For some reason, emacs 25 messes up python mode's testing for
+;; whether readline support is enabled in the python interpreter.
+;; This brute forces turns off readline support so we don't get
+;; spurious warnings in the *Warnings* buffer.
+(customize-set-variable 'python-shell-completion-native-enable nil)
 
 ;; Add some key bindings when elpy-mode is in effect. These could be
 ;; done in python-mode-hook, but adding them to elpy-mode-hook means I
@@ -20,28 +28,21 @@
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 (add-hook 'elpy-mode-hook 'flycheck-mode)
 
-;; For some reason, emacs 25 messes up python mode's testing for
-;; whether readline support is enabled in the python interpreter.
-;; This brute forces turns off readline support so we don't get
-;; spurious warnings in the *Warnings* buffer.
-(setq python-shell-completion-native-enable nil)
-
 ;; Setup jedi
-(setq elpy-rpc-backend "jedi")
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
-(jedi:install-server)
+; (setq elpy-rpc-backend "jedi") ; glenn 2018-01-29; this variable no longer available; remove if this never comes back
+; (add-hook 'python-mode-hook 'jedi:setup)
+; (setq jedi:complete-on-dot t)
+; (jedi:install-server)
 
 ;; Turn off some of the elpy modules.
 (setq elpy-modules (delq 'elpy-module-company               elpy-modules))
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
 (setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
 
-(customize-set-variable 'jedi:get-in-function-call-delay 10000000) ; prevent annoying jedi in function display
+; (customize-set-variable 'jedi:get-in-function-call-delay 10000000) ; prevent annoying jedi in function display
 
 ;; Turn on elpy.
 (elpy-enable)
-(elpy-use-ipython)
 
 ;; Insert an empty __init__.py into the current directory.
 (defun init-py ()
