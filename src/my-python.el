@@ -2,11 +2,11 @@
 
 (require 'python)
 (require 'elpy)
-; (require 'jedi)
+(require 'jedi)
 
 (customize-set-variable 'python-environment-directory "~/.emacs.d.persistent/python-environments")
 (customize-set-variable 'python-shell-interpreter "ipython")
-(customize-set-variable 'python-shell-interpreter-args "-i --simple-prompt")
+(customize-set-variable 'python-shell-interpreter-args "-i --simple-prompt --pprint")
 
 ;; For some reason, emacs 25 messes up python mode's testing for
 ;; whether readline support is enabled in the python interpreter.
@@ -30,9 +30,9 @@
 
 ;; Setup jedi
 ; (setq elpy-rpc-backend "jedi") ; glenn 2018-01-29; this variable no longer available; remove if this never comes back
-; (add-hook 'python-mode-hook 'jedi:setup)
-; (setq jedi:complete-on-dot t)
-; (jedi:install-server)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+(jedi:install-server)
 
 ;; Turn off some of the elpy modules.
 (setq elpy-modules (delq 'elpy-module-company               elpy-modules))
