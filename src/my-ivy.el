@@ -11,7 +11,9 @@
 ;; counsel-M-x will load it.
 (customize-set-variable 'smex-save-file "~/.emacs.d.persistent/smex/smex-items")
 
+(customize-set-variable 'counsel-ag-base-command "ag --hidden --ignore .git --nocolor --nogroup %s")
 (customize-set-variable 'counsel-find-file-at-point t)
+(customize-set-variable 'counsel-rg-base-command "rg --hidden --glob !.git -S --no-heading --line-number --color never %s .")
 (customize-set-variable 'ivy-count-format "%d/%d ")
 (customize-set-variable 'ivy-use-selectable-prompt t)
 
