@@ -170,15 +170,20 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (mkdir dir t)
   (cd dir)
+  (shell-with-name buffer-name))
+
+(defun shell-with-name (buffer-name)
+  "Open a shell in the current directory and name the buffer BUFFER-NAME."
+  (interactive)
   (shell)
   (rename-buffer buffer-name))
 
 (defun shells ()
   "Create shells starter shells."
   (interactive)
-  (shell-in-dir "~" "s2")
-  (shell-in-dir "~" "s1")
-  (shell-in-dir "~" "s0"))
+  (shell-with-name "s2")
+  (shell-with-name "s1")
+  (shell-with-name "s0"))
 
 (defun site-packages2 ()
   "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
@@ -204,6 +209,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (shell-in-dir "~/vm/bams" "b")
   (shell-in-dir "~/vm/g" "g")
+  (cd "~")
   (shells)
   (todo))
 
