@@ -120,7 +120,10 @@
 ;; (use-package paredit
 ;;   :init (require 'my-paredit))
 
+;; Only load python package on non red hat systems (currently assuming
+;; that red hat systems will not have full python environments).
 (use-package python
+  :if (not (file-exists-p "/etc/redhat-release"))
   :defer t
   :config (require 'my-python))
 
