@@ -22,6 +22,7 @@
           (lambda ()
             (local-set-key (kbd "M-q") 'python-fill-paragraph)
             (local-set-key (kbd "C-M-\\") (lambda () (interactive) (message "Warning: do not use indent-region in python code; use python-indent-shift-left (C-c <) or python-indent-shift-right (C-c >).")))
+            (local-set-key (kbd "M-.") 'elpy-goto-definition)
             ))
 
 ;; Have elpy use flycheck instead of flymake.
