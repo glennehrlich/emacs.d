@@ -208,6 +208,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shell-in-dir "~/vm/bams_build" "b")
+  (shell-in-dir "~/vm/bams_server" "bs")
   (shell-in-dir "~/vm/g" "g")
   (cd "~")
   (shells)
