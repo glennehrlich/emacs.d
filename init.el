@@ -5,6 +5,9 @@
 ; (setq debug-on-error t)
 (setq debug-on-error nil)
 
+; Make sure to start up in home directory.
+(cd "~")
+
 ; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
