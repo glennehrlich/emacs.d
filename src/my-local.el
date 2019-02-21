@@ -185,15 +185,12 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (shell-with-name "s1")
   (shell-with-name "s0"))
 
-(defun site-packages2 ()
-  "\"Edit\" directory /opt/anaconda/lib/python2.7/site-packages using `dired'."
+(defun site-packages ()
+  "\"Edit\" directory /opt/anaconda/lib/python*/site-packages using `dired'."
   (interactive)
-  (dired "/opt/anaconda/lib/python2.7/site-packages"))
-
-(defun site-packages3 ()
-  "\"Edit\" directory /opt/anaconda/lib/python3.6/site-packages using `dired'."
-  (interactive)
-  (dired "/opt/anaconda/lib/python3.6/site-packages"))
+  (let ((matches (file-expand-wildcards "/opt/anaconda/lib/python*/site-packages")))
+    (when matches
+      (dired (car matches)))))
 
 (defun sort-and-delete-duplicate-lines ()
   "Sort and uniquify the lines in region."
