@@ -45,7 +45,7 @@
      ("~/r/notes.personal" . 0)))
  '(make-backup-files t)
  '(package-selected-packages
-   '(wrap-region wgrep-ag wgrep web-mode visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode magit julia-shell json-mode jedi ivy-hydra ivy impatient-mode hydra hungry-delete hi2 haskell-mode git-timemachine groovy-mode ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav ein counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ag ace-window))
+   '(wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode magit julia-shell json-mode jedi ivy-hydra ivy impatient-mode hydra hungry-delete hi2 haskell-mode git-timemachine groovy-mode ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav ein counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ag ace-window))
  '(paradox-github-token t)
  '(plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")

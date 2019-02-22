@@ -77,6 +77,7 @@
                       undo-tree
                       use-package
                       visual-regexp
+                      w3m
                       web-mode
                       wgrep
                       wgrep-ag
