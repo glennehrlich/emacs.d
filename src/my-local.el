@@ -204,8 +204,8 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
-  (shell-in-dir "~/vm/northstar"       "n")
-  (shell-in-dir "~/vm/bams_build"      "bb")
+  (shell-in-dir "~/vm/northstar"  "n")
+  (shell-in-dir "~/vm/northstar2" "n2")
   (cd "~")
   (shells)
   (todo))
