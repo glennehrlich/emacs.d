@@ -9,6 +9,9 @@
                     :height 105
                     :weight 'medium)
 
+(customize-set-variable 'default-frame-alist '((width . 100)
+                                               (height . 60)))
+
 (bash-completion-setup)
 
 ;; Add "v" to dired-listing-switches if it is not already present to
