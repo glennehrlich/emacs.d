@@ -205,7 +205,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/r/kinetx/todo.org."
   (interactive)
   (shell-in-dir "~/vm/northstar"  "n")
-  (shell-in-dir "~/vm/northstar2" "n2")
   (cd "~")
   (shells)
   (todo))
