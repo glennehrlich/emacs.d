@@ -17,6 +17,11 @@
 (customize-set-variable 'org-table-use-standard-references t)
 (customize-set-variable 'org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
 
+;; Display time summaries from org-clock-display (C-c C-x C-d) in
+;; decimal hours (1.2) inetead of (01:12). Makes time entry for jamis
+;; easier.
+(customize-set-variable  'org-duration-format '(("h" . nil) (special . 1)))
+
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
 
