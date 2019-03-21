@@ -18,7 +18,7 @@
 (customize-set-variable 'org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
 
 ;; Display time summaries from org-clock-display (C-c C-x C-d) in
-;; decimal hours (1.2) inetead of (01:12). Makes time entry for jamis
+;; decimal hours (1.20) inetead of (01:12). Makes time entry for jamis
 ;; easier.
 (customize-set-variable  'org-duration-format '(("h" . nil) (special . 2)))
 
