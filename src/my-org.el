@@ -20,7 +20,7 @@
 ;; Display time summaries from org-clock-display (C-c C-x C-d) in
 ;; decimal hours (1.2) inetead of (01:12). Makes time entry for jamis
 ;; easier.
-(customize-set-variable  'org-duration-format '(("h" . nil) (special . 1)))
+(customize-set-variable  'org-duration-format '(("h" . nil) (special . 2)))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
