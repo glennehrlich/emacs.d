@@ -66,6 +66,7 @@
                       paredit-menu
                       popup
                       plantuml-mode
+                      px
                       shell-here
                       simple-httpd
                       skewer-mode
