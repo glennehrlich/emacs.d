@@ -52,6 +52,7 @@
  '(paradox-github-token t)
  '(plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
+ '(request-storage-directory "~/.emacs.d.transient/request")
  '(ring-bell-function 'ignore)
  '(save-place-mode nil)
  '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
