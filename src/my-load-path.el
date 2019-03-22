@@ -47,6 +47,7 @@
                       htmlize
                       hydra
                       impatient-mode
+                      importmagic
                       ivy
                       ivy-hydra
                       jedi

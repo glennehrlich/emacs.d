@@ -3,6 +3,8 @@
 (require 'python)
 (require 'elpy)
 
+(add-hook 'python-mode-hook 'importmagic-mode)
+
 ;; Turn off some of the elpy modules.
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
 (setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
