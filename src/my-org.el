@@ -16,6 +16,7 @@
 (customize-set-variable 'org-startup-indented t)
 (customize-set-variable 'org-table-use-standard-references t)
 (customize-set-variable 'org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
+(customize-set-variable 'org-format-latex-options (plist-put org-format-latex-options :scale 1.4))
 
 ;; Display time summaries from org-clock-display (C-c C-x C-d) in
 ;; decimal hours (1.20) inetead of (01:12). Makes time entry for jamis
