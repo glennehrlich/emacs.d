@@ -37,6 +37,10 @@
   :defer t
   :config (require 'my-compile))
 
+(use-package company
+  :defer t
+  :config (require 'my-company))
+
 (use-package dired
   :defer t
   :config (require 'my-dired))
