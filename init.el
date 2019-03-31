@@ -139,9 +139,6 @@
   :defer t
   :config (require 'my-shell))
 
-(use-package shell-here
-  :defer t)
-
 (use-package smartparens-config
   :config (require 'my-smartparens))
 
