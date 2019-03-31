@@ -175,7 +175,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun shell-with-name (buffer-name)
   "Open a shell in the current directory and name the buffer BUFFER-NAME."
   (interactive)
-  (shell)
+  (switch-to-buffer (shell))
   (rename-buffer buffer-name))
 
 (defun shells ()
