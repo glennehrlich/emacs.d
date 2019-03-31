@@ -7,11 +7,11 @@
 ;; Make shells open in same window.
 (add-to-list 'display-buffer-alist '("*shell*" display-buffer-same-window))
 
-(setq-default dirtrack-list '("^.*:\\(.*\\)" 1 t))
-(add-hook 'shell-mode-hook
-         (lambda ()
-           (shell-dirtrack-mode -1)
-           (dirtrack-mode 1)))
+;; (setq-default dirtrack-list '("^.*:\\(.*\\)" 1 t))
+;; (add-hook 'shell-mode-hook
+;;          (lambda ()
+;;            (shell-dirtrack-mode -1)
+;;            (dirtrack-mode 1)))
 
 ;; Stuff to make shells understand when the shell window changes.
 (defun comint-fix-window-size ()
