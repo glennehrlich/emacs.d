@@ -139,6 +139,10 @@
   :defer t
   :config (require 'my-shell))
 
+(use-package shell-pop
+  :defer t
+  :config (require 'my-shell-pop))
+
 (use-package smartparens-config
   :config (require 'my-smartparens))
 

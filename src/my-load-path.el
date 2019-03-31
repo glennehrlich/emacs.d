@@ -67,7 +67,7 @@
                       popup
                       plantuml-mode
                       px
-                      shell-here
+                      shell-pop
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets
