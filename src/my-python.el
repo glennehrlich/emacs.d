@@ -9,6 +9,9 @@
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
 (setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
 
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "--simple-prompt -i")
+
 ;; Have elpy use flycheck instead of flymake.
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 (add-hook 'elpy-mode-hook 'flycheck-mode)
