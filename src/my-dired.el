@@ -20,5 +20,7 @@
 (define-key dired-mode-map "\C-te" nil)
 (define-key dired-mode-map "\C-t" nil)
 
+(define-key dired-mode-map "Y" 'dired-do-relsymlink)
+
 (provide 'my-dired)
 
