@@ -22,6 +22,10 @@
           (lambda ()
             (setq comint-scroll-to-bottom-on-output t)))
 
+;; Do not show any of the lines sent to the *Python* buffer.
+(customize-set-variable 'elpy-shell-echo-input-lines-head 0)
+(customize-set-variable 'elpy-shell-echo-input-lines-tail 0)
+
 ;; Use ipthon.
 ;; (setq python-shell-interpreter "ipython"
 ;;       python-shell-interpreter-args "--simple-prompt -i")
