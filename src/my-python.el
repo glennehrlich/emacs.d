@@ -9,8 +9,29 @@
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
 (setq elpy-modules (delq 'elpy-module-yasnippet             elpy-modules))
 
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i")
+;; Make sure that python shells start in current working directory
+;; instead of project root (like git root).
+(customize-set-variable 'elpy-shell-use-project-root nil)
+
+;; Always display the *Python* buffer when sending code to it to
+;; excecute.
+(customize-set-variable 'elpy-shell-display-buffer-after-send t)
+
+;; Always scroll to the end of the *Python* buffer.
+(add-hook 'inferior-python-mode-hook
+          (lambda ()
+            (setq comint-scroll-to-bottom-on-output t)))
+
+;; Use ipthon.
+;; (setq python-shell-interpreter "ipython"
+;;       python-shell-interpreter-args "--simple-prompt -i")
+
+;; Use jupyter console.
+(setq python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt"
+      python-shell-prompt-detect-failure-warning nil)
+(add-to-list 'python-shell-completion-native-disabled-interpreters
+             "jupyter")
 
 ;; Have elpy use flycheck instead of flymake.
 (remove-hook 'elpy-modules 'elpy-module-flymake)
