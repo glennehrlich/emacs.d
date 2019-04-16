@@ -47,6 +47,7 @@
 ;; python-mode.
 (add-hook 'elpy-mode-hook
           (lambda ()
+            (local-set-key (kbd "C-.") 'elpy-goto-assignment)
             (local-set-key (kbd "M-q") 'python-fill-paragraph)
             (local-set-key (kbd "C-M-\\") (lambda () (interactive) (message "Warning: do not use indent-region in python code; use python-indent-shift-left (C-c <) or python-indent-shift-right (C-c >).")))
             ))
