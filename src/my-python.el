@@ -3,7 +3,8 @@
 (require 'python)
 (require 'elpy)
 
-(add-hook 'python-mode-hook 'importmagic-mode)
+;; glenn: disalbing this until I figure out what to do with it
+;; (add-hook 'python-mode-hook 'importmagic-mode)
 
 ;; Turn off some of the elpy modules.
 (setq elpy-modules (delq 'elpy-module-highlight-indentation elpy-modules))
