@@ -38,6 +38,9 @@
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
 
+;; Make dedicated *Python* shells.
+(add-hook 'elpy-mode-hook (lambda () (elpy-shell-toggle-dedicated-shell 1)))
+
 ;; Have elpy use flycheck instead of flymake.
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 (add-hook 'elpy-mode-hook 'flycheck-mode)
