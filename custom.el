@@ -70,7 +70,7 @@
  '(org-return-follows-link t)
  '(org-startup-folded t)
  '(org-startup-indented t)
- '(org-table-use-standard-references t)
+ '(org-table-use-standard-references t t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
    '(wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode magit julia-shell json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 haskell-mode git-timemachine groovy-mode ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav ein counsel cmake-mode cmake-font-lock bash-completion base16-theme avy ag ace-window))
@@ -86,7 +86,7 @@
        (switch-to-buffer
         (shell)))))
  '(shell-pop-universal-key "C-t")
- '(smex-save-file "~/.emacs.d.persistent/smex/smex-items" t)
+ '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
  '(sp-show-pair-from-inside t)
  '(split-height-threshold nil)
  '(transient-history-file "~/.emacs.d.transient/history.el")
