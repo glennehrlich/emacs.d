@@ -73,6 +73,12 @@ the Dired buffer."
         (when (eq major-mode 'dired-mode)
           (revert-buffer))))))
 
+(defun f-string ()
+  "Create an empty f-string."
+  (interactive)
+  (insert "f''''''")
+  (backward-char 3))
+
 ;; (require 'python)
 ;; (require 'elpy)
 ;; (require 'jedi)
