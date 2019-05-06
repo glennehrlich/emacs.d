@@ -85,6 +85,13 @@
                       wgrep-ag
                       wrap-region
                       yasnippet
+
+                      ;; Experiment with docker
+                      counsel-tramp
+                      docker
+                      docker-compose-mode
+                      docker-tramp
+                      dockerfile-mode
                       ))
 
 (defun get-my-packages ()
