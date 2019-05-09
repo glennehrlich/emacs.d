@@ -26,6 +26,11 @@
           (lambda ()
             (add-hook 'window-configuration-change-hook 'comint-fix-window-size)))
 
+;; Better color handling.
+
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+
 (defun shell-truncate-buffer-all ()
   "Truncate the buffer."
   (interactive)
