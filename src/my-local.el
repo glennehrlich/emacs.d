@@ -33,9 +33,9 @@
   (dired "~/r/branches"))
 
 (defun credit-cards ()
-  "Visit ~/r/notes.personal/credit_cards.org."
+  "Visit ~/notes.personal/credit_cards.org."
   (interactive)
-  (find-file "~/r/notes.personal/credit_cards.org"))
+  (find-file "~/notes.personal/credit_cards.org"))
 
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
@@ -146,24 +146,24 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (setq recentf-list nil))
 
 (defun notes ()
-  "\"Edit\" directory ~/r/notes using `dired'."
+  "\"Edit\" directory ~/notes using `dired'."
   (interactive)
-  (dired "~/r/notes"))
+  (dired "~/notes"))
 
 (defun notes.personal ()
-  "\"Edit\" directory ~/r/notes.personal using `dired'."
+  "\"Edit\" directory ~/notes.personal using `dired'."
   (interactive)
-  (dired "~/r/notes.personal"))
+  (dired "~/notes.personal"))
 
 (defun passwords ()
-  "Visit ~/r/notes/passwords.org."
+  "Visit ~/notes/passwords.org."
   (interactive)
-  (find-file "~/r/notes/passwords.org"))
+  (find-file "~/notes/passwords.org"))
 
 (defun phone-numbers ()
-  "Visit ~/r/notes/phone_numbers.org."
+  "Visit ~/notes/phone_numbers.org."
   (interactive)
-  (find-file "~/r/notes/phone_numbers.org"))
+  (find-file "~/notes/phone_numbers.org"))
 
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
