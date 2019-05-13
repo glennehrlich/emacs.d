@@ -27,15 +27,10 @@
       (untabify (1- (point)) (point-max)))
     nil))
 
-(defun branches ()
-  "\"Edit\" directory ~/r/branches using `dired'."
-  (interactive)
-  (dired "~/r/branches"))
-
 (defun credit-cards ()
-  "Visit ~/notes.personal/credit_cards.org."
+  "Visit ~/notes-personal/credit_cards.org."
   (interactive)
-  (find-file "~/notes.personal/credit_cards.org"))
+  (find-file "~/notes-personal/credit_cards.org"))
 
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
@@ -150,10 +145,10 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "~/notes"))
 
-(defun notes.personal ()
-  "\"Edit\" directory ~/notes.personal using `dired'."
+(defun notes-personal ()
+  "\"Edit\" directory ~/notes-personal using `dired'."
   (interactive)
-  (dired "~/notes.personal"))
+  (dired "~/notes-personal"))
 
 (defun passwords ()
   "Visit ~/notes/passwords.org."
@@ -202,22 +197,17 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
                           (region-end)))
 
 (defun start ()
-  "Create the shells and visit ~/r/kinetx/todo.org."
+  "Create the shells and visit ~/todo/todo.org."
   (interactive)
   (shell-in-dir "~/vm/northstar"  "n")
   (cd "~")
   (shells)
   (todo))
 
-(defun timekeeping ()
-  "\"Edit\" directory ~/r/kinetx/timekeeping using `dired'."
-  (interactive)
-  (dired "~/r/kinetx/timekeeping"))
-
 (defun todo ()
-  "Visit ~/r/org/todo.org."
+  "Visit ~/todo/todo.org."
   (interactive)
-  (find-file "~/r/org/todo.org"))
+  (find-file "~/todo/todo.org"))
 
 (provide 'my-local)
 
