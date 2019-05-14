@@ -32,6 +32,11 @@
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
 
+(defun dot-files ()
+  "\"Edit\" directory ~/dot-files using `dired'."
+  (interactive)
+  (dired "~/dot-files"))
+
 (defun elpa ()
   "\"Edit\" directory ~/.emacs.d.elpa using `dired'."
   (interactive)
