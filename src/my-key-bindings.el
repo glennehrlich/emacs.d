@@ -33,7 +33,7 @@
 ;; Editing keys.
 (global-set-key (kbd "<home>") 'beginning-of-buffer)
 (global-set-key (kbd "<end>")  'end-of-buffer)
-(global-set-key (kbd "M-SPC")  (lambda () "Call `cycle-spacing' with -1 so that it deletes newlines." (interactive) (cycle-spacing -1)))
+(global-set-key (kbd "C-M-SPC")  (lambda () "Call `cycle-spacing' with -1 so that it deletes newlines." (interactive) (cycle-spacing -1)))
 
 ;; Replace commands.
 (global-set-key (kbd "M-&")   'replace-string)
