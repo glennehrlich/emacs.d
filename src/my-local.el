@@ -32,6 +32,11 @@
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
 
+(defun diary ()
+  "Visit ~/gitlab/kinetx_glenn/northstar/notes/diary.org."
+  (interactive)
+  (find-file "~/gitlab/kinetx_glenn/northstar/notes/diary.org"))
+
 (defun dot-files ()
   "\"Edit\" directory ~/dot-files using `dired'."
   (interactive)
