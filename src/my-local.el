@@ -209,7 +209,8 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
-  (shell-in-dir "~/vm/northstar"  "n")
+  (shell-in-dir "~/vm/docker"    "d")
+  (shell-in-dir "~/vm/northstar" "n")
   (cd "~")
   (shells)
   (todo))
