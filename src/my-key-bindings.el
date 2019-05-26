@@ -72,16 +72,15 @@
   (compile compile-command))
 (global-set-key (kbd "<f13>")   'save-and-compile) ; Mac (Ins key)
 
-(global-set-key (kbd "<kp-delete>") 'magit-status) ; Mac (Del key)
-(global-set-key (kbd "<delete>")    'magit-status) ; Linux (Del key)
+(global-set-key (kbd "<kp-delete>") 'magit-status) ; mac / linux (DEL key)
 (global-set-key (kbd "C-x g")       'magit-status) ; recommendend key binding
 
-;; glenn: this binding is repeated below, see which one I like better.
-(global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac
-(global-set-key (kbd "M-<DEL>")    'magit-log-buffer-file) ; linux
+(global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac / linux (M-DEL key)
 
 (global-set-key (kbd "C-C M-g l") 'magit-log-buffer-file)
 (global-set-key (kbd "C-C M-g L") 'magit-log-buffer-file-popup)
+
+(global-set-key (kbd "C-M-<delete>") 'magit-list-repositories)
 
 ;; Stop overwrite mode
 (global-set-key (kbd "<insert>") nil)
