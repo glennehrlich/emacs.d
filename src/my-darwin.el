@@ -29,18 +29,6 @@
                     :height 140
                     :weight 'light)
 
-;; (set-face-attribute 'default nil
-;;                     :family "FreeMono"
-;;                     :height 140)
-
-;; (set-face-attribute 'default nil
-;;                     :family "Courier"
-;;                     :height 140)
-
-;; (set-face-attribute 'default nil
-;;                     :family "Segoe UI"
-;;                     :height 160)
-
 (bash-completion-setup)
 
 (provide 'my-darwin)
