@@ -45,6 +45,10 @@
   :defer t
   :config (require 'my-dired))
 
+(use-package docker-tramp
+  :defer t
+  :config (require 'my-docker-tramp))
+
 (use-package ediff
   :defer t
   :config (require 'my-ediff))
