@@ -86,9 +86,8 @@
 (global-set-key (kbd "<insert>") nil)
 (global-set-key (kbd "<insertchar>") nil)
 
-;; Sun keyboard; bindings set by ControllerMate.
-(global-set-key (kbd "M-<f11>") 'nil)                  ; Help
-(global-set-key (kbd "M-<f12>") 'nil)                  ; Blank key
+(global-set-key (kbd "C-c d")   'docker)
+(global-set-key (kbd "C-c C-d") 'docker)
 
 (provide 'my-key-bindings)
 
