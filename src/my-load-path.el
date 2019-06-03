@@ -29,15 +29,20 @@
                       cmake-mode
                       company
                       counsel
+                      counsel-tramp
                       dash
                       diminish
+                      docker
+                      docker-compose-mode
+                      docker-tramp
+                      dockerfile-mode
                       ein
                       elisp-slime-nav
                       ;; elpy
                       exec-path-from-shell
                       expand-region
-                      flycheck
                       flx
+                      flycheck
                       fuzzy
                       ggtags
                       git-timemachine
@@ -64,8 +69,8 @@
                       paradox
                       paredit
                       paredit-menu
-                      popup
                       plantuml-mode
+                      popup
                       px
                       shell-pop
                       simple-httpd
@@ -85,6 +90,7 @@
                       wgrep-ag
                       wrap-region
                       yasnippet
+
                       ;; alternative python
                       anaconda-mode
 
@@ -99,6 +105,7 @@
 (defun get-my-packages ()
   "Get all packages listed in the `my-packages' variable."
   (interactive)
+
   (unless package-archive-contents
     (package-refresh-contents))
 
