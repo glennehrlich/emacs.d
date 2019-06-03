@@ -50,16 +50,16 @@ extract_elpa_tar:
 # This should be done outside of emacs to work; see clean_persistent_dirs.
 create_persistent_dirs:
 	cd ~
-	mkdir $(PERSISTENT_DIR)
-	mkdir $(PERSISTENT_DIR)/auto-complete
-	mkdir $(PERSISTENT_DIR)/auto-save-list
-	mkdir $(PERSISTENT_DIR)/eshell
-	mkdir $(PERSISTENT_DIR)/org
-	mkdir $(PERSISTENT_DIR)/python-environments
-	mkdir $(PERSISTENT_DIR)/recentf
-	mkdir $(PERSISTENT_DIR)/smex
-	mkdir $(PERSISTENT_DIR)/url
+	mkdir -p $(PERSISTENT_DIR)
+	mkdir -p $(PERSISTENT_DIR)/auto-complete
+	mkdir -p $(PERSISTENT_DIR)/auto-save-list
+	mkdir -p $(PERSISTENT_DIR)/eshell
+	mkdir -p $(PERSISTENT_DIR)/org
+	mkdir -p $(PERSISTENT_DIR)/python-environments
+	mkdir -p $(PERSISTENT_DIR)/recentf
+	mkdir -p $(PERSISTENT_DIR)/smex
 	mkdir -p $(PERSISTENT_DIR)/tramp
+	mkdir -p $(PERSISTENT_DIR)/url
 	@echo
 	@echo "$(PERSISTENT_DIR) and sub-directories have been created."
 
