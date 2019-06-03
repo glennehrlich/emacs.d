@@ -21,7 +21,7 @@
  '(counsel-find-file-at-point t)
  '(counsel-rg-base-command
    "rg --hidden --glob !.git -S --no-heading --line-number --color never %s .")
- '(custom-enabled-themes '(wombat))
+ '(custom-enabled-themes '(zerodark))
  '(custom-safe-themes t)
  '(default-frame-alist '((width . 100) (height . 60)))
  '(delete-old-versions t)
