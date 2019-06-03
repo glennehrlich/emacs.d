@@ -85,6 +85,8 @@
                       wgrep-ag
                       wrap-region
                       yasnippet
+                      ;; alternative python
+                      anaconda-mode
                       ))
 
 (defun get-my-packages ()
