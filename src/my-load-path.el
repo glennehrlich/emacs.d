@@ -23,7 +23,6 @@
                       ag
                       auto-complete
                       avy
-                      base16-theme
                       bash-completion
                       bind-key
                       cmake-font-lock
