@@ -87,6 +87,13 @@
                       yasnippet
                       ;; alternative python
                       anaconda-mode
+
+                      ;; themes
+                      atom-dark-theme
+                      atom-one-dark-theme
+                      darcula-theme
+                      spacemacs-theme
+                      zerodark-theme
                       ))
 
 (defun get-my-packages ()
