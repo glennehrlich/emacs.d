@@ -27,6 +27,7 @@
                       bind-key
                       cmake-font-lock
                       cmake-mode
+                      company
                       counsel
                       dash
                       diminish
