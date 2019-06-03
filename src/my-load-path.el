@@ -33,7 +33,7 @@
                       diminish
                       ein
                       elisp-slime-nav
-                      elpy
+                      ;; elpy
                       exec-path-from-shell
                       expand-region
                       flycheck
