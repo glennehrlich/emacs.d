@@ -86,8 +86,7 @@
 (global-set-key (kbd "<insert>") nil)
 (global-set-key (kbd "<insertchar>") nil)
 
-(global-set-key (kbd "C-c d")   'docker)
-(global-set-key (kbd "C-c C-d") 'docker)
+(global-set-key (kbd "M-k") 'docker)
 
 (provide 'my-key-bindings)
 
