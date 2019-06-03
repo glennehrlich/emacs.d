@@ -59,6 +59,7 @@ create_persistent_dirs:
 	mkdir $(PERSISTENT_DIR)/recentf
 	mkdir $(PERSISTENT_DIR)/smex
 	mkdir $(PERSISTENT_DIR)/url
+	mkdir -p $(PERSISTENT_DIR)/tramp
 	@echo
 	@echo "$(PERSISTENT_DIR) and sub-directories have been created."
 
