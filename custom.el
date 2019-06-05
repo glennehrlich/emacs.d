@@ -80,7 +80,7 @@
  '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
  '(sp-show-pair-from-inside t)
  '(split-height-threshold nil)
- '(tramp-persistency-file-name "~/.emacs.d.persistent/tramp/tramp")
+ '(tramp-persistency-file-name nil)
  '(transient-history-file "~/.emacs.d.transient/history.el")
  '(url-configuration-directory "~/.emacs.d.persistent/url/")
  '(vc-annotate-background nil)
