@@ -16,6 +16,12 @@
                                   "git_status.sh"
                                   )))
 
+(customize-set-variable 'eshell-visual-options
+                        (append eshell-visual-options
+                                '(
+                                  ("docker" "build" "pull")
+                                  )))
+
 (defun eshell-truncate-buffer-all ()
   "Truncate the buffer."
   (interactive)
