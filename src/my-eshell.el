@@ -9,6 +9,13 @@
 (customize-set-variable 'eshell-history-file-name "~/.emacs.d.persistent/eshell/history")
 (customize-set-variable 'eshell-save-history-on-exit nil)
 
+(customize-set-variable 'eshell-visual-commands
+                        (append eshell-visual-commands
+                                '(
+                                  "mgitstatus"
+                                  "git_status.sh"
+                                  )))
+
 (defun eshell-truncate-buffer-all ()
   "Truncate the buffer."
   (interactive)
