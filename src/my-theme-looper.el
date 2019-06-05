@@ -7,6 +7,7 @@
                                     atom-dark
                                     atom-one-dark
                                     darcula
+                                    dracula
                                     spacemacs-dark
                                     ))
 
