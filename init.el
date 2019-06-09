@@ -96,9 +96,15 @@
   :mode "\\.md\\'"
   :mode "\\.markdown\\'")
 
+;; magit needs an :init to require 'my-magit before actually loading
+;; magit due to how lazy loading messes up usage of the function
+;; magit-list-repossitories. The issue was that
+;; magit-repository-directories was not being set before
+;; magit-list-repositories decided to run if a :config form was used
+;; instead.
 (use-package magit
   :defer t
-  :config (require 'my-magit))
+  :init (require 'my-magit))
 
 (use-package my-backup)
 
