@@ -57,12 +57,25 @@
   (interactive)
   (dired "~/.emacs.d"))
 
-(defun eshells ()
-  "Create eshells e0, e1, and e2."
+(defun eshell-in-dir (dir buffer-name)
+  "Open an eshell in DIR and name the buffer BUFFER-NAME."
   (interactive)
-  (eshell) (rename-buffer "e2")
-  (eshell) (rename-buffer "e1")
-  (eshell) (rename-buffer "e0"))
+  (mkdir dir t)
+  (cd dir)
+  (eshell-with-name buffer-name))
+
+(defun eshell-with-name (buffer-name)
+  "Open an eshell in the current directory and name the buffer BUFFER-NAME."
+  (interactive)
+  (switch-to-buffer (eshell))
+  (rename-buffer buffer-name))
+
+(defun eshells ()
+  "Create starter eshells."
+  (interactive)
+  (eshell-with-name "e2")
+  (eshell-with-name "e1")
+  (eshell-with-name "e0"))
 
 (defun gitlab ()
   "\"Edit\" directory ~/gitlab using `dired'."
@@ -189,7 +202,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (rename-buffer buffer-name))
 
 (defun shells ()
-  "Create shells starter shells."
+  "Create starter shells."
   (interactive)
   (shell-with-name "s2")
   (shell-with-name "s1")
@@ -214,10 +227,10 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
-  (shell-in-dir "~/vm/docker"    "d")
-  (shell-in-dir "~/vm/northstar" "n")
+  (eshell-in-dir "~/vm/docker"    "d")
+  (eshell-in-dir "~/vm/northstar" "n")
   (cd "~")
-  (shells)
+  (eshells)
   (todo))
 
 (defun todo ()

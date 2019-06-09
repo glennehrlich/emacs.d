@@ -71,11 +71,6 @@
  '(request-storage-directory "~/.emacs.d.transient/request")
  '(ring-bell-function 'ignore)
  '(save-place-mode nil)
- '(shell-pop-shell-type
-   '("shell" "*shell*"
-     (lambda nil
-       (switch-to-buffer
-        (shell)))))
  '(shell-pop-universal-key "C-t")
  '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
  '(sp-show-pair-from-inside t)
