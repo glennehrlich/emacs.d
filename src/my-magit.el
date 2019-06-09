@@ -44,10 +44,5 @@
                           ("Path"    99 magit-repolist-column-path nil)
                           ))
 
-(with-eval-after-load 'magit
-  (setcdr (cdr magit-repolist-columns)
-          (cons '("D" 1 magit-repolist-column-dirty ())
-                (cddr magit-repolist-columns))))
-
 (provide 'my-magit)
 
