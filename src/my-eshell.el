@@ -1,6 +1,7 @@
 ;;;; my-eshell.el - Customizations for eshell mode.
 
 (require 'eshell)
+(require 'em-dirs)
 (require 'em-hist)
 (require 'em-term)
 
