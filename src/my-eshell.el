@@ -23,6 +23,15 @@
                                   ("docker" "build" "pull")
                                   )))
 
+;; This is the same function as in em-prompt.el except that a newline
+;; is added.
+(customize-set-variable 'eshell-prompt-function
+                        (function
+                         (lambda ()
+                           (concat "\n"
+                                   (abbreviate-file-name (eshell/pwd))
+	                           (if (= (user-uid) 0) " # " " $ ")))))
+
 (defun eshell-truncate-buffer-all ()
   "Truncate the buffer."
   (interactive)
