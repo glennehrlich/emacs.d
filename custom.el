@@ -89,6 +89,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:foreground "#c678dd" :weight bold :height 2.0))))
  '(ediff-fine-diff-B ((t (:background "dark olive green"))))
  '(popup-isearch-match ((t (:background "sky blue" :foreground "black"))))
  '(sp-show-pair-match-face ((t (:background "gray50")))))
