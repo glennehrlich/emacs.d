@@ -1,7 +1,6 @@
 alias h history
-alias ct cleartool $*
 alias vd vagrant halt
-alias vh vagrant halt
+alias vgs vagrant global-status
 alias vs vagrant ssh
 alias vu vagrant up
 alias vus vagrant up ; vagrant ssh
