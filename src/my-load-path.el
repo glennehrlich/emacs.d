@@ -95,7 +95,6 @@
                       anaconda-mode
 
                       ;; themes
-                      atom-dark-theme
                       atom-one-dark-theme
                       darcula-theme
                       dracula-theme

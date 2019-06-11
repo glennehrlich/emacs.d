@@ -4,7 +4,6 @@
 
 (theme-looper-set-favorite-themes '(
                                     zerodark ; favorite
-                                    atom-dark
                                     atom-one-dark
                                     darcula
                                     dracula
