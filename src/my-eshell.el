@@ -1,9 +1,11 @@
 ;;;; my-eshell.el - Customizations for eshell mode.
 
 (require 'eshell)
+(require 'em-cmpl)
 (require 'em-dirs)
 (require 'em-hist)
 (require 'em-term)
+(require 'bash-completion)
 
 (customize-set-variable 'eshell-aliases-file "~/.emacs.d/eshell-alias")
 (customize-set-variable 'eshell-directory-name "~/.emacs.d.persistent/eshell/")
@@ -63,6 +65,12 @@ Set `eshell-save-history-on-exit' to nil when using this hook."
                      t
                      'no-message)))
 (add-hook 'eshell-post-command-hook 'my-eshell-post-command-hook)
+
+(defun eshell-bash-completion ()
+  (setq-local bash-completion-nospace t)
+  (while (pcomplete-here
+          (nth 2 (bash-completion-dynamic-complete-nocomint (save-excursion (eshell-bol) (point)) (point))))))
+(customize-set-variable 'eshell-default-completion-function 'eshell-bash-completion)
 
 (provide 'my-eshell)
 
