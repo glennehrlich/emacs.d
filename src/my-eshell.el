@@ -23,7 +23,7 @@
 (customize-set-variable 'eshell-visual-options
                         (append eshell-visual-options
                                 '(
-                                  ("docker" "build" "pull")
+                                  ("docker" "build" "pull" "push")
                                   )))
 
 ;; This is the same function as in em-prompt.el except that a newline
