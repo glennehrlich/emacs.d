@@ -20,6 +20,7 @@
 ;; $ sudo find / -name .git
 (customize-set-variable 'magit-repository-directories
                         '(
+                          ;; (<dir>           . <depth>)
                           ("~/.emacs.d"       . 0)
                           ("~/.ssh"           . 0)
                           ("~/bin"            . 0)
