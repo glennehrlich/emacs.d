@@ -2,6 +2,8 @@
 
 (require 'recentf)
 
+(declare-function eshell-reset "esh-mode")
+
 (defalias 'ac 'align-c-function-parameters)
 (defalias 'ar 'align-regexp)
 (defalias 'eb 'ediff-buffers)
@@ -60,15 +62,16 @@
 (defun eshell-in-dir (dir buffer-name)
   "Open an eshell in DIR and name the buffer BUFFER-NAME."
   (interactive)
-  (mkdir dir t)
-  (cd dir)
-  (eshell-with-name buffer-name))
+  (with-current-buffer (eshell-with-name buffer-name)
+    (mkdir dir t)
+    (cd dir)
+    (eshell-reset))) ;; eshell-reset needed to get prompt to display correctly after creating buffer
 
 (defun eshell-with-name (buffer-name)
   "Open an eshell in the current directory and name the buffer BUFFER-NAME."
   (interactive)
-  (switch-to-buffer (eshell))
-  (rename-buffer buffer-name))
+  (let ((eshell-buffer-name buffer-name))
+    (switch-to-buffer (eshell t))))
 
 (defun eshells ()
   "Create starter eshells."
