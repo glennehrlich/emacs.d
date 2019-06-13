@@ -81,7 +81,8 @@
 (global-set-key (kbd "C-C M-g l") 'magit-log-buffer-file)
 (global-set-key (kbd "C-C M-g L") 'magit-log-buffer-file-popup)
 
-(global-set-key (kbd "C-M-<delete>") 'magit-list-repositories)
+(global-set-key (kbd "C-M-<delete>")    'magit-list-repositories)
+(global-set-key (kbd "C-M-<backspace>") 'magit-list-repositories)
 
 ;; Stop overwrite mode
 (global-set-key (kbd "<insert>") nil)
