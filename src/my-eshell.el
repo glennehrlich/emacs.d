@@ -1,10 +1,11 @@
 ;;;; my-eshell.el - Customizations for eshell mode.
 
+(require 'bash-completion)
+(require 'counsel)
 (require 'em-cmpl)
 (require 'em-dirs)
 (require 'em-hist)
 (require 'em-term)
-(require 'bash-completion)
 
 (customize-set-variable 'eshell-aliases-file "~/.emacs.d/eshell-alias")
 (customize-set-variable 'eshell-directory-name "~/.emacs.d.persistent/eshell/")
@@ -46,10 +47,13 @@
             ;; eshell-command-map is a buffer local variable.  It's
             ;; apparently not supposed to be and appears to to be a
             ;; bug in the way eshell is implemented.
+            ;; eshell-mode-map:    <key>
+            ;; ehsell-command-map: C-c <key>
             (define-key eshell-command-map (kbd "SPC") nil) ;; unbind so that C-c SPC can be used for ace-jump-mode
             (define-key eshell-command-map (kbd "C-t") 'eshell-truncate-buffer-all)
             (define-key eshell-command-map (kbd "M-o") 'eshell-truncate-buffer-all)
             (define-key eshell-mode-map (kbd "<tab>") 'completion-at-point)
+            (define-key eshell-mode-map (kbd "M-r") 'counsel-esh-history)
             ))
 
 (defun my-eshell-post-command-hook ()
