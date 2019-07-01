@@ -230,6 +230,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
+  (eshell-in-dir "~/vm/aws"       "a")
   (eshell-in-dir "~/vm/docker"    "d")
   (eshell-in-dir "~/vm/northstar" "n")
   (cd "~")
