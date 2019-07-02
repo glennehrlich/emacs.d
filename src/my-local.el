@@ -212,9 +212,9 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (shell-with-name "s0"))
 
 (defun site-packages ()
-  "\"Edit\" directory /opt/anaconda/lib/python*/site-packages using `dired'."
+  "\"Edit\" directory /opt/*conda/lib/python*/site-packages using `dired'."
   (interactive)
-  (let ((matches (file-expand-wildcards "/opt/anaconda/lib/python*/site-packages")))
+  (let ((matches (file-expand-wildcards "/opt/*conda/lib/python*/site-packages")))
     (when matches
       (dired (car matches)))))
 
