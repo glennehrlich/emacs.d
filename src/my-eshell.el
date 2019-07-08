@@ -12,6 +12,7 @@
 (customize-set-variable 'eshell-hist-ignoredups t)
 (customize-set-variable 'eshell-history-file-name "~/.emacs.d.persistent/eshell/history")
 (customize-set-variable 'eshell-save-history-on-exit nil)
+(customize-set-variable 'eshell-glob-case-insensitive t)
 
 (customize-set-variable 'eshell-visual-commands
                         (append eshell-visual-commands
@@ -43,6 +44,8 @@
 
 (add-hook 'eshell-mode-hook
           (lambda ()
+            (setq pcomplete-ignore-case t)
+
             ;; These have to be done in a hook because
             ;; eshell-command-map is a buffer local variable.  It's
             ;; apparently not supposed to be and appears to to be a
