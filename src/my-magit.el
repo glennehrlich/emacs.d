@@ -21,6 +21,7 @@
 (customize-set-variable 'magit-repository-directories
                         '(
                           ;; (<dir>           . <depth>)
+                          ("~/.aws"           . 0)
                           ("~/.emacs.d"       . 0)
                           ("~/.ssh"           . 0)
                           ("~/bin"            . 0)
