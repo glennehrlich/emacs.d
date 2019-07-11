@@ -28,7 +28,6 @@
 (global-set-key (kbd "<f8>")  'counsel-rg)
 (global-set-key (kbd "C-s")   'counsel-grep-or-swiper)
 (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
-(global-set-key (kbd "C-x m") 'counsel-compile)
 
 (provide 'my-ivy)
 
