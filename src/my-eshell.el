@@ -27,14 +27,16 @@
                                   ("docker" "build" "pull" "push")
                                   )))
 
-;; This is the same function as in em-prompt.el except that a newline
-;; is added.
+(push 'eshell-tramp eshell-modules-list)
+
 (customize-set-variable 'eshell-prompt-function
                         (function
                          (lambda ()
                            (concat "\n"
                                    (abbreviate-file-name (eshell/pwd))
-	                           (if (= (user-uid) 0) " # " " $ ")))))
+                                   "\n"
+	                           (if (= (user-uid) 0) "# " "$ ")))))
+(customize-set-variable 'eshell-prompt-regexp "^[#$] ")
 
 (defun eshell-truncate-buffer-all ()
   "Truncate the buffer."
@@ -77,6 +79,13 @@ Set `eshell-save-history-on-exit' to nil when using this hook."
   (while (pcomplete-here
           (nth 2 (bash-completion-dynamic-complete-nocomint (save-excursion (eshell-bol) (point)) (point))))))
 (customize-set-variable 'eshell-default-completion-function 'eshell-bash-completion)
+
+(defun docker-env ()
+  "Set DOCKER environment variables to use docker server inside of minikube."
+  (interactive)
+  (setenv "DOCKER_TLS_VERIFY" "1")
+  (setenv "DOCKER_CERT_PATH" (expand-file-name "~/.minikube/certs"))
+  (setenv "DOCKER_HOST" (concat "tcp://" (substring (shell-command-to-string "minikube ip") 0 -1) ":2376")))
 
 (provide 'my-eshell)
 
