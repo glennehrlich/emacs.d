@@ -8,11 +8,12 @@
 (require 'em-term)
 
 (customize-set-variable 'eshell-aliases-file "~/.emacs.d/eshell-alias")
+(customize-set-variable 'eshell-banner-message "")
 (customize-set-variable 'eshell-directory-name "~/.emacs.d.persistent/eshell/")
+(customize-set-variable 'eshell-glob-case-insensitive t)
 (customize-set-variable 'eshell-hist-ignoredups t)
 (customize-set-variable 'eshell-history-file-name "~/.emacs.d.persistent/eshell/history")
 (customize-set-variable 'eshell-save-history-on-exit nil)
-(customize-set-variable 'eshell-glob-case-insensitive t)
 
 (customize-set-variable 'eshell-visual-commands
                         (append eshell-visual-commands
