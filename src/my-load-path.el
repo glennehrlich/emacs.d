@@ -38,7 +38,6 @@
                       dockerfile-mode
                       ein
                       elisp-slime-nav
-                      ;; elpy
                       exec-path-from-shell
                       expand-region
                       flx
@@ -91,8 +90,9 @@
                       wrap-region
                       yasnippet
 
-                      ;; alternative python
-                      anaconda-mode
+                      ;; python
+                      ;; anaconda-mode
+                      elpy
 
                       ;; themes
                       atom-one-dark-theme
