@@ -25,7 +25,7 @@
 (exec-path-from-shell-initialize)
 
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Source Code Pro for Powerline"
                     :height 140
                     :weight 'light)
 
