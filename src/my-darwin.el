@@ -17,10 +17,11 @@
 (defvar browse-url-chromium-program "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
 (require 'exec-path-from-shell)
+(add-to-list 'exec-path-from-shell-variables "EDITOR")
+(add-to-list 'exec-path-from-shell-variables "EMACS")
 (add-to-list 'exec-path-from-shell-variables "INFOPATH")
 (add-to-list 'exec-path-from-shell-variables "MANPATH")
-(add-to-list 'exec-path-from-shell-variables "EMACS")
-(add-to-list 'exec-path-from-shell-variables "EDITOR")
+(add-to-list 'exec-path-from-shell-variables "PYTHONPATH")
 (add-to-list 'exec-path-from-shell-variables "VISUAL")
 (exec-path-from-shell-initialize)
 
