@@ -230,19 +230,40 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
-  (eshell-in-dir "~/vm/aws"       "a")
-  (eshell-in-dir "~/vm/cluster"   "c")
-  (eshell-in-dir "~/vm/docker"    "d")
-  (eshell-in-dir "~/vm/northstar" "n")
-  (eshell-in-dir "~/vm/queue"     "q")
+  (vterm-in-dir "~/vm/aws"       "a")
+  (vterm-in-dir "~/vm/cluster"   "c")
+  (vterm-in-dir "~/vm/docker"    "d")
+  (vterm-in-dir "~/vm/northstar" "n")
+  (vterm-in-dir "~/vm/queue"     "q")
   (cd "~")
-  (eshells)
+  (vterms)
   (todo))
 
 (defun todo ()
   "Visit ~/todo/todo.org."
   (interactive)
   (find-file "~/todo/todo.org"))
+
+(defun vterm-in-dir (dir buffer-name)
+  "Open a vterm in DIR and name the buffer BUFFER-NAME."
+  (interactive)
+  (mkdir dir t)
+  (cd dir)
+  (vterm-with-name buffer-name))
+
+(defun vterm-with-name (buffer-name)
+  "Open a vterm in the current directory and name the buffer BUFFER-NAME."
+  (interactive)
+  (vterm)
+  ; (switch-to-buffer (vterm))
+  (rename-buffer buffer-name))
+
+(defun vterms ()
+  "Create starter vterms."
+  (interactive)
+  (vterm-with-name "v2")
+  (vterm-with-name "v1")
+  (vterm-with-name "v0"))
 
 (provide 'my-local)
 
