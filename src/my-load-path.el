@@ -95,11 +95,11 @@
                       elpy
 
                       ;; themes
-                      atom-one-dark-theme
-                      darcula-theme
-                      dracula-theme
-                      spacemacs-theme
                       zerodark-theme
+
+                      ;; term stuff
+                      vterm
+                      vterm-toggle
                       ))
 
 (defun get-my-packages ()

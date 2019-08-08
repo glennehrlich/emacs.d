@@ -3,11 +3,7 @@
 (require 'theme-looper)
 
 (theme-looper-set-favorite-themes '(
-                                    zerodark ; favorite
-                                    atom-one-dark
-                                    darcula
-                                    dracula
-                                    spacemacs-dark
+                                    zerodark
                                     ))
 
 (global-set-key (kbd "<M-f11>")   'theme-looper-enable-previous-theme)
