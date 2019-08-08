@@ -164,6 +164,10 @@
 (use-package visual-regexp
   :defer t)
 
+(use-package vterm
+  :defer t
+  :config (require 'my-vterm))
+
 (use-package winner
   :config (winner-mode 1))
 
