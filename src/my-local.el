@@ -194,9 +194,13 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
-  (mkdir dir t)
-  (cd dir)
-  (shell-with-name buffer-name))
+  (let ((the-current-directory default-directory)
+        (the-current-buffer (current-buffer)))
+    (mkdir dir t)
+    (cd dir)
+    (shell-with-name buffer-name)
+    (switch-to-buffer the-current-buffer)
+    (cd the-current-directory)))
 
 (defun shell-with-name (buffer-name)
   "Open a shell in the current directory and name the buffer BUFFER-NAME."
@@ -247,15 +251,18 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun vterm-in-dir (dir buffer-name)
   "Open a vterm in DIR and name the buffer BUFFER-NAME."
   (interactive)
-  (mkdir dir t)
-  (cd dir)
-  (vterm-with-name buffer-name))
+  (let ((the-current-directory default-directory)
+        (the-current-buffer (current-buffer)))
+    (mkdir dir t)
+    (cd dir)
+    (vterm-with-name buffer-name)
+    (switch-to-buffer the-current-buffer)
+    (cd the-current-directory)))
 
 (defun vterm-with-name (buffer-name)
   "Open a vterm in the current directory and name the buffer BUFFER-NAME."
   (interactive)
   (vterm)
-  ; (switch-to-buffer (vterm))
   (rename-buffer buffer-name))
 
 (defun vterms ()
