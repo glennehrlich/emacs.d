@@ -85,6 +85,7 @@
  '(woman-use-own-frame nil))
 
 (custom-set-faces
+ '(aw-leading-char-face ((t (:foreground "#c678dd" :weight bold :height 2.0)))) ; this makes ace-window (M-o) show window numbers bigger
  '(term-color-red ((t (:background "#ff6c6b"))))    ; zerodark red
  '(term-color-green ((t (:background "#98be65"))))  ; zerodark green
  ;; '(term-color-red ((t (:background "#744a5b"))))    ; zerodark bright-background-red
