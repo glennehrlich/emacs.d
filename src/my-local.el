@@ -39,6 +39,11 @@
   (interactive)
   (find-file "~/gitlab/kinetx_glenn/northstar/notes/diary.org"))
 
+(defun diary-muos ()
+  "Visit ~/gitlab/kinetx_glenn/muos/notes/diary.org."
+  (interactive)
+  (find-file "~/gitlab/kinetx_glenn/muos/notes/diary.org"))
+
 (defun diary-sim ()
   "Visit ~/gitlab/kinetx_glenn/sim/notes/diary.org."
   (interactive)
