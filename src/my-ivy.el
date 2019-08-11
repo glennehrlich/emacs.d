@@ -30,4 +30,3 @@
 (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
 
 (provide 'my-ivy)
-
