@@ -20,11 +20,9 @@
 
 (defvar my-packages '(
                       ace-window
-                      ag
                       auto-complete
                       avy
                       bash-completion
-                      bind-key
                       cmake-font-lock
                       cmake-mode
                       company
@@ -45,8 +43,6 @@
                       fuzzy
                       ggtags
                       git-timemachine
-                      groovy-mode
-                      haskell-mode
                       hi2
                       htmlize
                       hydra

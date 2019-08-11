@@ -12,7 +12,7 @@
 (global-set-key (kbd "<f3>")  'next-error)
 (global-set-key (kbd "<f6>")  'undo)
 (global-set-key (kbd "<f7>")  'repeat-complex-command)
-; (global-set-key (kbd "<f8>")  'lgrep) ; glenn: temporarily trying counsel-ag for this
+;; f8 is bound to counsel-rg in my-ivy.el .
 (global-set-key (kbd "<f9>")  'my-narrow-to-region)
 (global-set-key (kbd "<f10>") 'widen)
 (global-set-key (kbd "<f11>") (lambda () "Scroll the window down one line." (interactive) (scroll-down 1)))
