@@ -31,12 +31,15 @@
 ;; (setq python-shell-interpreter "ipython"
 ;;       python-shell-interpreter-args "--simple-prompt -i")
 
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "--simple-prompt -c exec('__import__(\\'readline\\')') -i")
+
 ;; Use jupyter console.
-(setq python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt"
-      python-shell-prompt-detect-failure-warning nil)
-(add-to-list 'python-shell-completion-native-disabled-interpreters
-             "jupyter")
+;; (setq python-shell-interpreter "jupyter"
+;;       python-shell-interpreter-args "console --simple-prompt"
+;;       python-shell-prompt-detect-failure-warning nil)
+;; (add-to-list 'python-shell-completion-native-disabled-interpreters
+;;              "jupyter")
 
 ;; Make dedicated *Python* shells.
 (add-hook 'elpy-mode-hook (lambda () (elpy-shell-toggle-dedicated-shell 1)))
