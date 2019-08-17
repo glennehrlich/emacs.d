@@ -73,13 +73,6 @@
   :defer t
   :config (require 'my-grep))
 
-(use-package groovy-mode
-  :defer t)
-
-(use-package haskell-mode
-  :defer t
-  :config (require 'my-haskell))
-
 (use-package ivy
   :config (require 'my-ivy))
 
