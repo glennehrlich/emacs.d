@@ -24,7 +24,6 @@
 ;; Control function keys.
 (global-set-key (kbd "C-<f6>") 'winner-undo)
 (global-set-key (kbd "C-<f7>") 'winner-redo)
-; (global-set-key (kbd "C-<f8>") 'rgrep) ; glenn: temporarily trying counsel-ag for this
 
 ;; Meta function keys.
 (global-set-key (kbd "M-<f6>") (lambda () "Call `revert-buffer' without confirmation." (interactive) (revert-buffer t t)))

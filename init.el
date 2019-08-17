@@ -69,10 +69,6 @@
   :defer t
   :config (require 'my-git-timemachine))
 
-(use-package grep
-  :defer t
-  :config (require 'my-grep))
-
 (use-package ivy
   :config (require 'my-ivy))
 
