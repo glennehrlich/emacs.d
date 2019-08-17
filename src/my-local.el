@@ -260,22 +260,16 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
         (the-current-buffer (current-buffer)))
     (mkdir dir t)
     (cd dir)
-    (vterm-with-name buffer-name)
+    (vterm buffer-name)
     (switch-to-buffer the-current-buffer)
     (cd the-current-directory)))
-
-(defun vterm-with-name (buffer-name)
-  "Open a vterm in the current directory and name the buffer BUFFER-NAME."
-  (interactive)
-  (vterm)
-  (rename-buffer buffer-name))
 
 (defun vterms ()
   "Create starter vterms."
   (interactive)
-  (vterm-with-name "v2")
-  (vterm-with-name "v1")
-  (vterm-with-name "v0"))
+  (vterm "v2")
+  (vterm "v1")
+  (vterm "v0"))
 
 (provide 'my-local)
 
