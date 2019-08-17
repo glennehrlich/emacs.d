@@ -29,6 +29,7 @@
                       counsel
                       counsel-tramp
                       dash
+                      default-text-scale
                       diminish
                       docker
                       docker-compose-mode

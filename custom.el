@@ -64,7 +64,7 @@
  '(org-table-use-standard-references t t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
-   '(wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode marcopolo magit julia-shell json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
+   '(wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode marcopolo magit julia-shell json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
  '(paradox-github-token t)
  '(plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")

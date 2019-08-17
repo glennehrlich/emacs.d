@@ -90,5 +90,9 @@
 
 (global-set-key (kbd "M-k") 'docker)
 
+;; Font size keys.
+(global-set-key (kbd "M--") 'default-text-scale-decrease)
+(global-set-key (kbd "M-=") 'default-text-scale-increase)
+
 (provide 'my-key-bindings)
 
