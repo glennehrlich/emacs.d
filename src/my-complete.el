@@ -44,46 +44,12 @@
 (diminish 'auto-complete-mode)
 
 (setq ac-modes '(
-                 ;; ada-mode
-                 ;; agda-mode
-                 ;; agda2-mode
-                 ;; c++-mode
-                 ;; c-mode
-                 ;; cc-mode
-                 ;; clojure-mode
-                 ;; clojurescript-mode
-                 ;; coq-mode
-                 ;; cperl-mode
-                 ;; css-mode
-                 ;; ecmascript-mode
                  emacs-lisp-mode
-                 ;; f90-mode
-                 ;; fortran-mode
-                 ;; go-mode
-                 ;; haskell-mode
-                 ;; java-mode
-                 ;; javascript-mode
-                 ;; js-mode
-                 ;; js2-mode
                  lisp-interaction-mode
                  lisp-mode
-                 ;; lua-mode
                  makefile-mode
-                 ;; malabar-mode
-                 ;; ocaml-mode
-                 ;; perl-mode
-                 ;; php-mode
-                 ;; python-mode
-                 ;; ruby-mode
-                 ;; scala-mode
-                 ;; scheme-mode
-                 ;; sclang-mode
-                 ;; sgml-mode
                  sh-mode
                  slime-repl-mode
-                 ;; ts-mode
-                 ;; tuareg-mode
-                 ;; verilog-mode
                  xml-mode
                  ))
 

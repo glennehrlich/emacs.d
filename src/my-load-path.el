@@ -52,7 +52,6 @@
                       ivy
                       ivy-hydra
                       jedi
-                      js2-mode
                       json-mode
                       json-reformat
                       magit
