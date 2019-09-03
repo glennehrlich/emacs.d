@@ -18,6 +18,7 @@
 ;; These should occur before any other packages.
 (use-package my-global-settings)
 (use-package my-complete)
+(use-package el-patch)
 
 (use-package calc
   :defer t
@@ -181,6 +182,22 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+;;; Patches
+
+;; Paradox patch
+(el-patch-defun package-menu-refresh ()
+    "Patch package-menu-refresh to work around Malabarba/paradox#175"
+    (interactive)
+    (unless (derived-mode-p 'package-menu-mode)
+      (user-error "The current buffer is not a Package Menu"))
+    (when (el-patch-swap (and package-menu-async package--downloads-in-progress)
+                         (and package-menu-async package--downloads-in-progress
+                              (seq-difference package--downloads-in-progress '(paradox--data))))
+      (user-error "Package refresh is already in progress, please wait..."))
+    (setq package-menu--old-archive-contents package-archive-contents)
+    (setq package-menu--new-package-list nil)
+    (package-refresh-contents package-menu-async))
 
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
