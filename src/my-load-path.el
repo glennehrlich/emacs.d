@@ -36,6 +36,7 @@
                       docker-tramp
                       dockerfile-mode
                       ein
+                      el-patch
                       elisp-slime-nav
                       exec-path-from-shell
                       expand-region
@@ -77,6 +78,8 @@
                       undo-tree
                       use-package
                       visual-regexp
+                      vterm
+                      vterm-toggle
                       w3m
                       web-mode
                       wgrep
@@ -90,10 +93,6 @@
 
                       ;; themes
                       zerodark-theme
-
-                      ;; term stuff
-                      vterm
-                      vterm-toggle
                       ))
 
 (defun get-my-packages ()
