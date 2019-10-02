@@ -1,6 +1,9 @@
 ;;;; my-magit.el - Customizations for magit mode.
 
 (require 'magit)
+(require 'magit-gitflow)
+
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 (customize-set-variable 'magit-log-arguments '("--graph" "--color" "-n256"))
 

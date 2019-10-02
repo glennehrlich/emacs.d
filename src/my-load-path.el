@@ -56,6 +56,7 @@
                       json-mode
                       json-reformat
                       magit
+                      magit-gitflow
                       markdown-mode
                       morlock
                       org-plus-contrib
