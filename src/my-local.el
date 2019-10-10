@@ -239,12 +239,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
-  (vterm-in-dir "~/vm/aws"       "a")
-  (vterm-in-dir "~/vm/cluster"   "c")
-  (vterm-in-dir "~/vm/docker"    "d")
-  (vterm-in-dir "~/vm/muos"      "m")
-  (vterm-in-dir "~/vm/northstar" "n")
-  (vterm-in-dir "~/vm/queue"     "q")
+  (vterm-in-dir "~/vm/bams_build" "b")
   (cd "~")
   (vterms)
   (todo))
