@@ -19,8 +19,12 @@
  '(compilation-window-height 6)
  '(counsel-ag-base-command "ag --hidden --ignore .git --nocolor --nogroup %s")
  '(counsel-find-file-at-point t)
+ '(counsel-mode-override-describe-bindings t)
  '(counsel-rg-base-command
    "rg --hidden --glob !.git -S --no-heading --line-number --color never %s .")
+ '(counsel-yank-pop-separator "
+----
+")
  '(custom-enabled-themes '(zerodark))
  '(custom-safe-themes t)
  '(default-frame-alist '((width . 100) (height . 60)))
@@ -44,11 +48,33 @@
  '(kept-old-versions 10)
  '(magit-log-arguments '("--graph" "--color" "-n256") t)
  '(magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+ '(magit-repolist-columns
+   '(("D" 1 magit-repolist-column-dirty nil)
+     ("S" 1 magit-repolist-column-stashes nil)
+     ("B<U" 3 magit-repolist-column-unpulled-from-upstream
+      ((:right-align t)
+       (:help-echo "Upstream changes not in branch")))
+     ("B>U" 3 magit-repolist-column-unpushed-to-upstream
+      ((:right-align t)
+       (:help-echo "Local changes not in upstream")))
+     ("Branch" 20 magit-repolist-column-branch nil)
+     ("Name" 40 magit-repolist-column-ident nil)
+     ("Path" 99 magit-repolist-column-path nil)))
+ '(magit-repository-directories
+   '(("~/.aws" . 0)
+     ("~/.emacs.d" . 0)
+     ("~/.ssh" . 0)
+     ("~/bin" . 0)
+     ("~/dot-files" . 0)
+     ("~/gitlab" . 6)
+     ("~/notes" . 0)
+     ("~/notes-personal" . 0)
+     ("~/todo" . 0)))
  '(make-backup-files t)
  '(org-clock-into-drawer nil)
  '(org-clock-persist t)
  '(org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
- '(org-duration-format '(("h") (special . 2)) t)
+ '(org-duration-format '(("h") (special . 2)))
  '(org-file-apps
    '((auto-mode . emacs)
      ("\\.mm\\'" . default)
@@ -71,6 +97,7 @@
  '(request-storage-directory "~/.emacs.d.transient/request")
  '(ring-bell-function 'ignore)
  '(save-place-mode nil)
+ '(shell-pop-shell-type '("vterm" "*vterm*" (lambda nil (vterm))))
  '(shell-pop-universal-key "C-t")
  '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
  '(sp-show-pair-from-inside t)
@@ -85,9 +112,12 @@
  '(woman-use-own-frame nil))
 
 (custom-set-faces
- '(aw-leading-char-face ((t (:foreground "#c678dd" :weight bold :height 2.0)))) ; this makes ace-window (M-o) show window numbers bigger
- '(term-color-red ((t (:background "#ff6c6b"))))    ; zerodark red
- '(term-color-green ((t (:background "#98be65"))))  ; zerodark green
- ;; '(term-color-red ((t (:background "#744a5b"))))    ; zerodark bright-background-red
- ;; '(term-color-green ((t (:background "#3f6d54"))))  ; zerodark bright-background-green
- )
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:foreground "#c678dd" :weight bold :height 2.0))))
+ '(ivy-current-match ((t (:background "#282c34" :foreground "#c678dd" :box (:line-width 1 :color "#c678dd") :weight normal))))
+ '(sp-show-pair-match-face ((t (:background "gray50"))))
+ '(term-color-green ((t (:background "#98be65"))))
+ '(term-color-red ((t (:background "#ff6c6b")))))
