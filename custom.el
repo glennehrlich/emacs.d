@@ -74,7 +74,7 @@
  '(org-clock-into-drawer nil)
  '(org-clock-persist t)
  '(org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
- '(org-duration-format '(("h") (special . 2)))
+ '(org-duration-format '(("h") (special . 2)) t)
  '(org-file-apps
    '((auto-mode . emacs)
      ("\\.mm\\'" . default)
