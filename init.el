@@ -184,20 +184,13 @@
 (load custom-file)
 
 ;;; Patches
-
-;; Paradox patch
-(el-patch-defun package-menu-refresh ()
-    "Patch package-menu-refresh to work around Malabarba/paradox#175"
-    (interactive)
-    (unless (derived-mode-p 'package-menu-mode)
-      (user-error "The current buffer is not a Package Menu"))
-    (when (el-patch-swap (and package-menu-async package--downloads-in-progress)
-                         (and package-menu-async package--downloads-in-progress
-                              (seq-difference package--downloads-in-progress '(paradox--data))))
-      (user-error "Package refresh is already in progress, please wait..."))
-    (setq package-menu--old-archive-contents package-archive-contents)
-    (setq package-menu--new-package-list nil)
-    (package-refresh-contents package-menu-async))
+;;;
+;;; This section uses el-patch-defun or other el-patch functions to
+;;; make patches to fix things. Even if there are no active patches,
+;;; keep this section in order to remind me where to do patches.
+;;;
+;;; See commit 67c192acfe330bff7213abcea837897a9770f1ca for an example
+;;; patch (copy the commit id and M-x magit-show-commit).
 
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
