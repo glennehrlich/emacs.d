@@ -240,6 +240,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
   (vterm-in-dir "~/vm/bams_build" "b")
+  (vterm-in-dir "~/vm/labtools"   "l")
   (cd "~")
   (vterms)
   (todo))
