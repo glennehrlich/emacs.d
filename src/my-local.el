@@ -34,6 +34,11 @@
   (interactive)
   (dired "~/gitlab/kinetx_bams/bams"))
 
+(defun bams-notes ()
+  "\"Edit\" directory ~/gitlab/kinetx_bams/notes using `dired'."
+  (interactive)
+  (dired "~/gitlab/kinetx_bams/notes"))
+
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
