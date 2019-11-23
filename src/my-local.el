@@ -29,7 +29,13 @@
       (untabify (1- (point)) (point-max)))
     nil))
 
-(defun credit-cards ()
+(defun bams ()
+  "\"Edit\" directory ~/gitlab/kinetx_bams/bams using `dired'."
+  (interactive)
+  (dired "~/gitlab/kinetx_bams/bams"))
+
+(defun home ()
+  "\"Edit\" directory ~ using `dired'."(defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
