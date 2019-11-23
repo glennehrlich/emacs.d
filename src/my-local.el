@@ -34,8 +34,7 @@
   (interactive)
   (dired "~/gitlab/kinetx_bams/bams"))
 
-(defun home ()
-  "\"Edit\" directory ~ using `dired'."(defun credit-cards ()
+(defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
