@@ -4,8 +4,6 @@
 (require 'shell)
 (require 'dirtrack)
 
-(customize-set-variable 'shell-pop-shell-type '("shell" "*shell*" (lambda () (switch-to-buffer (shell)))))
-
 ;; Make shells open in same window.
 (add-to-list 'display-buffer-alist '("*shell*" display-buffer-same-window))
 

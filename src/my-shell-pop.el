@@ -9,5 +9,10 @@
 ;; (customize-set-variable 'shell-pop-shell-type '("eshell" "*eshell*" (lambda () (switch-to-buffer (eshell)))))
 ;; (customize-set-variable 'shell-pop-shell-type '("vterm" "*vterm*" (lambda () (vterm))))
 
+(cond ((member 'vterm features)
+       (customize-set-variable 'shell-pop-shell-type '("vterm" "*vterm*" (lambda () (vterm)))))
+      (t
+       (customize-set-variable 'shell-pop-shell-type '("shell" "*shell*" (lambda () (switch-to-buffer (shell)))))))
+
 (provide 'my-shell-pop)
 
