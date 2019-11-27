@@ -154,8 +154,9 @@
 (use-package visual-regexp
   :defer t)
 
+;; Needs to be loaded directory for shell-pop to work (i.e., vterm can
+;; not be lazily loaded).
 (use-package vterm
-  :defer t
   :config (require 'my-vterm))
 
 (use-package winner
