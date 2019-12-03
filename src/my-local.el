@@ -100,6 +100,11 @@
   (interactive)
   (dired "~/gitlab"))
 
+(defun gitlab-archive ()
+  "\"Edit\" directory ~/gitlab-archive using `dired'."
+  (interactive)
+  (dired "~/gitlab-archive"))
+
 (defun home ()
   "\"Edit\" directory ~ using `dired'."
   (interactive)
