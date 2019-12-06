@@ -256,6 +256,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (vterm-in-dir "~/vm/bams_build" "b")
   (vterm-in-dir "~/vm/glenn"      "g")
+  (vterm-in-dir "~/vm/lxc"        "l")
   (cd "~")
   (vterms)
   (todo))
