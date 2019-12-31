@@ -28,6 +28,7 @@
                           ("~/.emacs.d"       . 0)
                           ("~/.ssh"           . 0)
                           ("~/bin"            . 0)
+                          ("~/config"         . 0)
                           ("~/dot-files"      . 0)
                           ("~/gitlab"         . 6)
                           ("~/notes"          . 0)
