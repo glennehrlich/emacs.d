@@ -8,6 +8,7 @@
 
 ;; C-l clears both visible screen and previous output (the "scrollback")
 (customize-set-variable 'vterm-clear-scrollback-when-clearing t)
+(customize-set-variable 'vterm-max-scrollback 100000)
 
 (provide 'my-vterm)
 
