@@ -29,35 +29,10 @@
       (untabify (1- (point)) (point-max)))
     nil))
 
-(defun bams ()
-  "\"Edit\" directory ~/gitlab/kinetx_bams/bams using `dired'."
-  (interactive)
-  (dired "~/gitlab/kinetx_bams/bams"))
-
-(defun bams-notes ()
-  "\"Edit\" directory ~/gitlab/kinetx_bams/notes using `dired'."
-  (interactive)
-  (dired "~/gitlab/kinetx_bams/notes"))
-
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
-
-(defun diary-northstar ()
-  "Visit ~/gitlab/kinetx_glenn/northstar/notes/diary.org."
-  (interactive)
-  (find-file "~/gitlab/kinetx_glenn/northstar/notes/diary.org"))
-
-(defun diary-muos ()
-  "Visit ~/gitlab/kinetx_glenn/muos/notes/diary.org."
-  (interactive)
-  (find-file "~/gitlab/kinetx_glenn/muos/notes/diary.org"))
-
-(defun diary-sim ()
-  "Visit ~/gitlab/kinetx_glenn/sim/notes/diary.org."
-  (interactive)
-  (find-file "~/gitlab/kinetx_glenn/sim/notes/diary.org"))
 
 (defun dot-files ()
   "\"Edit\" directory ~/dot-files using `dired'."
