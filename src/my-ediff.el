@@ -1,6 +1,7 @@
 ;;;; my-ediff.el - Customizations for ediff mode.
 
 (require 'ediff)
+(require 'outline)
 
 ;; This is not customizable; the help text for this variable says to
 ;; use setq-default.
@@ -21,6 +22,10 @@
 	  (message "")
 	  (set-buffer ctl-buf)
 	  (ediff-really-quit reverse-default-keep-variants))))
+
+;; Automatically expand org mode and outline files before diffing
+;; them.
+(add-hook 'ediff-prepare-buffer-hook #'outline-show-all)
 
 (provide 'my-ediff)
 
