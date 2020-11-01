@@ -10,6 +10,12 @@
 
 (setq package-user-dir "~/.emacs.d.elpa")
 
+;; Force package-gnupghome-dir to be in ~/.emacs.d.elpa instead of
+;; ~/.emacs.d/elpa.
+(when (boundp 'package-gnupghome-dir)
+  (setq package-gnupghome-dir
+         (expand-file-name "gnupg" package-user-dir)))
+
 (setq package-archives '(
                          ("org"       . "http://orgmode.org/elpa/")
                          ("melpa"     . "http://melpa.org/packages/")
