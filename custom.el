@@ -87,7 +87,7 @@
  '(org-return-follows-link t)
  '(org-startup-folded t)
  '(org-startup-indented t)
- '(org-table-use-standard-references t t)
+ '(org-table-use-standard-references t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
    '(wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode marcopolo magit-gitflow magit json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
@@ -109,6 +109,7 @@
  '(vc-follow-symlinks t)
  '(vc-make-backup-files t)
  '(version-control t)
+ '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
  '(wdired-allow-to-change-permissions t t)
