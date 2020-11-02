@@ -33,8 +33,6 @@
                           ("↓"        1 magit-repolist-column-unpulled-from-upstream ((:help-echo "Upstream changes not in branch")))
                           ("↑"        1 magit-repolist-column-unpushed-to-upstream ((:help-echo "Local changes not in upstream")))
                           ("Branch"  10 magit-repolist-column-branch nil)
-                          ("Name"    20 magit-repolist-column-ident nil)
-                          ;; ("Version" 25 magit-repolist-column-version nil)
                           ("Path"    99 magit-repolist-column-path nil)
                           ))
 
