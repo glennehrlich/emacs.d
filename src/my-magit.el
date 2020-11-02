@@ -24,16 +24,7 @@
 (customize-set-variable 'magit-repository-directories
                         '(
                           ;; (<dir>           . <depth>)
-                          ("~/.aws"           . 0)
-                          ("~/.emacs.d"       . 0)
-                          ("~/.ssh"           . 0)
-                          ("~/bin"            . 0)
-                          ("~/config"         . 0)
-                          ("~/dot-files"      . 0)
-                          ("~/gitlab"         . 6)
-                          ("~/notes"          . 0)
-                          ("~/notes-personal" . 0)
-                          ("~/todo"           . 0)
+                          ("~"           . 10)
                           ))
 
 (customize-set-variable 'magit-repolist-columns
