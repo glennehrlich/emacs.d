@@ -90,11 +90,6 @@
   (interactive)
   (dired "~/r/org/meetings"))
 
-(defun mg ()
-  "Run the mgitstatus command from the home directory."
-  (interactive)
-  (async-shell-command "cd ; mgitstatus -d 0"))
-
 (defun my-apply-function-to-region-lines (fn)
   "Apply function to all lines in the region.
 For each line that begins in the region, move to the beginning of
