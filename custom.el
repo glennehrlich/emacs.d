@@ -48,28 +48,6 @@
  '(kept-old-versions 10)
  '(magit-log-arguments '("--graph" "--color" "-n256") t)
  '(magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
- '(magit-repolist-columns
-   '(("D" 1 magit-repolist-column-dirty nil)
-     ("S" 1 magit-repolist-column-stashes nil)
-     ("B<U" 3 magit-repolist-column-unpulled-from-upstream
-      ((:right-align t)
-       (:help-echo "Upstream changes not in branch")))
-     ("B>U" 3 magit-repolist-column-unpushed-to-upstream
-      ((:right-align t)
-       (:help-echo "Local changes not in upstream")))
-     ("Branch" 20 magit-repolist-column-branch nil)
-     ("Name" 40 magit-repolist-column-ident nil)
-     ("Path" 99 magit-repolist-column-path nil)))
- '(magit-repository-directories
-   '(("~/.aws" . 0)
-     ("~/.emacs.d" . 0)
-     ("~/.ssh" . 0)
-     ("~/bin" . 0)
-     ("~/dot-files" . 0)
-     ("~/gitlab" . 6)
-     ("~/notes" . 0)
-     ("~/notes-personal" . 0)
-     ("~/todo" . 0)))
  '(make-backup-files t)
  '(org-clock-into-drawer nil)
  '(org-clock-persist t)
