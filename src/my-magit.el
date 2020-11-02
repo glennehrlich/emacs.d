@@ -31,9 +31,9 @@
                         '(
                           ("D"        1 magit-repolist-column-dirty nil)
                           ("S"        1 magit-repolist-column-stashes nil)
-                          ("B<U"      3 magit-repolist-column-unpulled-from-upstream ((:right-align t)
+                          ("↓"        3 magit-repolist-column-unpulled-from-upstream ((:right-align t)
                                                                                       (:help-echo "Upstream changes not in branch")))
-                          ("B>U"      3 magit-repolist-column-unpushed-to-upstream ((:right-align t)
+                          ("↑"        3 magit-repolist-column-unpushed-to-upstream ((:right-align t)
                                                                                     (:help-echo "Local changes not in upstream")))
                           ("Branch"  20 magit-repolist-column-branch nil)
                           ("Name"    40 magit-repolist-column-ident nil)
