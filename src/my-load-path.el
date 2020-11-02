@@ -92,6 +92,7 @@
                       wgrep
                       wgrep-ag
                       wrap-region
+                      xterm-color
                       yasnippet
 
                       ;; python
