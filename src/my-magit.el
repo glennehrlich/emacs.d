@@ -27,21 +27,23 @@
                           ("~"           . 10)
                           ))
 
-(message "glenn: before set")
 (customize-set-variable 'magit-repolist-columns
                         '(
-                          ("D"        1 magit-repolist-column-dirty nil)
-                          ("S"        1 magit-repolist-column-stashes nil)
-                          ("↓"        1 magit-repolist-column-unpulled-from-upstream ((:right-align t)
-                                                                                      (:help-echo "Upstream changes not in branch")))
-                          ("↑"        1 magit-repolist-column-unpushed-to-upstream ((:right-align t)
-                                                                                    (:help-echo "Local changes not in upstream")))
-                          ("Branch"  20 magit-repolist-column-branch nil)
-                          ("Name"    40 magit-repolist-column-ident nil)
+                          ("S"        1 magit-repolist-column-flag nil)
+                          ("↓"        1 magit-repolist-column-unpulled-from-upstream ((:help-echo "Upstream changes not in branch")))
+                          ("↑"        1 magit-repolist-column-unpushed-to-upstream ((:help-echo "Local changes not in upstream")))
+                          ("Branch"  10 magit-repolist-column-branch nil)
+                          ("Name"    20 magit-repolist-column-ident nil)
                           ;; ("Version" 25 magit-repolist-column-version nil)
                           ("Path"    99 magit-repolist-column-path nil)
                           ))
-(message "glenn: after set")
+
+(customize-set-variable 'magit-repolist-column-flag-alist
+                        '(
+                          (magit-untracked-files . "+")
+                          (magit-unstaged-files  . "*")
+                          (magit-staged-files    . "S")
+                          ))
 
 (provide 'my-magit)
 
