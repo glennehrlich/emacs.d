@@ -5,6 +5,9 @@
 ; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
+;; Don't prompt to compile vterm-module.
+(customize-set-variable 'vterm-always-compile-module t)
+
 (add-to-list 'load-path "~/.emacs.d/src" t)
 (setq load-path (delete-dups load-path))
 
