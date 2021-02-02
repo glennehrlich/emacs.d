@@ -6,7 +6,7 @@
 
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 110
+                    :height 100
                     :weight 'medium)
 
 (customize-set-variable 'default-frame-alist '((width . 100)
