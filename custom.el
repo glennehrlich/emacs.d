@@ -31,6 +31,7 @@
  '(delete-old-versions t)
  '(dired-dwim-target t)
  '(dired-kept-versions 2)
+ '(docker-tramp-use-names t)
  '(enable-local-variables :all)
  '(eshell-aliases-file "~/.emacs.d/eshell-alias")
  '(eshell-directory-name "~/.emacs.d.persistent/eshell/")
@@ -48,6 +49,19 @@
  '(kept-old-versions 10)
  '(magit-log-arguments '("--graph" "--color" "-n256") t)
  '(magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+ '(magit-repolist-column-flag-alist
+   '((magit-untracked-files . "+")
+     (magit-unstaged-files . "*")
+     (magit-staged-files . "S")))
+ '(magit-repolist-columns
+   '(("S" 1 magit-repolist-column-flag nil)
+     ("↓" 1 magit-repolist-column-unpulled-from-upstream
+      ((:help-echo "Upstream changes not in branch")))
+     ("↑" 1 magit-repolist-column-unpushed-to-upstream
+      ((:help-echo "Local changes not in upstream")))
+     ("Branch" 10 magit-repolist-column-branch nil)
+     ("Path" 99 magit-repolist-column-path nil)))
+ '(magit-repository-directories '(("~" . 10)))
  '(make-backup-files t)
  '(org-clock-into-drawer nil)
  '(org-clock-persist t)
@@ -68,7 +82,7 @@
  '(org-table-use-standard-references t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
-   '(xterm-color wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode marcopolo magit-gitflow magit json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
+   '(vterm xterm-color wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock markdown-mode marcopolo magit-gitflow magit json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
  '(paradox-github-token t)
  '(plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
@@ -77,7 +91,7 @@
  '(save-place-mode nil)
  '(shell-pop-shell-type '("vterm" "*vterm*" (lambda nil (vterm))))
  '(shell-pop-universal-key "C-t")
- '(smex-save-file "~/.emacs.d.persistent/smex/smex-items")
+ '(smex-save-file "~/.emacs.d.persistent/smex/smex-items" t)
  '(sp-show-pair-from-inside t)
  '(split-height-threshold nil)
  '(tramp-persistency-file-name nil)
