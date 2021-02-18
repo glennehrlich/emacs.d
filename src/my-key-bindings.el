@@ -75,13 +75,14 @@
 (global-set-key (kbd "<delete>")    'magit-status) ; Linux (Del key)
 (global-set-key (kbd "C-x g")       'magit-status) ; recommendend key binding
 
+(global-set-key (kbd "<insert>") 'magit-list-repositories)
+
 (global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac / linux (M-DEL key)
 
 (global-set-key (kbd "C-M-<delete>")    'magit-list-repositories)
 (global-set-key (kbd "C-M-<backspace>") 'magit-list-repositories)
 
 ;; Stop overwrite mode
-(global-set-key (kbd "<insert>") nil)
 (global-set-key (kbd "<insertchar>") nil)
 
 (global-set-key (kbd "M-k") 'docker)

@@ -23,8 +23,14 @@
 ;; $ sudo find / -name .git
 (customize-set-variable 'magit-repository-directories
                         '(
-                          ;; (<dir>           . <depth>)
-                          ("~"           . 10)
+                          ;; (<dir>      . <depth>)
+                          ("~/.emacs.d"  . 10)
+                          ("~/dot-files" . 10)
+                          ("~/g"         . 10)
+                          ("~/git"       . 10)
+                          ("~/glenn-bin" . 10)
+                          ("~/notes"     . 10)
+                          ("~/todo"      . 10)
                           ))
 
 (customize-set-variable 'magit-repolist-columns
@@ -32,7 +38,7 @@
                           ("S"        1 magit-repolist-column-flag nil)
                           ("↓"        1 magit-repolist-column-unpulled-from-upstream ((:help-echo "Upstream changes not in branch")))
                           ("↑"        1 magit-repolist-column-unpushed-to-upstream ((:help-echo "Local changes not in upstream")))
-                          ("Branch"  10 magit-repolist-column-branch nil)
+                          ("Branch"  25 magit-repolist-column-branch nil)
                           ("Path"    99 magit-repolist-column-path nil)
                           ))
 
