@@ -79,10 +79,6 @@
 
 (global-set-key (kbd "<insert>") 'magit-list-repositories)
 
-;; Stop overwrite mode
-(global-set-key (kbd "<insert>") nil)
-(global-set-key (kbd "<insertchar>") nil)
-
 (global-set-key (kbd "M-k") 'docker)
 
 ;; Font size keys.
