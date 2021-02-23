@@ -67,6 +67,7 @@
                       magit
                       magit-gitflow
                       markdown-mode
+                      maven-test-mode
                       morlock
                       org-plus-contrib
                       ox-clip

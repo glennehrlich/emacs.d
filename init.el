@@ -20,6 +20,10 @@
 (use-package my-complete)
 (use-package el-patch)
 
+;; Have to manually require this because use-package doesn't know that
+;; java-mode is a derived mode of cc-mode.
+(require 'my-java)
+
 (use-package calc
   :defer t
   :init (eval-when-compile (autoload 'calc-eval-region "my-calc" nil t))
