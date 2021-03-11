@@ -111,9 +111,11 @@
 ;; is loaded or compiled. Unfortunately, this can not be done in
 ;; custom.el.
 (eval-and-compile (customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar"))
+(eval-and-compile (customize-set-variable 'plantuml-default-exec-mode 'jar))
 (use-package plantuml-mode
   :defer t
-  :mode ("\\.puml\\'" . plantuml-mode))
+  :mode ("\\.puml\\'" . plantuml-mode)
+  :config (setq plantuml-output-type "png"))
 
 (use-package my-undo-tree)
 
