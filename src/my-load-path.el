@@ -77,12 +77,14 @@
                       plantuml-mode
                       popup
                       px
+                      restclient
                       shell-pop
                       simple-httpd
                       skewer-mode
                       skewer-reload-stylesheets
                       smartparens
                       smex
+                      string-edit
                       swiper
                       theme-looper
                       try

@@ -91,5 +91,7 @@
 (global-set-key (kbd "M--") 'default-text-scale-decrease)
 (global-set-key (kbd "M-=") 'default-text-scale-increase)
 
+(global-set-key (kbd "C-c \\") 'string-edit-at-point)
+
 (provide 'my-key-bindings)
 
