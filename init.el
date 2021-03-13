@@ -119,6 +119,13 @@
 
 (use-package my-undo-tree)
 
+(use-package restclient
+  :ensure t
+  :defer t
+  :mode (("\\.http\\'" . restclient-mode))
+  :bind (:map restclient-mode-map
+	      ("C-c C-f" . json-mode-beautify)))
+
 (use-package theme-looper
   :defer t
   :config (require 'my-theme-looper))

@@ -12,7 +12,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist '(("." . "~/backups/emacs")))
  '(blink-cursor-blinks 0)
- '(c-offsets-alist '((arglist-intro . +)))
+ '(c-offsets-alist '((arglist-intro . c-lineup-arglist-intro-after-paren)))
  '(calc-settings-file "~/.emacs.d/calc-settings.el")
  '(comint-input-ignoredups t)
  '(compilation-scroll-output t)
@@ -89,8 +89,9 @@
  '(org-table-use-standard-references t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
-   '(vterm xterm-color wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper smex smartparens skewer-reload-stylesheets shell-pop plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock maven-test-mode markdown-mode marcopolo magit-gitflow magit json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy ace-window))
+   '(vterm xterm-color wrap-region wgrep-ag wgrep web-mode w3m visual-regexp use-package undo-tree try theme-looper swiper string-edit smex smartparens skewer-reload-stylesheets shell-pop restclient plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock maven-test-mode markdown-mode marcopolo magit-gitflow magit json-mode jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy async ace-window))
  '(paradox-github-token t)
+ '(plantuml-default-exec-mode 'jar t)
  '(plantuml-jar-path "/usr/local/bin/plantuml.jar" t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(request-storage-directory "~/.emacs.d.transient/request")
@@ -111,7 +112,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t t)
+ '(wdired-allow-to-change-permissions t)
  '(woman-use-own-frame nil))
 
 (custom-set-faces

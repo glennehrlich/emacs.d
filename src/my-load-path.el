@@ -29,6 +29,7 @@
 
 (defvar my-packages '(
                       ace-window
+                      async
                       auto-complete
                       avy
                       bash-completion
