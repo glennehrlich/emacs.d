@@ -226,6 +226,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (delete-duplicate-lines (region-beginning)
                           (region-end)))
 
+(defun sps ()
+  "\"Edit\" directory /ssh:sps:/mnt/bclouddata/deployments/SPS/dev using `dired'."
+  (interactive)
+  (dired "/ssh:sps:/mnt/bclouddata/deployments/SPS/dev"))
+
 (defun start ()
   "Create the shells and visit ~/todo/todo.org."
   (interactive)
