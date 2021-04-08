@@ -29,6 +29,7 @@
 
 (defvar my-packages '(
                       ace-window
+                      async
                       auto-complete
                       avy
                       bash-completion
@@ -82,6 +83,7 @@
                       skewer-reload-stylesheets
                       smartparens
                       smex
+                      string-edit
                       swiper
                       theme-looper
                       try
