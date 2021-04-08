@@ -47,7 +47,7 @@
 
 (add-hook 'eshell-mode-hook
           (lambda ()
-            (setq pcomplete-ignore-case t)
+            (setq completion-ignore-case t)
 
             ;; These have to be done in a hook because
             ;; eshell-command-map is a buffer local variable.  It's
