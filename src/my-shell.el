@@ -4,6 +4,8 @@
 (require 'shell)
 (require 'dirtrack)
 
+(customize-set-variable 'explicit-shell-file-name "/usr/bin/bash")
+
 ;; Make shells open in same window.
 (add-to-list 'display-buffer-alist '("*shell*" display-buffer-same-window))
 
