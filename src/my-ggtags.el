@@ -2,10 +2,15 @@
 
 (require 'ggtags)
 
+;; Don't override magit-file-dispatch on C-C M-g. Thanks, ggtags.
+(define-key ggtags-mode-prefix-map (kbd "M-g") nil)
+
 (add-hook 'c-mode-common-hook
           (lambda ()
             (when (derived-mode-p 'java-mode)
-              (ggtags-mode 1))))
+              (ggtags-mode 1)
+              (local-unset-key (kbd "C-c M-g"))
+              )))
 
 (customize-set-variable 'ggtags-global-abbreviate-filename nil)
 
