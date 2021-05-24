@@ -75,6 +75,8 @@
 (global-set-key (kbd "<delete>")    'magit-status) ; Linux (Del key)
 (global-set-key (kbd "C-x g")       'magit-status) ; recommendend key binding
 
+(global-set-key (kbd "<insert>") 'magit-list-repositories)
+
 (global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac / linux (M-DEL key)
 
 (global-set-key (kbd "<insert>") 'magit-list-repositories)
@@ -84,6 +86,8 @@
 ;; Font size keys.
 (global-set-key (kbd "M--") 'default-text-scale-decrease)
 (global-set-key (kbd "M-=") 'default-text-scale-increase)
+
+(global-set-key (kbd "C-c \\") 'string-edit-at-point)
 
 (provide 'my-key-bindings)
 

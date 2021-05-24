@@ -68,6 +68,7 @@
                       magit
                       magit-gitflow
                       markdown-mode
+                      maven-test-mode
                       morlock
                       org-plus-contrib
                       ox-clip
@@ -77,6 +78,7 @@
                       plantuml-mode
                       popup
                       px
+                      restclient
                       shell-pop
                       simple-httpd
                       skewer-mode

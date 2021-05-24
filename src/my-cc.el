@@ -8,7 +8,12 @@
 
 (customize-set-variable 'c-offsets-alist '((arglist-intro . +)))
 
-(define-key c-mode-base-map (kbd "RET") 'align-newline-and-indent)
+;; This seems to really mess up in c based modes like java. Alginment
+;; of assignment statements and portions extend too far back, messing
+;; up the aesthetics of lines. Additionally, spacing in lines in
+;; mulit-line comments gets messed up as well.
+;;(define-key c-mode-base-map (kbd "RET") 'align-newline-and-indent)
+
 (define-key c-mode-base-map (kbd "C-<return>") 'align-current)
 (define-key c-mode-base-map (kbd "M-<return>") 'c-indent-defun)
 

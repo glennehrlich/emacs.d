@@ -20,6 +20,10 @@
 (use-package my-complete)
 (use-package el-patch)
 
+;; Have to manually require this because use-package doesn't know that
+;; java-mode is a derived mode of cc-mode.
+(require 'my-java)
+
 (use-package calc
   :defer t
   :init (eval-when-compile (autoload 'calc-eval-region "my-calc" nil t))
@@ -107,11 +111,20 @@
 ;; is loaded or compiled. Unfortunately, this can not be done in
 ;; custom.el.
 (eval-and-compile (customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar"))
+(eval-and-compile (customize-set-variable 'plantuml-default-exec-mode 'jar))
 (use-package plantuml-mode
   :defer t
-  :mode ("\\.puml\\'" . plantuml-mode))
+  :mode ("\\.puml\\'" . plantuml-mode)
+  :config (setq plantuml-output-type "png"))
 
 (use-package my-undo-tree)
+
+(use-package restclient
+  :ensure t
+  :defer t
+  :mode (("\\.http\\'" . restclient-mode))
+  :bind (:map restclient-mode-map
+	      ("C-c C-f" . json-mode-beautify)))
 
 (use-package theme-looper
   :defer t
