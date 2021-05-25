@@ -186,6 +186,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (find-file "~/notes/phone_numbers.org"))
 
+(defun ses ()
+  "\"Edit\" directory /ssh:ses:/mnt/bclouddata/deployments/SES/dev using `dired'."
+  (interactive)
+  (dired "/ssh:ses:/mnt/bclouddata/deployments/SES/dev"))
+
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
