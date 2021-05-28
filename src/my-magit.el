@@ -13,14 +13,15 @@
 (defun add-to-magit-repository-directories (dir-depth)
   (when (file-directory-p (car dir-depth)) ; only add if directory exists
     (add-to-list 'magit-repository-directories dir-depth t)))
-(add-to-magit-repository-directories '("~/.emacs.d"  . 10))
-(add-to-magit-repository-directories '("~/bin"       . 10))
-(add-to-magit-repository-directories '("~/dot-files" . 10))
-(add-to-magit-repository-directories '("~/g"         . 10))
-(add-to-magit-repository-directories '("~/git"       . 10))
-(add-to-magit-repository-directories '("~/glenn-bin" . 10))
-(add-to-magit-repository-directories '("~/notes"     . 10))
-(add-to-magit-repository-directories '("~/todo"      . 10))
+(add-to-magit-repository-directories '("~/.emacs.d"       . 10))
+(add-to-magit-repository-directories '("~/bin"            . 10))
+(add-to-magit-repository-directories '("~/dot-files"      . 10))
+(add-to-magit-repository-directories '("~/g"              . 10))
+(add-to-magit-repository-directories '("~/git"            . 10))
+(add-to-magit-repository-directories '("~/glenn-bin"      . 10))
+(add-to-magit-repository-directories '("~/notes"          . 10))
+(add-to-magit-repository-directories '("~/notes-personal" . 10))
+(add-to-magit-repository-directories '("~/todo"           . 10))
 
 (customize-set-variable 'magit-repolist-columns
                         '(
