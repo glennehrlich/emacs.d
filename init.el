@@ -154,6 +154,10 @@
   :diminish subword-mode
   :config (global-subword-mode 1))
 
+(use-package tramp
+  :defer t
+  :config (require 'my-tramp))
+
 (use-package visual-regexp
   :defer t)
 

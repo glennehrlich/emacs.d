@@ -58,6 +58,7 @@ create_persistent_dirs:
 	mkdir -p $(PERSISTENT_DIR)/python-environments
 	mkdir -p $(PERSISTENT_DIR)/recentf
 	mkdir -p $(PERSISTENT_DIR)/smex
+	mkdir -p $(PERSISTENT_DIR)/tramp
 	mkdir -p $(PERSISTENT_DIR)/url
 	@echo
 	@echo "$(PERSISTENT_DIR) and sub-directories have been created."
