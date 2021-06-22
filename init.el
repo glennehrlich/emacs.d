@@ -106,16 +106,10 @@
 
 (use-package my-local)
 
-;; plantuml-mode calls the plantuml jar file when byte compiling and on
-;; first load, hence the jar location has to be set before plantuml-mode
-;; is loaded or compiled. Unfortunately, this can not be done in
-;; custom.el.
-(eval-and-compile (customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar"))
-(eval-and-compile (customize-set-variable 'plantuml-default-exec-mode 'jar))
 (use-package plantuml-mode
   :defer t
   :mode ("\\.puml\\'" . plantuml-mode)
-  :config (setq plantuml-output-type "png"))
+  :config (require 'my-plantuml))
 
 (use-package my-undo-tree)
 
