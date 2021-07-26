@@ -191,6 +191,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:ses:/mnt/bclouddata/deployments/SES/dev"))
 
+(defun dev-1 ()
+  "\"Edit\" directory /ssh:dev-1:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:dev-1:/home1/um268c"))
+
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
