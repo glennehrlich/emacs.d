@@ -8,6 +8,10 @@
 
 (customize-set-variable 'c-offsets-alist '((arglist-intro . +)))
 
+;; https://confluence-sdteob.web.boeing.com/pages/viewpage.action?pageId=95208047
+(setq c-default-style "bsd" ; allman style
+      c-basic-offset 3)     ; indent by 3 spaces
+
 ;; This seems to really mess up in c based modes like java. Alginment
 ;; of assignment statements and portions extend too far back, messing
 ;; up the aesthetics of lines. Additionally, spacing in lines in
