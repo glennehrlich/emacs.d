@@ -7,10 +7,9 @@
 
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (when (derived-mode-p 'java-mode)
-              (ggtags-mode 1)
-              (local-unset-key (kbd "C-c M-g"))
-              )))
+            (ggtags-mode 1)
+            (local-unset-key (kbd "C-c M-g"))
+            ))
 
 (customize-set-variable 'ggtags-global-abbreviate-filename nil)
 
