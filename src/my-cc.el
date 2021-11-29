@@ -33,17 +33,26 @@
             (wrap-region-mode 1)
             ))
 
-(defun compile-cmake (test-name)
-  "Make all and run all tests in the current git repo's build directory. If TEST-NAME is provide, make TEST-NAME and run it."
-  (interactive "sTest name: ")
-  (let ((build-dir (concat (magit-toplevel) "build"))
-        (command))
-    (unless (file-directory-p build-dir)
-      (error "No such directory: %s" build-dir))
-    (if (string-empty-p test-name)
-        (setq command (format "cd %s/ ; make && ctest --verbose" build-dir))
-      (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir test-name test-name)))
-    (compile command)))
-  
+(defun compile-cmake (&optional test-name use-original-compile)
+  "Compile TEST-NAME in the current git repository's `build'
+directory with `make' and if successful, run it with `ctest'. If
+TEST-NAME is not provided, compile everything and run all tests.
+
+With prefix arg, runs `compile'."
+  (interactive
+   (if current-prefix-arg
+       (list nil t)
+     (list (read-string "Test name: ") nil)))
+  (if use-original-compile
+      (call-interactively 'compile)
+    (let ((build-dir (concat (magit-toplevel) "build"))
+          (command))
+      (unless (file-directory-p build-dir)
+        (error "No such directory: %s" build-dir))
+      (if (string-empty-p test-name)
+          (setq command (format "cd %s/ ; make && ctest --verbose" build-dir))
+        (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir test-name test-name)))
+      (compile command))))
+
 (provide 'my-cc)
 
