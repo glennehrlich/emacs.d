@@ -25,7 +25,6 @@
 (define-key c-mode-base-map (kbd "TAB") 'c-indent-line-or-region) ;; until auto complete figured out
 (define-key c-mode-base-map (kbd "S-<tab>") 'c-indent-line-or-region)
 (define-key c-mode-base-map (kbd "<backtab>") 'c-indent-line-or-region)
-(define-key c-mode-base-map (kbd "C-x m") 'compile-cmake)
 
 (add-hook 'c-mode-common-hook
           (lambda ()
@@ -46,13 +45,40 @@ With prefix arg, runs `compile'."
   (if use-original-compile
       (call-interactively 'compile)
     (let ((build-dir (concat (magit-toplevel) "build"))
-          (command))
+          (command nil))
       (unless (file-directory-p build-dir)
         (error "No such directory: %s" build-dir))
       (if (string-empty-p test-name)
-          (setq command (format "cd %s/ ; make && ctest --verbose" build-dir))
-        (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir test-name test-name)))
+          (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
+        (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir test-name test-name)))
       (compile command))))
+
+(defun cmake ()
+  "Run cmake in the current git repository's `build' directory."
+  (interactive)
+  (let* ((build-dir (cmake-build-directory))
+         (build-dir-exists (file-directory-p build-dir)))
+    (unless build-dir-exists
+      (make-directory build-dir))
+    (let ((command (format "cd %s && rm -rf * && cmake .." build-dir)))
+      (compile command))))
+
+(defun cmake-toplevel ()
+  (let* ((toplevel (magit-toplevel))
+         (toplevel-exists toplevel)
+         (cmakelists-txt-file (expand-file-name "CMakeLists.txt" toplevel))
+         (cmakelists-txt-file-exists (file-readable-p cmakelists-txt-file)))
+    (unless toplevel-exists
+      (error "Not in a git repository"))
+    (unless cmakelists-txt-file-exists
+      (error "No CMakeLists.txt in %s" toplevel))
+    toplevel))
+
+(defun cmake-build-directory ()
+  (expand-file-name "build" (cmake-toplevel)))
+
+(defun cmake-build-directory-p ()
+  (file-directory-p (cmake-build-directory)))
 
 (provide 'my-cc)
 

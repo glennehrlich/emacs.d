@@ -53,6 +53,7 @@
 ;; Other commands.
 ;; (global-set-key (kbd "M-g")     'goto-line)
 (global-set-key (kbd "C-x m")   'compile)
+(global-set-key (kbd "C-x j")   'compile-cmake)
 ;; (global-set-key (kbd "C-t")     'shell-pop)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window) ; was list-buffers
 (global-set-key (kbd "C-=")     'er/expand-region)

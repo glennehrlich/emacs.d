@@ -5,6 +5,7 @@
 
 (customize-set-variable 'compilation-scroll-output t)
 (customize-set-variable 'compilation-window-height 6)
+(customize-set-variable 'compile-command "make -k -j `nproc` ")
 
 (setq compilation-environment '("TERM=xterm-256color"))
 (defun my/advice-compilation-filter (f proc string)
