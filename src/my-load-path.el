@@ -19,11 +19,9 @@
   (setq package-gnupghome-dir
          (expand-file-name "gnupg" package-user-dir)))
 
-(setq package-archives '(
-                         ("org"       . "http://orgmode.org/elpa/")
-                         ("melpa"     . "http://melpa.org/packages/")
-                         ("gnu"       . "http://elpa.gnu.org/packages/")
-                         ))
+(add-to-list 'package-archives '("melpa"  . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("elpa"   . "https://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
 
 (package-initialize)
 
@@ -70,7 +68,8 @@
                       markdown-mode
                       maven-test-mode
                       morlock
-                      org-plus-contrib
+                      org
+                      org-contrib
                       ox-clip
                       paradox
                       paredit
