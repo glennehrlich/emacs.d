@@ -3,6 +3,10 @@
 (require 'org)
 (require 'org-checklist)
 
+(customize-set-variable 'org-confirm-babel-evaluate nil)
+(customize-set-variable 'org-startup-with-inline-images t)
+(add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+
 (customize-set-variable 'org-clock-into-drawer nil)
 (customize-set-variable 'org-clock-persist t)
 (customize-set-variable 'org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
@@ -42,6 +46,7 @@
 (add-hook 'text-mode-hook
           (lambda ()
             (setq tab-width 2)))
+
 
 (provide 'my-org)
 
