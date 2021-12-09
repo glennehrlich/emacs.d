@@ -3,6 +3,8 @@
 (require 'org)
 (require 'org-checklist)
 
+(customize-set-variable 'org-startup-folded nil)
+
 (customize-set-variable 'org-confirm-babel-evaluate nil)
 (customize-set-variable 'org-startup-with-inline-images t)
 (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
@@ -16,7 +18,6 @@
                                          ("\\.pdf\\'" . default)
                                          (directory . emacs)))
 (customize-set-variable 'org-return-follows-link t)
-(customize-set-variable 'org-startup-folded t)
 (customize-set-variable 'org-startup-indented t)
 (customize-set-variable 'org-table-use-standard-references t)
 (customize-set-variable 'org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))

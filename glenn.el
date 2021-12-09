@@ -282,7 +282,7 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
  '(kept-old-versions 10)
  '(make-backup-files t)
  '(org-return-follows-link t)
- '(org-startup-folded t)
+ '(org-startup-folded nil)
  '(org-startup-indented t)
  '(org-table-use-standard-references t)
  '(show-paren-mode t)
