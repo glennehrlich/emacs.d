@@ -12,5 +12,11 @@
   (funcall f proc (xterm-color-filter string)))
 (advice-add 'compilation-filter :around #'my/advice-compilation-filter)
 
+;; Add compilation error regexp support for plantuml mode.
+(add-to-list
+ 'compilation-error-regexp-alist-alist
+ '(plantuml "^Error line \\([0-9]+\\) in file: \\(.*?\\)$" 2 1))
+(add-to-list 'compilation-error-regexp-alist 'plantuml)
+
 (provide 'my-compile)
 
