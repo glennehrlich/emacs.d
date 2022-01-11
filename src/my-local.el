@@ -29,10 +29,23 @@
       (untabify (1- (point)) (point-max)))
     nil))
 
+(defun bc2 ()
+  "Start up bc2 stuff."
+  (interactive)
+  (dired-with-name "~/git/bc2" "b")
+  (dired-with-name "~/git/bc2/packetutil" "p")
+  (dired-with-name "~/g" "g")
+  )
+
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
   (find-file "~/notes-personal/credit_cards.org"))
+
+(defun dired-with-name (directory buffer-name)
+  "\"Edit\" DIRECTORY using `dired' and rename it's buffer to BUFFER-NAME."
+  (dired directory)
+  (rename-buffer buffer-name))
 
 (defun dot-files ()
   "\"Edit\" directory ~/dot-files using `dired'."
