@@ -34,6 +34,7 @@
   (interactive)
   (dired-with-name "~/git/bc2" "b")
   (dired-with-name "~/git/bc2/packetutil" "p")
+  (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine" "t")
   (dired-with-name "~/g" "g")
   )
 
