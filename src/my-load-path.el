@@ -51,7 +51,7 @@
                       flx
                       flycheck
                       fuzzy
-                      ggtags
+                      global-tags
                       git-timemachine
                       hi2
                       htmlize
@@ -60,6 +60,7 @@
                       importmagic
                       ivy
                       ivy-hydra
+                      ivy-xref
                       jedi
                       json-mode
                       json-reformat

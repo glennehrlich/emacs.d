@@ -1,7 +1,7 @@
 ;;;; my-cc.el - Customizations for cc mode.
 
 (require 'cc-mode)
-(require 'ggtags) ;; further customization of ggtags is in my-ggtags
+;; (require 'ggtags) ;; further customization of ggtags is in my-ggtags ;; glenn: delete
 (require 'wrap-region)
 (require 'magit-git)
 
