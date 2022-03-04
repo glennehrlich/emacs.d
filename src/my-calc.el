@@ -5,7 +5,8 @@
 (customize-set-variable 'calc-settings-file "~/.emacs.d/calc-settings.el")
 
 (defun calc-eval-region (beg end)
-  "Evaluate the algebraic calc expression in the region and replace it with the result."
+  "Evaluate the algebraic calc expression in the region and replace
+it with the result."
   (interactive "r")
   (let ((result (calc-eval (buffer-substring-no-properties beg end))))
     (delete-region beg end)
