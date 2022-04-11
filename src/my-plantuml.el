@@ -6,8 +6,11 @@
 
 (customize-set-variable 'plantuml-output-type "png")
 
-(eval-and-compile (customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar"))
-(eval-and-compile (customize-set-variable 'plantuml-default-exec-mode 'jar))
+;; glenn: not sure the eval-and-compile is necessary anymore
+;; (eval-and-compile (customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar"))
+;; (eval-and-compile (customize-set-variable 'plantuml-default-exec-mode 'jar))
+(customize-set-variable 'plantuml-jar-path "/usr/local/bin/plantuml.jar")
+(customize-set-variable 'plantuml-default-exec-mode 'jar)
 
 (add-hook 'plantuml-mode-hook
           (lambda ()
