@@ -85,6 +85,7 @@
  '(split-height-threshold nil)
  '(tramp-persistency-file-name nil)
  '(transient-history-file "~/.emacs.d.transient/history.el")
+ '(undo-tree-auto-save-history nil)
  '(url-configuration-directory "~/.emacs.d.persistent/url/")
  '(vc-annotate-background nil)
  '(vc-follow-symlinks t)
