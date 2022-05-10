@@ -95,12 +95,12 @@ With prefix arg, runs `compile'."
   "Return the make targets in the current git repository's `build' directory."
   (interactive)
   (let* ((build-dir (cmake-build-directory))
-         (command (format "cd %s/ ; make help" build-dir))
-         (make-help-output (shell-command-to-string command))
-         (lines (string-lines make-help-output t))
-         (targets (-map (lambda (line) (nth 1 (s-match "\\.\\.\\. \\([^ ]+\\)" line))) lines))
-         (unique-targets (-distinct targets))
-         (sorted-unique-targets (-sort #'string< unique-targets)))
+         (command (format "cd %s/ ; make help" build-dir))                                     ; the command
+         (make-help-output (shell-command-to-string command))                                  ; run the command
+         (lines (string-lines make-help-output t))                                             ; separate output into list of lines
+         (targets (-map (lambda (line) (nth 1 (s-match "\\.\\.\\. \\([^ ]+\\)" line))) lines)) ; get the targets
+         (unique-targets (-remove #'null (-distinct targets)))                                 ; get unique targets and remove any nils
+         (sorted-unique-targets (-sort #'string< unique-targets)))                             ; sort the targets
     sorted-unique-targets))
 
 (provide 'my-cc)
