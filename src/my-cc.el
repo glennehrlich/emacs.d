@@ -2,8 +2,13 @@
 
 (require 'cc-mode)
 (require 'ggtags) ;; further customization of ggtags is in my-ggtags
-(require 'wrap-region)
+(require 'ivy)
 (require 'magit-git)
+(require 's)
+(require 'wrap-region)
+
+(defvar compile-cmake-history ()
+  "History list for compile-cmake.")
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
@@ -32,25 +37,31 @@
             (wrap-region-mode 1)
             ))
 
-(defun compile-cmake (&optional test-name use-original-compile)
-  "Compile TEST-NAME in the current git repository's `build'
-directory with `make' and if successful, run it with `ctest'. If
-TEST-NAME is not provided, compile everything and run all tests.
+(defun compile-cmake (&optional target use-original-compile)
+  "Compile TARGET in the current git repository's `build' directory
+with `make'. If TARGET is a test, run it with `ctest'. If TARGET
+is not provided, compile everything and run all tests.
 
 With prefix arg, runs `compile'."
   (interactive
    (if current-prefix-arg
        (list nil t)
-     (list (read-string "Test name: ") nil)))
+     (list
+      (ivy-read "Target: "
+            (make-targets)
+            :preselect (ivy-thing-at-point)
+            :history 'compile-cmake-history
+            :caller 'compile-cmake)
+      nil)))
   (if use-original-compile
       (call-interactively 'compile)
     (let ((build-dir (concat (magit-toplevel) "build"))
           (command nil))
       (unless (file-directory-p build-dir)
         (error "No such directory: %s" build-dir))
-      (if (string-empty-p test-name)
+      (if (string-empty-p target)
           (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
-        (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir test-name test-name)))
+        (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir target target)))
       (compile command))))
 
 (defun cmake ()
@@ -79,6 +90,18 @@ With prefix arg, runs `compile'."
 
 (defun cmake-build-directory-p ()
   (file-directory-p (cmake-build-directory)))
+
+(defun make-targets ()
+  "Return the make targets in the current git repository's `build' directory."
+  (interactive)
+  (let* ((build-dir (cmake-build-directory))
+         (command (format "cd %s/ ; make help" build-dir))
+         (make-help-output (shell-command-to-string command))
+         (lines (string-lines make-help-output t))
+         (targets (-map (lambda (line) (nth 1 (s-match "\\.\\.\\. \\([^ ]+\\)" line))) lines))
+         (unique-targets (-distinct targets))
+         (sorted-unique-targets (-sort #'string< unique-targets)))
+    sorted-unique-targets))
 
 (provide 'my-cc)
 
