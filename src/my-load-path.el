@@ -64,7 +64,6 @@
                       json-mode
                       json-reformat
                       magit
-                      magit-gitflow
                       markdown-mode
                       maven-test-mode
                       morlock

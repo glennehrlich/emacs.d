@@ -1,7 +1,6 @@
 ;;;; my-magit.el - Customizations for magit mode.
 
 (require 'magit)
-(require 'magit-gitflow)
 
 ;; Add git repos to be tracked with magit-list-repositories.
 (defun add-to-magit-repository-directories (dir-depth)
