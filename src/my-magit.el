@@ -23,8 +23,8 @@
                           ("P↑"      2 magit-repolist-column-unpushed-to-pushremote nil)
                           ("U↓"      2 magit-repolist-column-unpulled-from-upstream nil)
                           ("U↑"      2 magit-repolist-column-unpushed-to-upstream nil)
+                          ("Path"   40 magit-repolist-column-path nil)
                           ("Branch" 90 magit-repolist-column-branch nil)
-                          ("Path"   99 magit-repolist-column-path nil)
                           ))
 
 (customize-set-variable 'magit-repolist-column-flag-alist
