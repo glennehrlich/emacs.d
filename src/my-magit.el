@@ -19,10 +19,10 @@
 (customize-set-variable 'magit-repolist-columns
                         '(
                           ("S"       1 magit-repolist-column-flag nil)
-                          ("U↓"      2 magit-repolist-column-unpulled-from-upstream nil)
-                          ("U↑"      2 magit-repolist-column-unpushed-to-upstream nil)
                           ("P↓"      2 magit-repolist-column-unpulled-from-pushremote nil)
                           ("P↑"      2 magit-repolist-column-unpushed-to-pushremote nil)
+                          ("U↓"      2 magit-repolist-column-unpulled-from-upstream nil)
+                          ("U↑"      2 magit-repolist-column-unpushed-to-upstream nil)
                           ("Branch" 90 magit-repolist-column-branch nil)
                           ("Path"   99 magit-repolist-column-path nil)
                           ))
