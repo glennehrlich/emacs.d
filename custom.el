@@ -22,9 +22,7 @@
  '(counsel-mode-override-describe-bindings t)
  '(counsel-rg-base-command
    "rg --hidden --glob !.git -S --no-heading --line-number --color never %s .")
- '(counsel-yank-pop-separator "
-----
-")
+ '(counsel-yank-pop-separator "\12----\12")
  '(custom-enabled-themes '(zerodark))
  '(custom-safe-themes t)
  '(default-frame-alist '((width . 100) (height . 60)))
@@ -95,6 +93,7 @@
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
  '(wdired-allow-to-change-permissions t t)
+ '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 
 (custom-set-faces
