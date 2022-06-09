@@ -2,15 +2,13 @@
 
 (require 'bash-completion)
 
-(defvar browse-url-chromium-program "/opt/google/chrome/chrome")
-
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 140
+                    :height 168
                     :weight 'medium)
 
-(customize-set-variable 'default-frame-alist '((width . 100)
-                                               (height . 60)))
+(customize-set-variable 'default-frame-alist '((width  . 100)
+                                               (height .  60)))
 
 (bash-completion-setup)
 
