@@ -77,9 +77,8 @@
 (use-package ivy
   :config (require 'my-ivy))
 
-(use-package json-mode
-  :defer t
-  :mode "\\.czml\\'")
+(use-package jsonian-mode
+  :defer t)
 
 (use-package lisp-mode
   :defer t

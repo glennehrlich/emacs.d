@@ -61,8 +61,7 @@
                       ivy
                       ivy-hydra
                       jedi
-                      json-mode
-                      json-reformat
+                      jsonian
                       magit
                       markdown-mode
                       maven-test-mode
