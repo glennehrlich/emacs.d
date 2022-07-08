@@ -77,7 +77,7 @@
 (use-package ivy
   :config (require 'my-ivy))
 
-(use-package jsonian-mode
+(use-package jsonian
   :defer t)
 
 (use-package lisp-mode
