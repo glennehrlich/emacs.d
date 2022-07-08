@@ -2,8 +2,10 @@
 
 (require 'ggtags)
 
-;; Don't override magit-file-dispatch on C-C M-g. Thanks, ggtags.
+;; Don't override these common key bindings. Thanks, ggtags.
+(define-key ggtags-mode-prefix-map (kbd "M-o") nil)
 (define-key ggtags-mode-prefix-map (kbd "M-g") nil)
+(define-key ggtags-navigation-map (kbd "M-o") nil)
 
 (add-hook 'c-mode-common-hook
           (lambda ()
