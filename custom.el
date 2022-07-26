@@ -12,7 +12,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist '(("." . "~/backups/emacs")))
  '(blink-cursor-blinks 0)
- '(c-offsets-alist '((arglist-intro . c-lineup-arglist-intro-after-paren)))
+ '(c-offsets-alist '((arglist-intro . +)))
  '(calc-settings-file "~/.emacs.d/calc-settings.el")
  '(comint-input-ignoredups t)
  '(compilation-scroll-output t)
@@ -56,6 +56,7 @@
  '(org-clock-persist t)
  '(org-clock-persist-file "~/.emacs.d.persistent/org/org-clock-save.el")
  '(org-duration-format '(("h") (special . 2)) t)
+ '(org-export-backends '(ascii html icalendar latex md odt confluence))
  '(org-file-apps
    '((auto-mode . emacs)
      ("\\.mm\\'" . default)
@@ -92,7 +93,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t t)
+ '(wdired-allow-to-change-permissions t)
  '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 
