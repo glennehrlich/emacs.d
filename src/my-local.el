@@ -285,5 +285,13 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (vterm "v1")
   (vterm "v0"))
 
+(defun int-vterms ()
+  "Create starter vterms for int host."
+  (interactive)
+  (vterm "i3")
+  (vterm "i2")
+  (vterm "i1")
+  (vterm "i0"))
+
 (provide 'my-local)
 
