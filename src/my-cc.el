@@ -60,8 +60,10 @@ With prefix arg, runs `compile'."
       (unless (file-directory-p build-dir)
         (error "No such directory: %s" build-dir))
       (if (string-empty-p target)
-          (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
-        (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir target target)))
+          ; (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
+          (setq command (format "cd %s/ ; make && ctest --verbose" build-dir))
+        ; (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir target target)))
+        (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir target target)))
       (compile command))))
 
 (defun cmake ()
