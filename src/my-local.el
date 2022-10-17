@@ -38,6 +38,16 @@
   (dired-with-name "~/g" "g")
   )
 
+(defun bc2-vterms ()
+  "Create starter vterms for int host."
+  (interactive)
+  (cd "~/bc2/usr/bin")
+  (vterm "b4-send_tc")
+  (vterm "b3-view_tm")
+  (vterm "b2-tail_events")
+  (vterm "b1-services")
+  (vterm "b0-mss"))
+
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
   (interactive)
