@@ -60,7 +60,8 @@
             ))
 
 ;; Turn on elpy.
-(elpy-enable)
+;; glenn: 2022-11-16 turning elpy off because it is annoying when looking at random python code
+;; (elpy-enable)
 
 ;; Insert an empty __init__.py into the current directory.
 (defun init-py ()
