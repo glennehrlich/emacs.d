@@ -225,6 +225,16 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:dev-2:/home1/um268c"))
 
+(defun int-1 ()
+  "\"Edit\" directory /ssh:int-1:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:int-1:/home1/um268c"))
+
+(defun int-2 ()
+  "\"Edit\" directory /ssh:int-2:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:int-2:/home1/um268c"))
+
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
