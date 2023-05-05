@@ -78,6 +78,7 @@
 
 (global-set-key (kbd "<insert>") 'magit-list-repositories)
 
+(global-set-key (kbd "C-<delete>") 'magit-blame-addition) ; mac / linux (C-DEL key)
 (global-set-key (kbd "M-<delete>") 'magit-log-buffer-file) ; mac / linux (M-DEL key)
 
 (global-set-key (kbd "<insert>") 'magit-list-repositories)
