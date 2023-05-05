@@ -10,7 +10,11 @@
 (add-hook 'c-mode-common-hook
           (lambda ()
             (ggtags-mode 1)
-            (local-unset-key (kbd "C-c M-g"))
+
+            ;; Remove ggtags mode keybindings that I'd rather it
+            ;; didn't override.
+            (keymap-unset ggtags-navigation-map "C-c M-g" t)
+            (keymap-unset ggtags-navigation-map "M-=" t)
             ))
 
 (customize-set-variable 'ggtags-global-abbreviate-filename nil)
