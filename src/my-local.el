@@ -235,6 +235,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:int-2:/home1/um268c"))
 
+(defun devops-1 ()
+  "\"Edit\" directory /ssh:devops-1:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:devops-1:/home1/um268c"))
+
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
   (interactive)
