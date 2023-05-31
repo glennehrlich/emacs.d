@@ -66,15 +66,20 @@ With prefix arg, runs `compile'."
         (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir target target)))
       (compile command))))
 
-(defun cmake ()
-  "Run cmake in the current git repository's `build' directory."
-  (interactive)
+(defun cmake (&optional clear-build-directory)
+  "Run cmake in the current git repository's `build' directory.
+
+With prefix arg CLEAR-BUILD-DIRECTORY, deletes the contents of
+the `build' directory before running cmake."
+  (interactive "P")
+  (message "clear-build-directory: %s" clear-build-directory)
   (let* ((build-dir (cmake-build-directory))
          (build-dir-exists (file-directory-p build-dir)))
     (unless build-dir-exists
       (make-directory build-dir))
-    (let ((command (format "cd %s && rm -rf * && cmake .." build-dir)))
-      (compile command))))
+    (if clear-build-directory
+        (compile (format "cd %s && rm -rf * && cmake .." build-dir))
+      (compile (format "cd %s && cmake .." build-dir)))))
 
 (defun cmake-toplevel ()
   (let* ((toplevel (magit-toplevel))
