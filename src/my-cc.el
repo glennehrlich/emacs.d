@@ -63,7 +63,7 @@ With prefix arg, runs `compile'."
           ; (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
           (setq command (format "cd %s/ ; make && ctest --verbose" build-dir))
         ; (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir target target)))
-        (setq command (format "cd %s/ ; make %s && ctest --verbose -R %s" build-dir target target)))
+        (setq command (format "cd %s/ ; make %s && ctest --verbose -R \"%s$\"" build-dir target target)))
       (compile command))))
 
 (defun cmake (&optional clear-build-directory)
