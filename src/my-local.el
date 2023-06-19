@@ -42,11 +42,12 @@
   "Create starter vterms for int host."
   (interactive)
   (cd "~/bc2/usr/bin")
-  (vterm "b4-send_tc")
-  (vterm "b3-view_tm")
-  (vterm "b2-tail_events")
-  (vterm "b1-services")
-  (vterm "b0-mss"))
+  (vterm "b-mss")
+  (vterm "b-tail_events")
+  (vterm "b-view_tm")
+  (vterm "b-sdbservice")
+  (vterm "b-tcservice")
+  (vterm "b-cmdline"))
 
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
@@ -239,6 +240,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   "\"Edit\" directory /ssh:devops-1:/home1/um268c using `dired'."
   (interactive)
   (dired "/ssh:devops-1:/home1/um268c"))
+
+(defun devops-2 ()
+  "\"Edit\" directory /ssh:devops-2:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:devops-2:/home1/um268c"))
 
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
