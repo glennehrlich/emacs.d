@@ -231,6 +231,11 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:int-1:/home1/um268c"))
 
+(defun int-1-bc2 ()
+  "\"Edit\" directory /ssh:int-1:/var/bc2/usr using `dired'."
+  (interactive)
+  (dired "/ssh:int-1:/var/bc2/usr"))
+
 (defun int-2 ()
   "\"Edit\" directory /ssh:int-2:/home1/um268c using `dired'."
   (interactive)
