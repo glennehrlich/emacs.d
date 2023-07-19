@@ -43,11 +43,12 @@
   (interactive)
   (cd "~/bc2/usr/bin")
   (vterm "b-mss")
-  (vterm "b-tail_events")
-  (vterm "b-view_tm")
   (vterm "b-sdbservice")
+  (vterm "b-tail_events")
   (vterm "b-tcservice")
-  (vterm "b-cmdline"))
+  (vterm "b-view_tm")
+  (vterm "b-parameter-manager")
+  (vterm "b-cmdline")) ;; want this one to be last
 
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
