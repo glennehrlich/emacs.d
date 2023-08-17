@@ -29,7 +29,6 @@
  '(delete-old-versions t)
  '(dired-dwim-target t)
  '(dired-kept-versions 2)
- '(docker-tramp-use-names t)
  '(enable-local-variables :all)
  '(eshell-aliases-file "~/.emacs.d/eshell-alias")
  '(eshell-directory-name "~/.emacs.d.persistent/eshell/")
@@ -71,7 +70,7 @@
  '(org-table-use-standard-references t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
-   '(xterm-color wrap-region wgrep-ag wgrep web-mode w3m vterm visual-regexp use-package undo-tree try theme-looper swiper string-edit smex smartparens skewer-reload-stylesheets shell-pop restclient plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock maven-test-mode markdown-mode marcopolo magit jsonian jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-tramp docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy async ace-window))
+   '(xterm-color wrap-region wgrep-ag wgrep web-mode w3m vterm visual-regexp use-package undo-tree try theme-looper swiper string-edit smex smartparens skewer-reload-stylesheets shell-pop restclient plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock maven-test-mode markdown-mode marcopolo magit jsonian jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy async ace-window))
  '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(request-storage-directory "~/.emacs.d.transient/request")

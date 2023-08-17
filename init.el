@@ -50,9 +50,10 @@
   :defer t
   :config (require 'my-dired))
 
-(use-package docker-tramp
-  :defer t
-  :config (require 'my-docker-tramp))
+;; obsolete, need to incorporate this functionality using tramp-container
+;; (use-package docker-tramp
+;;   :defer t
+;;   :config (require 'my-docker-tramp))
 
 (use-package ediff
   :defer t

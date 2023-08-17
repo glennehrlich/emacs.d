@@ -19,10 +19,10 @@
 (defun any-mode-untabify ()
   "Untabify automatically on file write.  Add this to a mode hook:
 
-\(add-hook 'some-mode-hook  
-           '(lambda () 
-               (make-local-hook 'write-contents-hooks) 
-                (add-hook 'write-contents-hooks 'any-mode-untabify nil t)))"
+\(add-hook \='some-mode-hook  
+           \='(lambda () 
+               (make-local-hook \='write-contents-hooks) 
+                (add-hook \='write-contents-hooks \='any-mode-untabify nil t)))"
   (save-excursion
     (goto-char (point-min))
     (when (search-forward "\t" nil t)

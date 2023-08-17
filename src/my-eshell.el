@@ -78,7 +78,7 @@ Set `eshell-save-history-on-exit' to nil when using this hook."
 (defun eshell-bash-completion ()
   (setq-local bash-completion-nospace t)
   (while (pcomplete-here
-          (nth 2 (bash-completion-dynamic-complete-nocomint (save-excursion (eshell-bol) (point)) (point))))))
+          (nth 2 (bash-completion-dynamic-complete-nocomint (save-excursion (beginning-of-line) (point)) (point))))))
 (customize-set-variable 'eshell-default-completion-function 'eshell-bash-completion)
 
 (defun docker-env ()

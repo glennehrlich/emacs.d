@@ -41,7 +41,6 @@
                       diminish
                       docker
                       docker-compose-mode
-                      docker-tramp
                       dockerfile-mode
                       ein
                       el-patch
