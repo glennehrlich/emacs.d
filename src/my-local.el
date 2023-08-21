@@ -32,10 +32,11 @@
 (defun bc2 ()
   "Start up bc2 stuff."
   (interactive)
-  (dired-with-name "~/git/bc2" "b")
-  (dired-with-name "~/git/bc2/packetutil" "p")
+  (dired-with-name "~/git/bc2/apiutil/src/bc2"            "a")
+  (dired-with-name "~/git/bc2"                            "b")
+  (dired-with-name "~/git/bc2/packetutil/src/bc2"         "p")
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine" "t")
-  (dired-with-name "~/g" "g")
+  (dired-with-name "~/g"                                  "g")
   )
 
 (defun bc2-vterms ()
