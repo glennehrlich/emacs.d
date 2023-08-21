@@ -228,6 +228,31 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:dev-2:/home1/um268c"))
 
+(defun dev-3 ()
+  "\"Edit\" directory /ssh:dev-3:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:dev-3:/home1/um268c"))
+
+(defun dev-4 ()
+  "\"Edit\" directory /ssh:dev-4:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:dev-4:/home1/um268c"))
+
+(defun dev-5 ()
+  "\"Edit\" directory /ssh:dev-5:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:dev-5:/home1/um268c"))
+
+(defun dev-6 ()
+  "\"Edit\" directory /ssh:dev-6:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:dev-6:/home1/um268c"))
+
+(defun devops-2 ()
+  "\"Edit\" directory /ssh:devops-2:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:devops-2:/home1/um268c"))
+
 (defun int-1 ()
   "\"Edit\" directory /ssh:int-1:/home1/um268c using `dired'."
   (interactive)
