@@ -1,6 +1,7 @@
 ;;;; my-local.el - Stuff I write.
 
 (require 'recentf)
+(require 'vterm)
 
 (declare-function eshell-reset "esh-mode")
 
@@ -35,6 +36,7 @@
   (dired-with-name "~/git/bc2/apiutil/src/bc2"            "a")
   (dired-with-name "~/git/bc2"                            "b")
   (dired-with-name "~/git/bc2/packetutil/src/bc2"         "p")
+  (dired-with-name "~/git/bc2/apiutil/src/bc2/sdbconfig"  "s")
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine" "t")
   (dired-with-name "~/g"                                  "g")
   )
@@ -248,10 +250,20 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:dev-6:/home1/um268c"))
 
+(defun devops-1 ()
+  "\"Edit\" directory /ssh:devops-1:/home1/um268c using `dired'."
+  (interactive)
+  (dired "/ssh:devops-1:/home1/um268c"))
+
 (defun devops-2 ()
   "\"Edit\" directory /ssh:devops-2:/home1/um268c using `dired'."
   (interactive)
   (dired "/ssh:devops-2:/home1/um268c"))
+
+(defun elena ()
+  "\"Edit\" directory /ssh:dev-6:/home1/um268c/homes/elena using `dired'."
+  (interactive)
+  (dired "/ssh:dev-6:/home1/um268c/homes/elena"))
 
 (defun int-1 ()
   "\"Edit\" directory /ssh:int-1:/home1/um268c using `dired'."
@@ -268,15 +280,10 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:int-2:/home1/um268c"))
 
-(defun devops-1 ()
-  "\"Edit\" directory /ssh:devops-1:/home1/um268c using `dired'."
+(defun homes ()
+  "\"Edit\" directory /ssh:dev-6:/home1/um268c/homes using `dired'."
   (interactive)
-  (dired "/ssh:devops-1:/home1/um268c"))
-
-(defun devops-2 ()
-  "\"Edit\" directory /ssh:devops-2:/home1/um268c using `dired'."
-  (interactive)
-  (dired "/ssh:devops-2:/home1/um268c"))
+  (dired "/ssh:dev-6:/home1/um268c/homes"))
 
 (defun shell-in-dir (dir buffer-name)
   "Open a shell in DIR and name the buffer BUFFER-NAME."
