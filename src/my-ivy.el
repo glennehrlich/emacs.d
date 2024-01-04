@@ -26,7 +26,10 @@
         (t . ivy--regex-plus)))
 
 (global-set-key (kbd "<f8>")  'counsel-rg)
-(global-set-key (kbd "C-s")   'counsel-grep-or-swiper)
+
+(global-set-key (kbd "C-s") 'swiper-isearch) ; instead of counsel-grep-or-swiper, https://oremacs.com/2019/04/07/swiper-isearch/
+(global-set-key (kbd "C-r") 'swiper-isearch-backward)
+
 (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
 
 (provide 'my-ivy)
