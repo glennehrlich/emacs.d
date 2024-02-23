@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-backup.el - Customizations for backing up files.
 
 (add-hook 'before-save-hook

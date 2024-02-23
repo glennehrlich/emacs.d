@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-compile.el - Customizations for compilation commands.
 
 (require 'compile)

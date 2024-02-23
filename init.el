@@ -1,4 +1,12 @@
+;; -*- lexical-binding: t -*-
 ;;;; init.el - Emacs initialization file.
+
+;; Don't turn off native compilation warnings but this should suppress
+;; popping them up in a warnings buffer.
+(customize-set-variable 'native-comp-async-report-warnings-errors 'silent)
+
+;; Native compile packages when installing them.
+(customize-set-variable 'package-native-compile t)
 
 (setq gc-cons-threshold 20000000)
 

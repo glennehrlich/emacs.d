@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-dired.el - Customizations for dired mode.
 
 (require 'dired)

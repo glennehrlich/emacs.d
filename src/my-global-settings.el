@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-global-settings.el - Global settings.
 
 (blink-cursor-mode 1)

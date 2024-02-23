@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-tramp.el - Customizations for tramp.
 
 (require 'tramp-cache)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-ediff.el - Customizations for ediff mode.
 
 (require 'ediff)
@@ -16,7 +17,6 @@
   (interactive "P")
   (ediff-barf-if-not-control-buffer)
   (let ((ctl-buf (current-buffer))
-	(ctl-frm (selected-frame))
 	(minibuffer-auto-raise t))
     (progn
 	  (message "")

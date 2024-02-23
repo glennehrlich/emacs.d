@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-java.el - Customizations for java mode.
 
 (require 'cc-mode)

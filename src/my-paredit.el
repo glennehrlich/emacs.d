@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-paredit.el - Customizations for paredit mode.
 
 (require 'diminish)

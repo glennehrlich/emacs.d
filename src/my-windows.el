@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-windows.el - Customizations for running emacs on windows.
 
 (set-face-attribute 'default nil

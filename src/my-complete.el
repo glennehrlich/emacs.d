@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-complete.el - Customizations for auto-complete and yasnippet.
 
 ;;; ==============================================================

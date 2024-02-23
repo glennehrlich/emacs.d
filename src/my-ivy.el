@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-ivy.el - Customizations for ivy mode.
 
 (require 'counsel)

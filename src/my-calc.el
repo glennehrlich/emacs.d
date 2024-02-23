@@ -1,4 +1,7 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-calc.el - Customizations for calc mode.
+
+;; -*- lexical-binding: t -*-
 
 (require 'calc)
 

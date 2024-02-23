@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-git-timemachine.el - Customizations for git-timemachine.
 
 (require 'git-timemachine)

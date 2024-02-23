@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-cc.el - Customizations for cc mode.
 
 (require 'cc-mode)

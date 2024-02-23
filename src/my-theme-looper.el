@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-theme-looper.el - Customizations for theme looper.
 
 (require 'theme-looper)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-cmake.el - Customizations for cmake mode.
 
 (require 'cmake-mode)

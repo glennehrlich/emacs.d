@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-yas.el - Customizations for yasnippet mode.
 
 (require 'yasnippet)

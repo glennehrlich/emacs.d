@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-key-bindings.el - Global key bindings.
 
 ;; Physical key remappings.

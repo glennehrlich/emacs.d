@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-plantuml.el - Customizations for plantuml mode.
 
 (require 'plantuml-mode)

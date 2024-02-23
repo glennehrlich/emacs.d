@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-smartparens.el - Customizatoins for smartparens mode.
 
 (require 'diminish)

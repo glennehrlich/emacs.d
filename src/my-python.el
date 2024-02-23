@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-python.el - Customizations for python mode.
 
 (require 'python)

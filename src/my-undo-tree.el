@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-undo-tree.el - Customizations for undo-tree mode.
 
 (require 'diminish)

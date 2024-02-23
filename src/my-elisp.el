@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-elisp.el - Customizations for emacs-lisp mode.
 
 (require 'diminish)

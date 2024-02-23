@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-darwin.el - Customizations for running emacs on stock gnu emacs build for mac.
 
 (require 'bash-completion)

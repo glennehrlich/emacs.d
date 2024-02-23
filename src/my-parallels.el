@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-parallels.el - Customizations for when running in parallels.
 
 ;; Clones of common meta control keystrokes because parallels can't

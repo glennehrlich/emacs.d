@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-ggtags.el - Customizations for ggtags mode.
 
 (require 'ggtags)

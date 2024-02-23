@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-linux.el - Customizations for running emacs on linux.
 
 (require 'bash-completion)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-shell-pop.el - Customizations for shell-pop.
 
 (require 'shell-pop)

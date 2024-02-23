@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-vterm.el - Customizations for vterm.
 
 (require 'vterm)

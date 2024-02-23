@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-shell.el - Customizations for shell mode.
 
 (require 'counsel)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-lisp.el - Customizations for lisp mode.
 
 (require 'lisp-mode)

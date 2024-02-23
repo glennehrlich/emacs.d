@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-company.el - Customizations for comapny-mode.
 
 (require 'company)

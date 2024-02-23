@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-eshell.el - Customizations for eshell mode.
 
 (require 'bash-completion)

@@ -1,8 +1,16 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-load-path.el - Set up the load-path and package system.
 
 (require 'package)
 
-; Suppress messages from ad-handle-definition.
+;; Don't turn off native compilation warnings but this should suppress
+;; popping them up in a warnings buffer.
+(customize-set-variable 'native-comp-async-report-warnings-errors 'silent)
+
+;; Native compile packages when installing them.
+(customize-set-variable 'package-native-compile t)
+
+;; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
 ;; Don't prompt to compile vterm-module.

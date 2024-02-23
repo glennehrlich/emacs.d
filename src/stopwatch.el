@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; stopwatch.el - Minimal stopwatch functionality.
 
 (defvar *stopwatch-start-time* nil "The time when the stopwatch is started.")

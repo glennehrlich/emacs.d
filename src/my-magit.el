@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-magit.el - Customizations for magit mode.
 
 (require 'magit)

@@ -1,9 +1,8 @@
+;; -*- lexical-binding: t -*-
 ;;;; my-local.el - Stuff I write.
 
 (require 'recentf)
 (require 'vterm)
-
-(declare-function eshell-reset "esh-mode")
 
 (defalias 'ac 'align-c-function-parameters)
 (defalias 'ar 'align-regexp)
@@ -77,27 +76,6 @@
   "\"Edit\" directory ~/.emacs.d using `dired'."
   (interactive)
   (dired "~/.emacs.d"))
-
-(defun eshell-in-dir (dir buffer-name)
-  "Open an eshell in DIR and name the buffer BUFFER-NAME."
-  (interactive)
-  (with-current-buffer (eshell-with-name buffer-name)
-    (mkdir dir t)
-    (cd dir)
-    (eshell-reset))) ;; eshell-reset needed to get prompt to display correctly after creating buffer
-
-(defun eshell-with-name (buffer-name)
-  "Open an eshell in the current directory and name the buffer BUFFER-NAME."
-  (interactive)
-  (let ((eshell-buffer-name buffer-name))
-    (switch-to-buffer (eshell t))))
-
-(defun eshells ()
-  "Create starter eshells."
-  (interactive)
-  (eshell-with-name "e2")
-  (eshell-with-name "e1")
-  (eshell-with-name "e0"))
 
 (defun gitlab ()
   "\"Edit\" directory ~/gitlab using `dired'."
