@@ -30,7 +30,7 @@
  '(dired-dwim-target t)
  '(dired-kept-versions 2)
  '(enable-local-variables :all)
- '(eshell-aliases-file "~/.emacs.d/eshell-alias")
+ '(eshell-aliases-file "~/.emacs.d/eshell-alias" t)
  '(eshell-directory-name "~/.emacs.d.persistent/eshell/")
  '(eshell-hist-ignoredups t)
  '(eshell-history-file-name "~/.emacs.d.persistent/eshell/history")
@@ -47,8 +47,7 @@
  '(magit-log-arguments '("--graph" "--color" "-n256") t)
  '(magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
  '(magit-repolist-column-flag-alist
-   '((magit-untracked-files . "+")
-     (magit-unstaged-files . "*")
+   '((magit-untracked-files . "+") (magit-unstaged-files . "*")
      (magit-staged-files . "S")))
  '(make-backup-files t)
  '(org-clock-into-drawer nil)
@@ -57,20 +56,32 @@
  '(org-duration-format '(("h") (special . 2)) t)
  '(org-export-backends '(ascii html icalendar latex md odt confluence))
  '(org-file-apps
-   '((auto-mode . emacs)
-     ("\\.mm\\'" . default)
-     ("\\.x?html?\\'" . default)
-     ("\\.pdf\\'" . default)
+   '((auto-mode . emacs) ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default) ("\\.pdf\\'" . default)
      (directory . emacs)))
  '(org-format-latex-options
-   '(:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
+   '(:foreground default :background default :scale 1.4 :html-foreground
+                 "Black" :html-background "Transparent" :html-scale
+                 1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(org-return-follows-link t)
  '(org-startup-indented t)
  '(org-table-use-standard-references t)
  '(org-todo-keywords '((sequence "TODO" "WORKING" "|" "DONE" "CANCELLED")))
  '(package-selected-packages
-   '(xterm-color wrap-region wgrep-ag wgrep web-mode w3m vterm visual-regexp use-package undo-tree try theme-looper swiper string-edit smex smartparens skewer-reload-stylesheets shell-pop restclient plantuml-mode paredit-menu paradox ox-clip org-plus-contrib morlock maven-test-mode markdown-mode marcopolo magit jsonian jedi ivy-hydra ivy importmagic impatient-mode hydra hungry-delete hi2 git-timemachine ggtags fuzzy flx flycheck expand-region exec-path-from-shell elpy elisp-slime-nav el-patch ein dockerfile-mode docker-compose-mode docker-cli docker-api docker default-text-scale counsel-tramp counsel company cmake-mode cmake-font-lock bash-completion avy async ace-window))
+   '(ace-window async avy bash-completion cmake-font-lock cmake-mode
+                company counsel counsel-tramp default-text-scale
+                docker docker-api docker-cli docker-compose-mode
+                dockerfile-mode ein el-patch elisp-slime-nav elpy
+                exec-path-from-shell expand-region flx flycheck fuzzy
+                ggtags git-timemachine hi2 hungry-delete hydra
+                impatient-mode importmagic ivy ivy-hydra jedi jsonian
+                magit marcopolo markdown-mode maven-test-mode morlock
+                org org-plus-contrib ox-clip paradox paredit-menu
+                plantuml-mode restclient shell-pop
+                skewer-reload-stylesheets smartparens smex string-edit
+                swiper theme-looper try undo-tree use-package
+                visual-regexp vterm w3m web-mode wgrep wgrep-ag
+                wrap-region xterm-color))
  '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(request-storage-directory "~/.emacs.d.transient/request")
@@ -92,7 +103,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t)
+ '(wdired-allow-to-change-permissions t t)
  '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 
