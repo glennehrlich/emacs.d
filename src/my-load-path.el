@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t -*-
 ;;;; my-load-path.el - Set up the load-path and package system.
 
+(require 'cl-lib)
 (require 'package)
 
 ;; Don't turn off native compilation warnings but this should suppress
@@ -9,6 +10,10 @@
 
 ;; Native compile packages when installing them.
 (customize-set-variable 'package-native-compile t)
+
+;; Upgrade packages from archives even if they come with emacs. This
+;; is mostly for getting newer version of org.
+(customize-set-variable 'package-install-upgrade-built-in t)
 
 ;; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
@@ -27,13 +32,17 @@
   (setq package-gnupghome-dir
          (expand-file-name "gnupg" package-user-dir)))
 
-(add-to-list 'package-archives '("melpa"  . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("elpa"   . "https://elpa.gnu.org/packages/") t)
-(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
+;; Re-order the emacs package archives.
+(setq package-archives '(("melpa"  . "https://melpa.org/packages/")
+                         ("elpa"   . "https://elpa.gnu.org/packages/")
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+                         ("gnu"    . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
 (defvar my-packages '(
+                      ;; These have to be done first.
+
                       ace-window
                       async
                       auto-complete
@@ -73,7 +82,7 @@
                       markdown-mode
                       maven-test-mode
                       morlock
-                      org
+                      org ;; this doesn't really work, need to manually install with list-packages
                       org-contrib
                       ox-clip
                       paradox
@@ -120,7 +129,6 @@
 
   (unless package-archive-contents
     (package-refresh-contents))
-
   (dolist (package my-packages)
     (unless (package-installed-p package)
       (package-install package))))
