@@ -3,6 +3,8 @@
 
 (require 'org)
 (require 'org-checklist)
+(require 'ob-ditaa)
+(require 'ob-plantuml)
 
 (customize-set-variable 'org-startup-folded nil)
 
@@ -49,6 +51,23 @@
           (lambda ()
             (setq tab-width 2)))
 
+
+;; Babel support -- languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ (append org-babel-load-languages
+         '(
+           (ditaa    . t)
+           (plantuml . t)
+           )))
+
+;; Babel support -- plantuml
+(add-to-list 'org-structure-template-alist '("p" . "src plantuml :file DIAGRAM.png"))
+(customize-set-variable 'org-plantuml-jar-path "/usr/local/bin/plantuml.jar")
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+
+;; Babel support -- ditaa
+(customize-set-variable 'org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 
 (provide 'my-org)
 

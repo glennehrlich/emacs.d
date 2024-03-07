@@ -22,16 +22,16 @@
             (add-to-list 'plantuml-indent-regexp-end ge-plantuml-indent-regexp-return-end)))
 
 ;; Babel support
-(add-to-list 'org-structure-template-alist '("p" . "src plantuml :file DIAGRAM.png"))
+;; (add-to-list 'org-structure-template-alist '("p" . "src plantuml :file DIAGRAM.png"))
 
-(customize-set-variable 'org-plantuml-jar-path plantuml-jar-path)
+;; (customize-set-variable 'org-plantuml-jar-path plantuml-jar-path)
 
-(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+;; (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- (append org-babel-load-languages
-         '((plantuml . t))))
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  (append org-babel-load-languages
+;;          '((plantuml . t))))
 
 (provide 'my-plantuml)
 
