@@ -115,10 +115,6 @@
                       xterm-color
                       yasnippet
 
-                      ;; python
-                      ;; anaconda-mode
-                      elpy
-
                       ;; themes
                       zerodark-theme
                       ))

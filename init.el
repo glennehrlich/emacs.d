@@ -134,6 +134,7 @@
 
 (use-package python
   :defer t
+  :mode ("\\.py[iw]?\\'" . python-ts-mode)
   :config (require 'my-python))
 
 (use-package org
