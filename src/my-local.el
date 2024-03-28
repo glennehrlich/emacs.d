@@ -228,11 +228,6 @@ BOTTOM, describing the current region.  TOP must be before BOTTOM."
   (interactive)
   (dired "/ssh:dev-6:/home1/um268c"))
 
-(defun devops-1 ()
-  "\"Edit\" directory /ssh:devops-1:/home1/um268c using `dired'."
-  (interactive)
-  (dired "/ssh:devops-1:/home1/um268c"))
-
 (defun devops-2 ()
   "\"Edit\" directory /ssh:devops-2:/home1/um268c using `dired'."
   (interactive)
