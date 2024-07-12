@@ -44,14 +44,14 @@
 (defun bc2-vterms ()
   "Create starter vterms for int host."
   (interactive)
-  (cd "~/bc2/usr/bin")
-  (vterm "b-mss")
-  (vterm "b-sdbservice")
-  (vterm "b-tail_events")
-  (vterm "b-tcservice")
-  (vterm "b-view_tm")
-  (vterm "b-parameter-manager")
-  (vterm "b-cmdline")) ;; want this one to be last
+  (vterm-in-dir "~/bc2/usr/bin" "b-sdbservice")
+  (vterm-in-dir "~/bc2/usr/bin" "b-tail_events")
+  (vterm-in-dir "~/bc2/usr/bin" "bt")
+  (vterm-in-dir "~/bc2/usr/bin" "b-view_tm")
+  (vterm-in-dir "~/bc2/usr/bin" "bpm")
+  (vterm-in-dir "~/bc2/usr/bin" "bc")
+  (switch-to-buffer "bc")
+  ) ;; want this one to be last
 
 (defun credit-cards ()
   "Visit ~/notes-personal/credit_cards.org."
