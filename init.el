@@ -129,7 +129,6 @@
 	      ("C-c C-f" . json-mode-beautify)))
 
 (use-package theme-looper
-  :defer t
   :config (require 'my-theme-looper))
 
 (use-package python

@@ -38,7 +38,7 @@
   (dired-with-name "~/git/bc2/apiutil/src/bc2/sdbconfig"                          "s")
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine"                         "t")
   (dired-with-name "~/git/bc2/parametermanager/src/bc2/parameter_manager_service" "pm")
-  (dired-with-name "~/g"                                                          "g")
+  (dired-with-name "~/g/2025"                                                     "g")
   )
 
 (defun bc2-vterms ()

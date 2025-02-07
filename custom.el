@@ -72,16 +72,16 @@
                 company counsel counsel-tramp default-text-scale
                 docker docker-api docker-cli docker-compose-mode
                 dockerfile-mode ein el-patch elisp-slime-nav elpy
-                exec-path-from-shell expand-region flx flycheck
-                fuzzy ggtags git-timemachine hi2
-                hungry-delete hydra impatient-mode importmagic ivy
-                ivy-hydra jedi jsonian magit marcopolo markdown-mode
-                maven-test-mode morlock org org-plus-contrib ox-clip
-                paradox paredit-menu plantuml-mode restclient
-                shell-pop skewer-reload-stylesheets smartparens smex
-                string-edit swiper theme-looper try undo-tree
-                use-package visual-regexp vterm w3m web-mode wgrep
-                wgrep-ag wrap-region xterm-color))
+                exec-path-from-shell expand-region flx flycheck fuzzy
+                ggtags git-timemachine hi2 hungry-delete hydra
+                impatient-mode importmagic ivy ivy-hydra jedi jsonian
+                magit marcopolo markdown-mode maven-test-mode morlock
+                org org-plus-contrib ox-clip paradox paredit-menu
+                plantuml-mode restclient shell-pop
+                skewer-reload-stylesheets smartparens smex string-edit
+                swiper theme-looper try undo-tree unfill use-package
+                visual-regexp vterm w3m web-mode wgrep wgrep-ag
+                wrap-region xterm-color))
  '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(request-storage-directory "~/.emacs.d.transient/request")

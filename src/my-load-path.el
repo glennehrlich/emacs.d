@@ -103,6 +103,7 @@
                       theme-looper
                       try
                       undo-tree
+                      unfill
                       use-package
                       visual-regexp
                       vterm
@@ -116,6 +117,12 @@
                       yasnippet
 
                       ;; themes
+                      color-theme-sanityinc-solarized
+                      color-theme-sanityinc-tomorrow
+                      doom-themes
+                      solarized-theme
+                      spacemacs-theme
+                      zenburn-theme
                       zerodark-theme
                       ))
 
