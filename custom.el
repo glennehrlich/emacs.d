@@ -79,9 +79,9 @@
                 org org-plus-contrib ox-clip paradox paredit-menu
                 plantuml-mode restclient shell-pop
                 skewer-reload-stylesheets smartparens smex string-edit
-                swiper theme-looper try undo-tree unfill use-package
-                visual-regexp vterm w3m web-mode wgrep wgrep-ag
-                wrap-region xterm-color))
+                swiper theme-looper try undo-tree unfill
+                unicode-math-input use-package visual-regexp vterm w3m
+                web-mode wgrep wgrep-ag wrap-region xterm-color))
  '(paradox-github-token t)
  '(recentf-save-file "~/.emacs.d.persistent/recentf/recentf")
  '(request-storage-directory "~/.emacs.d.transient/request")
@@ -103,7 +103,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t t)
+ '(wdired-allow-to-change-permissions t)
  '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 

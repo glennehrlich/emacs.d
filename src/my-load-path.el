@@ -104,6 +104,7 @@
                       try
                       undo-tree
                       unfill
+                      unicode-math-input
                       use-package
                       visual-regexp
                       vterm
