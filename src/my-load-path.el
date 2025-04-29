@@ -42,7 +42,6 @@
 
 (defvar my-packages '(
                       ;; These have to be done first.
-                      ;; (currently none)
 
                       ace-window
                       async
@@ -68,8 +67,8 @@
                       flx
                       flycheck
                       fuzzy
+                      ggtags
                       git-timemachine
-                      global-tags
                       hi2
                       htmlize
                       hydra
@@ -77,7 +76,6 @@
                       importmagic
                       ivy
                       ivy-hydra
-                      ivy-xref
                       jedi
                       jsonian
                       magit

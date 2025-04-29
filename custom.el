@@ -36,6 +36,7 @@
  '(eshell-history-file-name "~/.emacs.d.persistent/eshell/history")
  '(eshell-save-history-on-exit nil)
  '(gdb-many-windows t)
+ '(ggtags-global-abbreviate-filename nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
@@ -72,13 +73,13 @@
                 docker docker-api docker-cli docker-compose-mode
                 dockerfile-mode ein el-patch elisp-slime-nav elpy
                 exec-path-from-shell expand-region flx flycheck fuzzy
-                git-timemachine global-tags hi2 hungry-delete
-                hydra impatient-mode importmagic ivy ivy-hydra
-                ivy-xref jedi jsonian magit marcopolo markdown-mode
-                maven-test-mode morlock org org-plus-contrib ox-clip
-                paradox paredit-menu plantuml-mode restclient
-                shell-pop skewer-reload-stylesheets smartparens smex
-                string-edit swiper theme-looper try undo-tree unfill
+                ggtags git-timemachine hi2 hungry-delete hydra
+                impatient-mode importmagic ivy ivy-hydra jedi jsonian
+                magit marcopolo markdown-mode maven-test-mode morlock
+                org org-plus-contrib ox-clip paradox paredit-menu
+                plantuml-mode restclient shell-pop
+                skewer-reload-stylesheets smartparens smex string-edit
+                swiper theme-looper try undo-tree unfill
                 unicode-math-input use-package visual-regexp vterm w3m
                 web-mode wgrep wgrep-ag wrap-region xterm-color))
  '(paradox-github-token t)
@@ -102,7 +103,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t t)
+ '(wdired-allow-to-change-permissions t)
  '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 
