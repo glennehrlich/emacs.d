@@ -2,7 +2,7 @@
 ;;;; my-cc.el - Customizations for cc mode.
 
 (require 'cc-mode)
-(require 'ggtags) ;; further customization of ggtags is in my-ggtags
+(require 'global-tags)
 (require 'ivy)
 (require 'magit-git)
 (require 's)
@@ -36,6 +36,7 @@
           (lambda ()
             (c-toggle-hungry-state 1)
             (wrap-region-mode 1)
+            (global-tags-exclusive-backend-mode)
             ))
 
 (defun compile-cmake (&optional target use-original-compile)

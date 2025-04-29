@@ -75,9 +75,8 @@
   :defer t
   :config (require 'my-eshell))
 
-(use-package ggtags
-  :defer t
-  :config (require 'my-ggtags))
+(use-package global-tags
+  :defer t)
 
 (use-package git-timemachine
   :defer t
@@ -170,6 +169,10 @@
 
 (use-package winner
   :config (winner-mode 1))
+
+(use-package xref
+  :defer t
+  :config (require 'my-xref))
 
 (use-package yasnippet
   :defer t
