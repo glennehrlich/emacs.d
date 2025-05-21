@@ -2,12 +2,16 @@
 ;;;; my-local.el - Stuff I write.
 
 (require 'recentf)
+(require 'sort)
 (require 'vterm)
 
 (defalias 'ac 'align-c-function-parameters)
 (defalias 'ar 'align-regexp)
 (defalias 'eb 'ediff-buffers)
 (defalias 'rb 'rename-buffer)
+
+;; Ignore case when sorting.
+(customize-set-variable 'sort-fold-case t)
 
 (defun align-c-function-parameters ()
   "Align function call parameters in region."
