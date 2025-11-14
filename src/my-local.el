@@ -36,11 +36,19 @@
 (defun bc2 ()
   "Start up bc2 stuff."
   (interactive)
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Asset_declaration.hpp"      "ad" )
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Asset_implementation.hpp"   "ai" )
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Request_declaration.hpp"    "rd" )
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Request_implementation.hpp" "ri" )
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Command_declaration.hpp"    "cd" )
+  (file-with-name "~/git/bc2/tcservice/src/bc2/tcengine2/Command_implementation.hpp" "ci" )
+
   (dired-with-name "~/git/bc2/apiutil/src/bc2"                                    "a")
   (dired-with-name "~/git/bc2"                                                    "b")
   (dired-with-name "~/git/bc2/packetutil/src/bc2"                                 "p")
   (dired-with-name "~/git/bc2/apiutil/src/bc2/sdbconfig"                          "s")
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine"                         "t")
+  (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine2"                        "t2")
   (dired-with-name "~/git/bc2/parametermanager/src/bc2/parameter_manager_service" "pm")
   (dired-with-name "~/g/2025"                                                     "g")
   )
@@ -81,6 +89,11 @@
   "\"Edit\" directory ~/.emacs.d using `dired'."
   (interactive)
   (dired "~/.emacs.d"))
+
+(defun file-with-name (file buffer-name)
+  "\"Edit\" FILE using `dired' and rename it's buffer to BUFFER-NAME."
+  (find-file file)
+  (rename-buffer buffer-name))
 
 (defun gitlab ()
   "\"Edit\" directory ~/gitlab using `dired'."
