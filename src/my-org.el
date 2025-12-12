@@ -49,7 +49,7 @@
 
 (add-hook 'text-mode-hook
           (lambda ()
-            (setq tab-width 2)))
+            (setq tab-width 8)))
 
 
 ;; Babel support -- languages

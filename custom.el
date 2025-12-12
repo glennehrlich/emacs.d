@@ -1,4 +1,4 @@
-;;;; custom.el - Custumization settings.
+;;;; custom.el - Custumization settings.  -*- lexical-binding: t; -*-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -103,7 +103,7 @@
  '(vterm-always-compile-module t)
  '(vterm-clear-scrollback-when-clearing t)
  '(vterm-max-scrollback 100000)
- '(wdired-allow-to-change-permissions t)
+ '(wdired-allow-to-change-permissions t t)
  '(wgrep-auto-save-buffer t nil nil "glenn: 2022-06-07: set to on")
  '(woman-use-own-frame nil))
 
