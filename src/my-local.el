@@ -53,7 +53,7 @@
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine"                         "t")
   (dired-with-name "~/git/bc2/tcservice/src/bc2/tcengine2"                        "t2")
   (dired-with-name "~/git/bc2/parametermanager/src/bc2/parameter_manager_service" "pm")
-  (dired-with-name "~/g/2025"                                                     "g")
+  (dired-with-name "~/g/2026"                                                     "g")
   )
 
 (defun bc2-vterms ()
