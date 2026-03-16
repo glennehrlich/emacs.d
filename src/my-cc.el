@@ -34,6 +34,7 @@
 
 (add-hook 'c-mode-common-hook
           (lambda ()
+            (c-set-offset 'class-field-cont 0) ; prevent continuation lines in class declaration from being indented
             (c-toggle-hungry-state 1)
             (wrap-region-mode 1)
             ))
@@ -61,10 +62,21 @@ With prefix arg, runs `compile'."
       (unless (file-directory-p build-dir)
         (error "No such directory: %s" build-dir))
       (if (string-empty-p target)
-          ; (setq command (format "cd %s/ ; make -j `nproc` && ctest --verbose" build-dir))
           (setq command (format "cd %s/ ; make -j1 && ctest --verbose" build-dir))
-        ; (setq command (format "cd %s/ ; make -j `nproc` %s && ctest --verbose -R %s" build-dir target target)))
-        (setq command (format "cd %s/ ; make -j1 %s && ctest --verbose -R \"%s$\"" build-dir target target)))
+        (setq command
+              (format "cd %s/ ; make -j1 %s && ctest --verbose -R %s"
+                      build-dir
+                      target
+                      ;; Strip off "test_" from the start and "_test"
+                      ;; at the end for the ctest regex. This allows
+                      ;; people to specify test_foo or foo_test as
+                      ;; their ctest name, regardless of what the
+                      ;; actual executable target name is.
+                      (setq command
+                            (format "cd %s/ ; make -j1 %s && ctest --verbose -R %s"
+                                    build-dir
+                                    target
+                                    (string-remove-prefix "test_" (string-remove-suffix "_test" target)))))))
       (compile command))))
 
 (defun cmake (&optional clear-build-directory)
