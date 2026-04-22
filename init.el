@@ -19,7 +19,7 @@
 ; Suppress messages from ad-handle-definition.
 (setq ad-redefinition-action 'accept)
 
-(load (expand-file-name "src/my-load-path.el" (file-name-directory load-file-name)))
+(load (expand-file-name "src/my-load-path.elc" (file-name-directory load-file-name)))
 
 (require 'use-package)
 
@@ -53,6 +53,9 @@
 (use-package company
   :defer t
   :config (require 'my-company))
+
+(use-package corfu
+  :defer t)
 
 (use-package dired
   :defer t
@@ -155,6 +158,12 @@
   :if (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   :diminish subword-mode
   :config (global-subword-mode 1))
+
+(use-package treesit-auto
+  :demand t
+  :functions (global-treesit-auto-mode)
+  :config
+  (global-treesit-auto-mode))
 
 (use-package tramp
   :defer t
