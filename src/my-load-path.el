@@ -42,6 +42,7 @@
 
 (defvar my-packages '(
                       ;; These have to be done first.
+                      ;; <currently none>
 
                       ace-window
                       async
@@ -51,6 +52,7 @@
                       cmake-font-lock
                       cmake-mode
                       company
+                      corfu
                       counsel
                       counsel-tramp
                       dash
@@ -78,12 +80,17 @@
                       ivy-hydra
                       jedi
                       jsonian
+                      jupyter
                       magit
                       markdown-mode
                       maven-test-mode
                       morlock
-                      org ;; this doesn't really work, need to manually install with list-packages
-                      org-contrib
+
+                      ;; Installing these from elpa this way doesn't seem to work.
+                      ;; Manually install them using list-packages.
+                      ;; org
+                      ;; org-contrib
+
                       ox-clip
                       paradox
                       paredit
@@ -101,6 +108,7 @@
                       string-edit
                       swiper
                       theme-looper
+                      treesit-auto
                       try
                       undo-tree
                       unfill
@@ -116,6 +124,7 @@
                       wrap-region
                       xterm-color
                       yasnippet
+                      zmq
 
                       ;; themes
                       color-theme-sanityinc-solarized
@@ -139,5 +148,5 @@
 
 (get-my-packages)
 
-(provide 'my-load-paths)
+(provide 'my-load-path)
 
