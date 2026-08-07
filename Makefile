@@ -1,4 +1,6 @@
-ifeq ($(EMACS), t)
+ifeq ($(strip $(EMACS)),)
+	EMACS = emacs
+else ifeq ($(EMACS), t)
 	EMACS = emacs
 endif
 
@@ -29,7 +31,9 @@ clean:
 
 update_elpa:
 	mkdir -p $(ELPA_BACKUP_DIR)
-	mv $(ELPA_DIR) $(ELPA_BACKUP_DIR)/$(ELPA)_$(shell date "+%Y-%m-%d_%H%M%S")
+	if [ -d "$(ELPA_DIR)" ]; then \
+		mv $(ELPA_DIR) $(ELPA_BACKUP_DIR)/$(ELPA)_$(shell date "+%Y-%m-%d_%H%M%S"); \
+	fi
 	rm -rf ~/.emacs.d/eln-cache/*
 	$(EMACS_BATCH) -f get-my-packages
 	@echo "sleeping 5 seconds in order to touch all *.elc files"
