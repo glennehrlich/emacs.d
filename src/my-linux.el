@@ -8,6 +8,10 @@
                     :height 168
                     :weight 'medium)
 
+;; WSLg/PGTK clipboard workaround.
+(when (getenv "WSL_DISTRO_NAME")
+  (setq select-active-regions nil))
+
 (customize-set-variable 'default-frame-alist '((width  . 100)
                                                (height .  60)))
 
