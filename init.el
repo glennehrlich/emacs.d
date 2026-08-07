@@ -1,13 +1,6 @@
 ;; -*- lexical-binding: t -*-
 ;;;; init.el - Emacs initialization file.
 
-;; Don't turn off native compilation warnings but this should suppress
-;; popping them up in a warnings buffer.
-(customize-set-variable 'native-comp-async-report-warnings-errors 'silent)
-
-;; Native compile packages when installing them.
-(customize-set-variable 'package-native-compile t)
-
 (setq gc-cons-threshold 20000000)
 
 ; (setq debug-on-error t)
@@ -16,10 +9,8 @@
 ; Make sure to start up in home directory.
 (cd "~")
 
-; Suppress messages from ad-handle-definition.
-(setq ad-redefinition-action 'accept)
-
-(load (expand-file-name "src/my-load-path.elc" (file-name-directory load-file-name)))
+(load (expand-file-name "src/my-load-path"
+                        (file-name-directory load-file-name)))
 
 (require 'use-package)
 
@@ -31,7 +22,6 @@
 ;; Have to manually require this because use-package doesn't know that
 ;; java-mode is a derived mode of cc-mode.
 (require 'my-java)
-
 (use-package calc
   :defer t
   :init (eval-when-compile (autoload 'calc-eval-region "my-calc" nil t))
@@ -129,7 +119,7 @@
   :defer t
   :mode (("\\.http\\'" . restclient-mode))
   :bind (:map restclient-mode-map
-	      ("C-c C-f" . json-mode-beautify)))
+              ("C-c C-f" . json-mode-beautify)))
 
 (use-package theme-looper
   :config (require 'my-theme-looper))
@@ -199,8 +189,8 @@
 (use-package my-windows
   :if (eq system-type 'windows-nt))
 
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file 'noerror)
 
 ;;; Patches
 ;;;
@@ -214,4 +204,3 @@
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
